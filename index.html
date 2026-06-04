@@ -230,6 +230,45 @@ strong{font-weight:700}
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
 </script>
+<script>
+/* 교풀 포털 행동 트래킹: 전환(교풀/블로그 이동)·콘텐츠 관심·도구 사용. 본문 비침습(이벤트 위임). */
+(function(){
+  function ev(n,p){ try{ if(window.gtag) gtag('event', n, p||{}); }catch(e){} }
+  function gyo(h){ return /(?:^|\.)gyopool\.com$/i.test(h) || /(?:^|\.)gyopooledu\.com$/i.test(h) || /\.notion\.site$/i.test(h); }
+  function dest(u){ var p=(u.pathname||'').toLowerCase(), h=(u.hostname||'').toLowerCase();
+    if(/\/blog/.test(p)) return 'blog';
+    if(/promotion/.test(p)) return 'promotion';
+    if(/notion\.site$/.test(h)) return 'guide';
+    if(/gyopooledu\.com$/.test(h)) return 'gyopooledu';
+    return 'gyopool_home'; }
+  var level='go';
+  document.addEventListener('click', function(e){
+    var t=e.target; if(!t||!t.closest) return;
+    var tab=t.closest('[data-level]');
+    if(tab){ level=tab.getAttribute('data-level')||level; ev('tab_select',{portal_level:level}); return; }
+    var cp=t.closest('.ait-copy');
+    if(cp){ var s=cp.closest('[id]'); ev('prompt_copy',{portal_level:level, section_id:(s&&s.id)||''}); return; }
+    var tb=t.closest('.tool-btn,.tool-btn-sm');
+    if(tb){ var ts=tb.closest('[id]'); ev('tool_use',{portal_level:level, tool_id:(ts&&ts.id)||''}); return; }
+    var a=t.closest('a[href]');
+    if(a){ try{ var u=new URL(a.getAttribute('href'), location.href);
+      if(u.host && u.host!==location.host && gyo(u.hostname)){
+        ev('conversion_click',{ portal_level:level, destination:dest(u),
+          link_url:String(u.href).slice(0,100), link_text:(a.textContent||'').trim().slice(0,90) });
+      } }catch(_){} }
+  }, true);
+  document.addEventListener('DOMContentLoaded', function(){
+    var act=document.querySelector('[data-level].is-active,[data-level].active,[data-level][aria-selected="true"]');
+    if(act) level=act.getAttribute('data-level')||level;
+    if('IntersectionObserver' in window){
+      var seen={}, io=new IntersectionObserver(function(es){ es.forEach(function(x){
+        if(x.isIntersecting && x.target.id && !seen[x.target.id]){ seen[x.target.id]=1;
+          ev('section_view',{section_id:x.target.id, portal_level:level}); } }); }, {threshold:0.5});
+      document.querySelectorAll('section[id]').forEach(function(s){ io.observe(s); });
+    }
+  });
+})();
+</script>
 </head>
 <body>
 
