@@ -244,21 +244,22 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
   var level='go';
   document.addEventListener('click', function(e){
     var t=e.target; if(!t||!t.closest) return;
-    var tab=t.closest('[data-level]');
-    if(tab){ level=tab.getAttribute('data-level')||level; ev('tab_select',{portal_level:level}); return; }
+    function lvlOf(el){ var c=el.closest('.ait-level'); return (c&&c.getAttribute('data-level')) || level; }
     var cp=t.closest('.ait-copy');
-    if(cp){ var s=cp.closest('[id]'); ev('prompt_copy',{portal_level:level, section_id:(s&&s.id)||''}); return; }
+    if(cp){ var s=cp.closest('section[id],[id]'); ev('prompt_copy',{portal_level:lvlOf(cp), section_id:(s&&s.id)||''}); return; }
     var tb=t.closest('.tool-btn,.tool-btn-sm');
-    if(tb){ var ts=tb.closest('[id]'); ev('tool_use',{portal_level:level, tool_id:(ts&&ts.id)||''}); return; }
+    if(tb){ var ts=tb.closest('section[id],[id]'); ev('tool_use',{portal_level:lvlOf(tb), tool_id:(ts&&ts.id)||''}); return; }
     var a=t.closest('a[href]');
     if(a){ try{ var u=new URL(a.getAttribute('href'), location.href);
       if(u.host && u.host!==location.host && gyo(u.hostname)){
-        ev('conversion_click',{ portal_level:level, destination:dest(u),
+        ev('conversion_click',{ portal_level:lvlOf(a), destination:dest(u),
           link_url:String(u.href).slice(0,100), link_text:(a.textContent||'').trim().slice(0,90) });
-      } }catch(_){} }
+      } }catch(_){} return; }
+    var tab=t.closest('.ait-tab');
+    if(tab){ var lv=tab.getAttribute('data-level'); if(lv){ level=lv; ev('tab_select',{portal_level:lv}); } return; }
   }, true);
   document.addEventListener('DOMContentLoaded', function(){
-    var act=document.querySelector('[data-level].is-active,[data-level].active,[data-level][aria-selected="true"]');
+    var act=document.querySelector('.ait-tab.active');
     if(act) level=act.getAttribute('data-level')||level;
     if('IntersectionObserver' in window){
       var seen={}, io=new IntersectionObserver(function(es){ es.forEach(function(x){
