@@ -287,6 +287,7 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
     <button class="ait-tab active" type="button" data-level="go" role="tab" aria-selected="true">고등학교</button>
     <button class="ait-tab" type="button" data-level="teuk" role="tab" aria-selected="false">특성화고</button>
     <button class="ait-tab" type="button" data-level="spec" role="tab" aria-selected="false">특수교사</button>
+    <button class="ait-tab" type="button" data-level="rubric" role="tab" aria-selected="false">루브릭</button>
     <button class="ait-tab" type="button" data-level="tool" role="tab" aria-selected="false">도구</button>
   </div>
 </div>
@@ -4950,6 +4951,293 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
 <p class="ait-body"><strong>AI 도구 활용 시 책임:</strong> AI는 교사의 보조 도구입니다. 사실 검증, 정보의 적절성 판단, 학생에 대한 최종 판단은 교사의 책임입니다. 특히 개별화교육계획 수립, 평가, 생활지도 등 핵심 업무에서 AI 결과물은 참고만 하시고, 전문적 판단과 학생 맥락을 반영하여 최종 결정하세요.</p>
 <p class="ait-src">출처: 개별화교육계획 운영 가이드북 (국립특수교육원), 특수교육 교육과정 총론 (교육부), 관련 법령</p>
 </div>
+</section>
+
+<!-- AIT_SECTIONS_END -->
+</main>
+</div>
+
+
+</div>
+
+
+<div class="ait-level" data-level="rubric" hidden>
+<section class="ait-hero">
+  <div class="ait-hero-in">
+    <div class="ait-hero-l">
+      <span class="ait-hero-chip">교사를 위한 분석적 루브릭(채점기준표) 만들기 가이드</span>
+      <h1 class="ait-hero-title">AI로운 <span class="ait-hl">교사생활</span></h1>
+      <p class="ait-hero-sub">평가 요소별로 채점하는 분석적 루브릭을, 성취기준에서 출발해 쉽게 만드는 법. 3대 구성요소부터 단계별 절차, 바로 쓰는 빈 템플릿과 복사 프롬프트까지. KICE 학생평가지원포털과 KERIS 연수자료 등 공식 1차 출처로 검증해 모았습니다. 회원가입 없이 무료.</p>
+      <div class="ait-hero-cta">
+        <a href="#rubric-ait-make" class="ait-btn ait-btn-primary">만드는 법 보기 &#8594;</a>
+        <a href="#rubric-ait-template" class="ait-btn">바로 쓰는 템플릿</a>
+      </div>
+      <div class="ait-hero-stats">
+        <div class="ait-stat"><b>5</b><span>주제 섹션</span></div>
+        <div class="ait-stat"><b>12</b><span>공식 출처</span></div>
+        <div class="ait-stat"><b>무료</b><span>회원가입 없이</span></div>
+        <div class="ait-stat"><b>템플릿 3종</b><span>바로 복사</span></div>
+      </div>
+    </div>
+    <div class="ait-hero-r">
+      <div class="ait-pcard"><span class="ait-pcard-l">왜 만들었나</span><h3>루브릭 작성의 막막함을 줄이려고</h3><p>평가 요소를 어떻게 나누고 진술문을 어떻게 쓸지 막막한 선생님을 위해. 검증된 절차와 예시만 담았습니다.</p></div>
+      <div class="ait-pcard"><span class="ait-pcard-l">무엇을 담았나</span><h3>절차 + 빈 템플릿 + 복사 프롬프트</h3><p>3대 구성요소, 단계별 제작 절차, 진술문 작성 원리, 바로 쓰는 표 3종과 작성 체크리스트.</p></div>
+      <div class="ait-pcard"><span class="ait-pcard-l">어떻게 검증했나</span><h3>공식 1차 출처로 대조</h3><p>KICE 학생평가지원포털, KERIS 교사연수자료, 교육과정평가연구 논문 원문과 대조했습니다.</p></div>
+      <a class="ait-pcard ait-pcard-gyo" href="https://www.gyopool.com/blog/category/school_educase" target="_blank" rel="noopener"><span class="ait-pcard-l">누가 만들었나</span><h3>교풀이 교사들을 위해 &#8594;</h3><p>전교과 AI 에듀테크 교풀. 초중고 AI 교육 사례를 블로그에서 보세요.</p></a>
+    </div>
+  </div>
+</section>
+
+
+<button class="ait-navtoggle" aria-expanded="false" aria-controls="rubric-ait-toc">목차 열기</button>
+
+<div class="ait-shell">
+<nav class="ait-toc" id="rubric-ait-toc" aria-label="섹션 목차">
+  <ul class="ait-toc-list">
+    <li><a href="#rubric-ait-what">루브릭(채점기준표)이란</a></li>
+    <li><a href="#rubric-ait-make">루브릭 만드는 법</a></li>
+    <li><a href="#rubric-ait-curri">국가 교육과정 연계</a></li>
+    <li><a href="#rubric-ait-template">바로 쓰는 템플릿과 프롬프트</a></li>
+    <li><a href="#rubric-ait-src">자료실 &amp; 출처</a></li>
+  </ul>
+  <div class="ait-madeby">
+    <span class="ait-madeby-badge">made by</span>
+    <strong class="ait-madeby-t">교풀이 만들었습니다</strong>
+    <a class="ait-madeby-cta" href="https://gyopool.notion.site/teacher-guide" target="_blank" rel="noopener">학교용 AI 에듀테크 '교풀AI' &#8594;</a>
+    <a class="ait-madeby-d" href="https://www.gyopool.com/blog/category/school_educase" target="_blank" rel="noopener">초중고 AI 교육 사례 보러가기 &#8594;</a>
+  </div>
+</nav>
+
+<main class="ait-main">
+<!-- AIT_SECTIONS_START -->
+
+<section class="ait-section" id="rubric-ait-what" aria-labelledby="rubric-ait-what-h">
+  <h2 class="ait-h2" id="rubric-ait-what-h">루브릭(채점기준표)이란</h2>
+<div class="ait-keypoint"><strong>핵심</strong> 분석적 채점은 KICE가 서논술형 평가에서 "권장"하는 방식이지만, 총체적 채점의 "금지"가 아닙니다. 과제 특성에 따라 두 방식 중 선택하되, 피드백과 객관성이 중요할 때 분석적을 선호합니다.</div>
+
+<div class="ait-block"><h3 class="ait-h3">분석적 루브릭 vs 총체적 루브릭</h3><p class="ait-body">채점기준표(루브릭)는 평가 요소별로 기준을 나누어 채점하는 "분석적 루브릭"과 전체를 아우르는 기준에 따라 종합 점수 하나를 부여하는 "총체적 루브릭"으로 나뉩니다. 두 방식의 특징을 비교하면 다음과 같습니다.</p><div class="ait-tw"><table class="ait-table"><thead><tr><th>구분</th><th>총체적(Holistic) 루브릭</th><th>분석적(Analytic) 루브릭</th></tr></thead><tbody><tr><td>채점 방식</td><td>전체를 아우르는 기준에 따라 종합적으로 단일 점수/등급 부여</td><td>평가 요소별로 기준을 설정·구분하여 요소마다 채점</td></tr><tr><td>결과</td><td>하나의 종합 점수</td><td>요소별 점수의 집합</td></tr><tr><td>강점</td><td>채점이 빠르고 전체 인상 평가에 적합</td><td>강점·약점 진단 가능, 구체적 피드백 용이, 높은 타당도·신뢰도</td></tr><tr><td>약점</td><td>어느 부분이 부족한지 진단 어려움</td><td>개발 난도가 높고 채점에 시간이 더 소요됨</td></tr></tbody></table></div><p class="ait-src">출처: KERIS 2020 통합사회 평가도구 개발 연수자료 <a href="http://contents2.kocw.or.kr/KOCW/data/keris/2020/keris1/keris3/5.pdf" target="_blank" rel="noopener">원문</a></p></div>
+
+<div class="ait-block"><h3 class="ait-h3">서논술형 평가에서의 분석적 채점 추천</h3><p class="ait-body">한국교육과정평가원(KICE)은 서논술형 평가에서 채점의 객관성 확보와 평가 결과에 대한 구체적 피드백 제공을 위해 분석적 채점 방식을 권장합니다. 다만 이는 총체적 채점의 '금지'가 아니라 '권장'이므로, 과제의 성격과 특성에 맞게 두 방식 중 선택할 수 있습니다.</p><p class="ait-src">출처: KICE 교육과정평가연구 2021 <a href="https://www.ejce.org/download/download_pdf?pid=jce-24-3-27" target="_blank" rel="noopener">원문</a></p></div>
+</section>
+
+<section class="ait-section" id="rubric-ait-make" aria-labelledby="rubric-ait-make-h">
+  <h2 class="ait-h2" id="rubric-ait-make-h">루브릭 만드는 법</h2>
+<div class="ait-keypoint"><strong>핵심</strong> 분석적 루브릭은 평가 요소(세로축) × 수준(가로축) × 진술문(각 칸) 3가지로 구성됩니다. 요소 간 중첩을 피하고(배타성), 성취기준을 빠짐없이 담되(포괄성), 수준별로 질적 차이를 명확히 써야 합니다.</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">3대 구성요소</h3>
+<p class="ait-body">분석적 루브릭은 다음 세 가지로 구성됩니다.</p>
+<ul class="ait-ul">
+<li>측정하려는 평가 요소 (무엇을 볼 것인가)</li>
+<li>요소별 수준 (범주·척도, 보통 3~5단계)</li>
+<li>각 수준에 대한 기대 수행 진술문(descriptor, 그 수준에서 어떤 모습이어야 하는가)</li>
+</ul>
+<p class="ait-body">표 형태로는 세로축에 평가 요소, 가로축에 평가 요소별 성취 혹은 수행 수준을 배치하고, 각 칸에 진술문을 채웁니다. 평가 요소가 지식·기능·태도로 구성될 때는 3개 차원으로, 또는 지식+기능/태도의 2개 차원으로 구성할 수 있습니다.</p>
+<p class="ait-src">출처: KICE 김경희·이명진, 교육과정평가연구 2021 Vol.24 No.3 <a href="https://www.ejce.org/download/download_pdf?pid=jce-24-3-27" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">제작 절차 3단계</h3>
+<p class="ait-body">표준 제작 절차는 다음과 같습니다.</p>
+<ul class="ait-ul">
+<li><strong>가. 평가 요소 추출하기</strong> - 성취기준에서 측정할 주요 요소들을 도출합니다.</li>
+<li><strong>나. 평가 요소 세부 내용 확정</strong> - 각 요소의 범위와 내용을 명확히 합니다.</li>
+<li><strong>다. 척도 결정 및 채점기준표 제작</strong> - 수준의 개수(보통 3~5단계)를 정하고 각 칸에 진술문을 작성합니다.</li>
+</ul>
+<p class="ait-body">핵심 원칙은 이렇습니다. 평가 요소는 배타성(요소 간 서로 중첩되지 않음)과 포괄성(성취기준을 빠짐없이 포괄)을 갖춰야 합니다. 척도(수준 수)는 과제와 평가 요소의 복잡성·난이도·관찰 가능 정도에 따라 보통 3~5수준으로 정합니다.</p>
+<p class="ait-src">출처: KERIS 2020 통합사회 평가도구 개발 연수자료 <a href="http://contents2.kocw.or.kr/KOCW/data/keris/2020/keris1/keris3/5.pdf" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">진술문(Descriptor) 작성 5가지 원리</h3>
+<p class="ait-body">성취수준 진술문을 작성할 때 다음을 지켜야 합니다.</p>
+<ul class="ait-ul">
+<li>양적 측면보다 질적 측면을 부각합니다. 가능하면 개수·수량 표현을 줄이고 수행의 질로 수준을 구분합니다.</li>
+<li>척도 간 질적 구분이 명확해야 합니다. 인접한 두 수준이 무엇이 다른지 읽어서 구분되어야 합니다.</li>
+<li>모호한 표현("창의적", "일반적" 등)이나 최소 도달 수준이 전혀 없는 부정적 진술을 피합니다.</li>
+<li>학습자가 이해하기 쉬운 용어를 씁니다.</li>
+<li>동 교과 교사와의 협업으로 작성합니다.</li>
+</ul>
+<p class="ait-src">출처: KERIS 2020 통합사회 평가도구 개발 연수자료 <a href="http://contents2.kocw.or.kr/KOCW/data/keris/2020/keris1/keris3/5.pdf" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">조건 세기형의 한계와 과정중심 단계형 대안</h3>
+<p class="ait-body">최근 연구는 "조건 3개 충족=상" 식 루브릭의 한계를 지적합니다. 이런 식으로 작성하면 학생은 조건에만 집착하게 되고, 교사도 기계적으로 점수를 매기게 된다는 것입니다.</p>
+<p class="ait-body">이를 보완하는 방법은 <strong>계획 단계 - 수행 단계 - 산출물 단계</strong>로 구성하여 과정중심평가를 반영하고, A/B/C 등급을 요소 충족 여부로 판정하는 것입니다(예: A = 세 가지 모두 충족). 이렇게 하면 진술문의 질적 차별성을 살리면서도 단계적 성장을 평가할 수 있습니다.</p>
+<p class="ait-body">분석적 루브릭을 만들 때 기계적 합산을 넘어서, 과정(계획-수행-산출)을 단계로 녹이고 진술문의 질적 차별성을 살리는 방향이 권장됩니다.</p>
+<p class="ait-src">출처: 이형빈, "성장중심평가의 취지에 따른 평가 루브릭 개발 가능성 탐구", 교육과정평가연구 2023 Vol.26 No.2 <a href="https://www.ejce.org/archive/view_article?pid=jce-26-2-259" target="_blank" rel="noopener">원문</a></p>
+</div>
+</section>
+
+<section class="ait-section" id="rubric-ait-curri" aria-labelledby="rubric-ait-curri-h">
+  <h2 class="ait-h2" id="rubric-ait-curri-h">국가 교육과정 연계</h2>
+<div class="ait-keypoint"><strong>핵심</strong> 채점기준표는 교육과정 성취기준과 평가기준(상/중/하)에 반드시 근거해야 하며, KICE의 수업-평가 연계 6단계 절차에 따라 단계별로 개발합니다.</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">성취기준에서 평가기준(성취수준)으로</h3>
+<p class="ait-body">채점기준표 개발의 첫 단계는 교육과정 성취기준과 평가기준을 분석하는 것입니다. 한국교육과정평가원(KICE)은 성취기준 도달 정도를 상/중/하 3단계로 구분·기술한 평가기준을 학생평가지원포털에서 제시합니다. 계획 단계에서 성취기준별 평가기준과 성취수준을 꼼꼼히 살피고, 지식·기능·태도를 고르게 평가하도록 계획하는 것이 핵심입니다.</p>
+<p class="ait-body">연결 흐름은 다음과 같습니다:</p>
+<ul class="ait-ul">
+<li>성취기준 분석</li>
+<li>평가기준(상/중/하) 검토</li>
+<li>평가 요소 도출</li>
+<li>평가 방법 선정</li>
+<li>분석적 채점기준표 작성</li>
+</ul>
+<p class="ait-src">출처: KICE 학생평가지원포털 <a href="https://stas.moe.go.kr/" target="_blank" rel="noopener">stas.moe.go.kr</a>, KERIS 고교학점제 연수자료 <a href="http://kocw-n.xcache.kinxcdn.com/data/keris/2023/keris0610/03.pdf" target="_blank" rel="noopener">고교학점제 평가 연수</a></p>
+</div>
+
+<div class="ait-caution">
+<strong>참고:</strong> KICE 서·논술형 평가 지침은 채점의 객관성과 피드백을 위해 분석적 채점을 "권장"하는 것이며, 총체적 채점을 "금지"하는 것은 아닙니다. 과제 특성에 따라 총체적 채점과 분석적 채점 중에서 선택하시되, 피드백과 객관성이 중요할 때 분석적 방식을 선호한다는 의미로 이해하시면 됩니다.
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">KICE 수업-평가 연계 6단계 절차</h3>
+<p class="ait-body">KICE는 수업과 평가의 유기적 연계를 강화하기 위해 다음 6단계 절차를 제시합니다. 이 절차를 따를 때 채점기준표가 교육과정과 수업을 일관되게 연결할 수 있습니다.</p>
+<ul class="ait-ul">
+<li>1단계: 평가 계획 수립</li>
+<li>2단계: 평가도구 개발</li>
+<li>3단계: 평가 시행 및 채점</li>
+<li>4단계: 결과 처리</li>
+<li>5단계: 피드백 제공</li>
+<li>6단계: 교사 자체 평가</li>
+</ul>
+<p class="ait-body">또한 KICE는 단위학교 교사를 위해 서·논술형 평가 지침 69개를 개발해 제시했습니다. 이 지침들은 학생 피드백을 위한 객관적인 채점 기준 개발을 지원합니다.</p>
+<p class="ait-src">출처: KICE 교육과정평가연구 2021 <a href="https://www.ejce.org/download/download_pdf?pid=jce-24-3-27" target="_blank" rel="noopener">서·논술형 평가 도구 개발</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">평가 요소와 평가 방법의 매칭</h3>
+<p class="ait-body">평가 방법의 선택은 성취기준에 반영된 내용 요소와 기능 요소를 고려해 도출한 평가 요소에 따라 결정됩니다. 같은 기능을 평가하더라도 내용에 따라 다른 평가 방법이 필요할 수 있습니다.</p>
+<p class="ait-body">예를 들어:</p>
+<ul class="ait-ul">
+<li>"기체의 성질 비교하기" → 실험·실습 방법</li>
+<li>"추론하기" → 논술형 방법</li>
+</ul>
+<p class="ait-body">이렇게 평가 요소별로 적절한 평가 방법을 선택한 후, 해당 방법에 맞는 채점기준표를 개발하면 됩니다. 한 가지 유의하실 점은, 인용한 경기도교육청 초등 예시 자료가 채점·등급용 분석적 루브릭이 아니라 형성평가(학습으로의 평가) 성격의 자기평가 도구라는 것입니다. 평가 요소와 방법을 연결하는 사고 과정의 참고로는 유용하나, 총괄 채점용 루브릭과는 목적이 다릅니다.</p>
+<p class="ait-src">출처: 경기도교육청 초등 평가 예시자료 <a href="https://www.goe.go.kr/resource/old/BBSMSTR_000000030136/BBS_202502201106162700.pdf" target="_blank" rel="noopener">학습으로의 평가</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">교과별 완성 예시: 2021 서·논술형 평가 도구 가이드북</h3>
+<p class="ait-body">2021년 교육부는 국어·영어·수학·사회·과학 5개 교과별로 중학교 및 고등학교 서·논술형 평가 도구 가이드북을 발간했습니다. 실제 교과별 문항과 채점 기준 사례가 수록되어 있어 바로 참고할 수 있는 예시 모음입니다.</p>
+<p class="ait-body">다만 이 가이드북은 2015 개정 교육과정을 기반으로 한 2021년판입니다. 2022 개정 교육과정 적용 이후의 갱신본 발간 여부는 별도로 확인하시는 것이 좋겠습니다.</p>
+<p class="ait-src">출처: 교육부·KICE 2021 교과별 가이드북(중학교판 재배포) <a href="https://ssam.teacherville.co.kr/aabb/contents/15196.edu" target="_blank" rel="noopener">중학교판</a>, 고등학교판 <a href="https://ssam.teacherville.co.kr/aabb/contents/15197.edu" target="_blank" rel="noopener">고등학교판</a></p>
+</div>
+
+<div class="ait-caution">
+<strong>주의:</strong> 2022 개정 교육과정이 현재 적용 진행 중이므로, 성취기준과 평가기준의 코드는 학교급과 연도에 따라 다를 수 있습니다. 반드시 최신 KICE 학생평가지원포털(stas.moe.go.kr)에서 현재 학년·교과의 기준을 재확인하시기 바랍니다.
+</div>
+</section>
+
+<section class="ait-section" id="rubric-ait-template" aria-labelledby="rubric-ait-template-h">
+  <h2 class="ait-h2" id="rubric-ait-template-h">바로 쓰는 템플릿과 프롬프트</h2>
+<div class="ait-block">
+<h3 class="ait-h3">분석적 루브릭 기본 양식 (4수준)</h3>
+<p class="ait-body">평가 요소별로 상·중상·중·하 4수준의 진술문을 담은 표준 표식입니다. 내용 정확성, 논리적 구성, 근거 활용, 표현 어법 등의 평가 요소를 예시로 제시했으니, 교과와 평가 과제에 맞게 요소를 수정해 사용하세요.</p>
+<div class="ait-tw"><table class="ait-table"><thead><tr><th>평가 요소</th><th>상 (매우 우수)</th><th>중상 (우수)</th><th>중 (보통)</th><th>하 (미흡)</th></tr></thead><tbody><tr><td>요소 1<br>(예: 내용의 정확성)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>요소 2<br>(예: 논리적 구성)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>요소 3<br>(예: 근거 활용)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>요소 4<br>(예: 표현 어법)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr></tbody></table></div>
+<p class="ait-src">출처: KERIS 2020 통합사회 평가도구 개발 연수자료 <a href="http://contents2.kocw.or.kr/KOCW/data/keris/2020/keris1/keris3/5.pdf" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">지식·기능·태도 3차원 양식</h3>
+<p class="ait-body">교육과정의 지식·기능·태도를 3개 차원으로 구조화한 변형 양식입니다. 성취기준을 이 세 차원으로 나누어 고르게 평가하고 싶을 때 유용합니다.</p>
+<div class="ait-tw"><table class="ait-table"><thead><tr><th>차원</th><th>평가 요소</th><th>상</th><th>중</th><th>하</th></tr></thead><tbody><tr><td>지식</td><td>(개념 이해 등)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>기능</td><td>(적용·탐구 등)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>태도</td><td>(참여·협력 등)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr></tbody></table></div>
+<p class="ait-src">출처: KICE 교육과정평가연구 2021 Vol.24 No.3 <a href="https://www.ejce.org/download/download_pdf?pid=jce-24-3-27" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">과정중심 단계형 양식 (성장중심평가 대안)</h3>
+<p class="ait-body">계획 단계 - 수행 단계 - 산출물 단계로 구성하는 방식입니다. 조건 개수만 세는 기계적 합산을 넘어서, 과정을 녹이고 진술문의 질적 차별성을 살리는 데 효과적입니다. 등급은 각 단계 요소의 충족 여부로 판정합니다(예: A = 세 단계 모두 충족).</p>
+<div class="ait-tw"><table class="ait-table"><thead><tr><th>단계</th><th>평가 요소</th><th>A (모두 충족)</th><th>B (일부 충족)</th><th>C (충족 미흡)</th></tr></thead><tbody><tr><td>계획 단계</td><td>(계획 수립의 적절성)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>수행 단계</td><td>(과정의 충실성)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>산출물 단계</td><td>(결과물의 완성도)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr></tbody></table></div>
+<p class="ait-src">출처: 이형빈, "성장중심평가의 취지에 따른 평가 루브릭 개발 가능성 탐구", 교육과정평가연구 2023 Vol.26 No.2 <a href="https://www.ejce.org/archive/view_article?pid=jce-26-2-259" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">루브릭 작성 체크리스트</h3>
+<p class="ait-body">분석적 루브릭을 완성한 뒤 다음 항목들을 확인해 보세요.</p>
+<ul class="ait-ul">
+<li>평가 요소들이 서로 중첩되지 않는가 (배타성)</li>
+<li>평가 요소가 성취기준을 빠짐없이 포괄하는가 (포괄성)</li>
+<li>수준은 과제의 복잡성에 맞게 3~5단계인가</li>
+<li>진술문이 개수·수량보다 수행의 질로 구분되는가</li>
+<li>인접한 두 수준의 진술문이 질적으로 명확히 구분되는가</li>
+<li>"창의적" "일반적" 등 모호한 표현이나 부정적 진술을 피했는가</li>
+<li>학생이 읽고 이해할 수 있는 용어인가</li>
+<li>동 교과 교사와 협의해서 작성했는가</li>
+</ul>
+<p class="ait-src">출처: KERIS 2020 통합사회 평가도구 개발 연수자료 <a href="http://contents2.kocw.or.kr/KOCW/data/keris/2020/keris1/keris3/5.pdf" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">AI와 함께 만드는 루브릭 초안 프롬프트</h3>
+<p class="ait-body">범용 AI(ChatGPT, Claude 등)를 활용해 분석적 루브릭의 초안을 만든 뒤, 교사가 직접 성취기준·평가기준과 대조해 검증하고 수정하는 방식이 효과적입니다. 다음 프롬프트를 참고해 필요한 내용을 채워 사용하세요.</p>
+</div>
+
+<div class="ait-prompt">
+<button class="ait-copy" type="button">복사</button>
+<pre class="ait-pre">너는 한국 교육과정평가원 기준을 따르는 분석적 루브릭 작성 전문가다.
+
+[역할]
+한국 초중고 교사를 위해 분석적 채점기준표를 만드는 것을 지원한다.
+
+[과제]
+다음 성취기준을 근거로 4수준(상/중상/중/하) 분석적 루브릭을 만들어야 한다.
+
+성취기준:
+[성취기준을 여기에 붙여넣기]
+
+학교급: [초등 / 중학 / 고등 중 선택]
+교과: [국어 / 수학 / 영어 / 과학 / 사회 등]
+평가 방법: [서술형 / 논술형 / 프로젝트 / 실험실습 중 선택]
+
+[형식]
+- 평가 요소: 3~4개 (배타성·포괄성 만족)
+- 수준: 상, 중상, 중, 하 (4수준 고정)
+- 각 칸: 기대 수행을 기술한 진술문 (150자 이내, 학생 이해 용어)
+- 출력: HTML 표 또는 마크다운 표로
+
+[제약]
+1. 개수 세기식 조건("조건 3개 충족=상") 금지
+2. "창의적" "일반적" 같은 모호 표현 금지
+3. 질적 차별성을 드러낼 것(예: 계획 - 실행 - 검토의 완성도 차이)
+
+[출력]
+마크다운 표 형식으로 루브릭 초안을 만들고, 각 진술문 하단에 (검토 필요) 주석을 달아줄 것.</pre>
+</div>
+
+<div class="ait-prompt">
+<button class="ait-copy" type="button">복사</button>
+<pre class="ait-pre">너는 분석적 루브릭의 진술문 품질 개선 전문가다.
+
+[과제]
+다음 루브릭의 진술문들을 질적으로 더 명확하게 차별화해 줄 수 있는가?
+
+[현재 루브릭]
+[진술문이 들어있는 표를 여기에 붙여넣기]
+
+교과: [예: 사회]
+학년: [예: 중학 1학년]
+
+[검토 기준]
+1. 인접한 수준(예: 상과 중상)을 읽었을 때 명확히 무엇이 다른지 드러나는가?
+2. 개수가 아니라 "완성도"나 "정확도" 같은 질적 측면이 드러나는가?
+3. 학생이 읽고 자신이 어느 수준에 있는지 판단할 수 있는 용어인가?
+
+[출력]
+개선된 진술문을 표 형식으로 보여주고, 각 요소별로 개선 이유를 한 줄씩 설명할 것.</pre>
+</div>
+
+<div class="ait-caution">
+<strong>주의</strong> 
+경기도교육청이 제공하는 초등 다단계 기술어("잘하고 있어요 / 발전하고 있어요 / 도움이 필요해요")는 형성평가(학습으로의 평가)용 자기평가 도구로, 총괄 채점용 분석적 루브릭과는 목적이 다릅니다. 다단계 기술어 작성의 참고로는 유용하나, 이것만으로는 학기말 성적 산출용 루브릭으로 쓸 수 없습니다. 2021년 교육부 가이드북은 2015 개정 교육과정 기반이며, 2022 개정 교육과정 적용이 진행 중이므로 학교급·연도별 성취기준·평가기준 코드는 KICE 학생평가지원포털(stas.moe.go.kr)에서 최신 정보를 재확인할 필요가 있습니다.
+</div>
+</section>
+
+<section class="ait-section" id="rubric-ait-src" aria-labelledby="rubric-ait-src-h">
+  <h2 class="ait-h2" id="rubric-ait-src-h">자료실 & 출처</h2>
+<div class="ait-block"><h3 class="ait-h3">이 자료실 쓰는 법</h3><p class="ait-body">루브릭 이론과 제작 원리는 안정적이므로, 아래 자료들은 2020년대 현재도 유효한 표준 지침입니다. 다만 성취기준과 평가기준 코드는 2022 개정 교육과정 적용이 진행 중이므로, 학교급과 연도에 맞게 한국교육과정평가원(KICE) 학생평가지원포털에서 재확인하시기 바랍니다.</p></div><div class="ait-keypoint"><strong>핵심</strong> 루브릭 이론은 안정적이나 성취기준·평가기준 코드는 최신 KICE 포털에서 재확인 필요합니다.</div><div class="ait-block"><h3 class="ait-h3">공식 포털 및 교과별 평가도구</h3><p class="ait-body">교육부 공식 채점기준표 자료실과 교과별 예시자료입니다. 서술형·논술형·실험·프로젝트·포트폴리오·구술발표·토의토론 등 평가 유형별로 분류되어 있습니다.</p><ul class="ait-ul"><li><a href="https://stas.moe.go.kr/" target="_blank" rel="noopener">KICE 학생평가지원포털</a> - 한국교육과정평가원 (초·중·고 학교급별 서논술형 평가도구, 유형별 채점기준 6종)</li></ul><p class="ait-src">출처: <a href="https://stas.moe.go.kr/" target="_blank" rel="noopener">한국교육과정평가원 학생평가지원포털</a></p></div><div class="ait-block"><h3 class="ait-h3">학술자료 (이론 근거)</h3><p class="ait-body">분석적 루브릭의 구성요소, 제작 절차, 과정중심평가 대안을 다룬 교육과정평가 학술논문입니다.</p><ul class="ait-ul"><li><a href="https://www.ejce.org/download/download_pdf?pid=jce-24-3-27" target="_blank" rel="noopener">김경희·이명진, "서·논술형 평가 도구 개발"</a> - 교육과정평가연구 2021 Vol.24 No.3 (구성요소, 제작절차, KICE 6단계 평가 절차, 중학교 과학 예시)</li><li><a href="https://www.ejce.org/archive/view_article?pid=jce-26-2-259" target="_blank" rel="noopener">이형빈, "성장중심평가의 취지에 따른 평가 루브릭 개발 가능성 탐구"</a> - 교육과정평가연구 2023 Vol.26 No.2 (조건 세기형 한계 분석, 계획-수행-산출 단계형 대안)</li></ul><p class="ait-src">출처: <a href="https://www.ejce.org/" target="_blank" rel="noopener">한국교육과정평가원 교육과정평가연구</a></p></div><div class="ait-block"><h3 class="ait-h3">교사 연수자료 (실무 작성법)</h3><p class="ait-body">KERIS(한국교육학술정보원)에서 제공하는 평가 실무 가이드입니다. 분석적 루브릭의 정의, 장단점, 진술문 작성 원리 등 교사들이 즉시 활용할 수 있는 방법론을 담고 있습니다.</p><ul class="ait-ul"><li><a href="http://contents2.kocw.or.kr/KOCW/data/keris/2020/keris1/keris3/5.pdf" target="_blank" rel="noopener">KERIS 2020 통합사회 평가도구 개발 연수자료</a> - 한국교육학술정보원 (이론 정의, 3단계 제작 절차, 진술문 원리, 교사 협의 사례)</li><li><a href="http://kocw-n.xcache.kinxcdn.com/data/keris/2023/keris0610/03.pdf" target="_blank" rel="noopener">KERIS 2023 고교학점제 평가 연수</a> - 한국교육학술정보원 (상·중·하 평가기준, 성취기준 연계)</li></ul><p class="ait-src">출처: <a href="http://www.kocw.or.kr/" target="_blank" rel="noopener">KERIS 공개강좌(KOCW)</a></p></div><div class="ait-block"><h3 class="ait-h3">시도교육청 자료 (초등·지역별 예시)</h3><p class="ait-body">경기도와 경상남도교육청, 서울교육정책연구소에서 발간한 평가 지침과 예시자료입니다.</p><ul class="ait-ul"><li><a href="https://www.goe.go.kr/resource/old/BBSMSTR_000000030136/BBS_202502201106162700.pdf" target="_blank" rel="noopener">경기도교육청 초등 평가 예시 자료</a> - 경기도교육청 (초등 자기평가 도구, 다단계 기술어 예시)</li><li><a href="https://www.gne.go.kr/component/file/ND_fileDownload.do?q_fileSn=181529862&q_fileId=35f1624d-9456-4c01-8eb5-4410dbbac6fc" target="_blank" rel="noopener">경상남도교육청 평가 자료</a> - 경상남도교육청</li><li><a href="https://www.serii.re.kr/fus/MI000000000000000488/board/BO00000363/ctgynone/view0010v.do?board_seq=4765" target="_blank" rel="noopener">서울교육정책연구소(SERII) 자료</a> - 서울교육정책연구소</li></ul><p class="ait-src">출처: 각 시도교육청 공식 사이트</p></div><div class="ait-block"><h3 class="ait-h3">2021 교육부 교과별 서논술형 평가 가이드북</h3><p class="ait-body">국어·영어·수학·사회·과학 5개 교과에 대해 교육부가 발간한 실제 예시와 채점 기준입니다. 실무에서 바로 참고 가능한 문항과 분석적 루브릭 사례를 수록하고 있습니다.</p><ul class="ait-ul"><li><a href="https://ssam.teacherville.co.kr/aabb/contents/15196.edu" target="_blank" rel="noopener">중학교 서논술형 평가 도구 가이드북</a> - 교육부 (재배포처)</li><li><a href="https://ssam.teacherville.co.kr/aabb/contents/15197.edu" target="_blank" rel="noopener">고등학교 서논술형 평가 도구 가이드북</a> - 교육부 (재배포처)</li></ul><p class="ait-src">출처: 교육부 (KICE 학생평가지원포털 1차 출처, 위 재배포처 참고)</p></div><div class="ait-caution"><strong>주의</strong> 이 가이드북은 2015 개정 교육과정을 기반으로 2021년에 발간되었습니다. 2022 개정 교육과정 갱신본 여부는 KICE 포털에서 별도 확인하시기 바랍니다. 또한 경기도교육청 초등 자료는 채점·등급용이 아니라 형성평가(학습으로의 평가) 성격의 자기평가 도구입니다.</div><div class="ait-block"><h3 class="ait-h3">출처 정책과 면책</h3><p class="ait-body">본 자료실의 모든 출처는 교육부, 한국교육과정평가원(KICE), 한국교육학술정보원(KERIS), 각 시도교육청 등 공신력 있는 공공기관이 발간한 공식 자료입니다. 루브릭 이론과 제작 원리는 교육학 문헌에서 2020년대 현재도 안정적입니다. 다만 교육과정 코드와 성취기준은 학제·지역·년도에 따라 변동될 수 있으므로, 실제 작성 시 최신 KICE 학생평가지원포털(https://stas.moe.go.kr/)과 각 학교의 교육과정을 참고하시기 바랍니다.</p></div></StructuredOutput>
 </section>
 
 <!-- AIT_SECTIONS_END -->
