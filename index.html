@@ -259,7 +259,9 @@ strong{font-weight:700}
 .ait-aiclass .ait-table a[href*="/dashboard/"]::after{content:"\2197";font-size:.88em}
 @media(max-width:919px){.ait-chip{font-size:.84rem;padding:6px 11px}.ait-subnav-label{font-size:.82rem}.ait-vbox{grid-template-columns:1fr}}
 /* === 과업-우선 재편: 전역 학교급 필터 + 인트로 === */
-.ait-levelbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;max-width:var(--maxw);margin:0 auto;padding:10px 22px 2px}
+.ait-levelbar{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(180%) blur(10px);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.ait-levelbar-in{display:flex;gap:8px;align-items:center;flex-wrap:wrap;max-width:var(--maxw);margin:0 auto;padding:10px 22px}
+@media(min-width:920px){.ait-levelbar{position:sticky;top:107px;z-index:24}}
 .ait-levelbar .ait-lvlabel{font-size:13px;font-weight:700;color:var(--teal-d);margin-right:2px}
 .ait-lv{font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1.5px solid var(--teal-bd);background:#fff;color:var(--teal-d);cursor:pointer;line-height:1.2}
 .ait-lv[aria-pressed="true"]{background:var(--teal-d);border-color:var(--teal-d);color:#fff;font-weight:700}
@@ -271,6 +273,7 @@ strong{font-weight:700}
 .ait-intro p{margin:6px 0 0;color:var(--ink-soft);line-height:1.7}
 #ait-aiclass-note[hidden]{display:none}
 .ait-level[data-level="aiclass"]>.ait-section{max-width:var(--maxw);margin-left:auto;margin-right:auto;padding-left:22px;padding-right:22px}
+.ait-section[hidden]{display:none}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC8M7K7HC4"></script>
 <script>
@@ -311,8 +314,6 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
     // 카테고리/학교급 전환은 별도 컨트롤러에서 category_select / level_select 발화
   }, true);
   document.addEventListener('DOMContentLoaded', function(){
-    var act=document.querySelector('.ait-tab.active');
-    if(act) level=act.getAttribute('data-level')||level;
     if('IntersectionObserver' in window){
       var seen={}, io=new IntersectionObserver(function(es){ es.forEach(function(x){
         if(x.isIntersecting && x.target.id && !seen[x.target.id]){ seen[x.target.id]=1;
@@ -343,11 +344,13 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
   </div>
 </div>
 <div class="ait-levelbar" id="ait-levelbar" aria-label="학교급 선택">
-  <span class="ait-lvlabel">나는</span>
-  <button class="ait-lv" type="button" data-lv="cho" aria-pressed="false">초등학교</button>
-  <button class="ait-lv" type="button" data-lv="jung" aria-pressed="false">중학교</button>
-  <button class="ait-lv" type="button" data-lv="go" aria-pressed="true">고등학교</button>
-  <button class="ait-lv" type="button" data-lv="teuk" aria-pressed="false">특성화고</button>
+  <div class="ait-levelbar-in">
+    <span class="ait-lvlabel">나는</span>
+    <button class="ait-lv" type="button" data-lv="cho" aria-pressed="false">초등학교</button>
+    <button class="ait-lv" type="button" data-lv="jung" aria-pressed="false">중학교</button>
+    <button class="ait-lv" type="button" data-lv="go" aria-pressed="true">고등학교</button>
+    <button class="ait-lv" type="button" data-lv="teuk" aria-pressed="false">특성화고</button>
+  </div>
 </div>
 <div class="ait-introwrap" id="ait-introwrap">
   <div class="ait-intro">
@@ -5721,6 +5724,18 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
     window.scrollTo(0,0);
   }
   document.addEventListener('click',function(e){
+    var anchor=e.target.closest&&e.target.closest('a[href^="#"]');
+    if(anchor){
+      var aid=anchor.getAttribute('href').slice(1), ael=aid&&document.getElementById(aid);
+      if(ael&&ael.classList&&ael.classList.contains('ait-section')){
+        var ac=ael.getAttribute('data-cat'), al=ael.getAttribute('data-level'), chg=false;
+        if(ac){
+          if(ac!==state.cat){state.cat=ac;chg=true;}
+          if(al&&al!=='any'&&LEVELS.indexOf(al)>=0&&al!==state.lv){state.lv=al;try{localStorage.setItem('ait_level',al);}catch(_){ }chg=true;}
+          if(chg){e.preventDefault();render();try{ael.scrollIntoView();}catch(_){ }return;}
+        }
+      }
+    }
     var t=e.target.closest&&e.target.closest('.ait-tab');
     if(t){ state.cat=t.getAttribute('data-cat'); render();
       try{if(window.gtag)gtag('event','category_select',{portal_category:state.cat,portal_level:state.lv});}catch(_){ } return; }
