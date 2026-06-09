@@ -233,6 +233,14 @@ strong{font-weight:700}
 .ait-cta-links a{display:inline-block;background:#fff;border:1px solid var(--teal-bd);color:var(--teal-d);font-weight:600;font-size:.85rem;padding:6px 11px;border-radius:999px;text-decoration:none}
 .ait-cta-links a:hover{background:var(--teal-l)}
 .ait-cta-note{font-size:.82rem;color:var(--muted);margin:9px 0 0;line-height:1.5}
+.ait-subnav{margin:0 0 6px;display:flex;flex-direction:column;gap:10px}
+.ait-subnav-group{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+.ait-subnav-label{flex:0 0 auto;font-weight:800;color:var(--teal-d);font-size:.9rem;background:var(--teal-l);border:1px solid var(--teal-bd);border-radius:8px;padding:4px 10px}
+.ait-chip{flex:0 0 auto;font-size:.9rem;font-weight:700;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);cursor:pointer}
+.ait-chip:hover{color:var(--ink);background:var(--bg-soft)}
+.ait-chip.active{color:#fff;background:var(--teal-d);border-color:var(--teal-d)}
+.ait-subpanel[hidden]{display:none}
+@media(max-width:919px){.ait-chip{font-size:.84rem;padding:6px 11px}.ait-subnav-label{font-size:.82rem}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC8M7K7HC4"></script>
 <script>
@@ -246,6 +254,7 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
   function gyo(h){ return /(?:^|\.)gyopool\.com$/i.test(h) || /(?:^|\.)gyopooledu\.com$/i.test(h) || /\.notion\.site$/i.test(h); }
   function dest(u){ var p=(u.pathname||'').toLowerCase(), h=(u.hostname||'').toLowerCase();
     if(/\/dashboard\/ai\/apps\//.test(p)) return 'gyopool_tool';
+    if(/\/dashboard\/guide\//.test(p)) return 'gyopool_guide';
     if(/\/blog/.test(p)) return 'blog';
     if(/promotion/.test(p)) return 'promotion';
     if(/notion\.site$/.test(h)) return 'guide';
@@ -300,6 +309,7 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
     <button class="ait-tab" type="button" data-level="teuk" role="tab" aria-selected="false">특성화고</button>
     <button class="ait-tab" type="button" data-level="spec" role="tab" aria-selected="false">특수교사</button>
     <button class="ait-tab" type="button" data-level="rubric" role="tab" aria-selected="false">루브릭</button>
+    <button class="ait-tab" type="button" data-level="aiclass" role="tab" aria-selected="false">AI활용수업</button>
     <button class="ait-tab" type="button" data-level="tool" role="tab" aria-selected="false">도구</button>
   </div>
 </div>
@@ -5282,6 +5292,925 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
 </main>
 </div>
 
+
+</div>
+
+
+<div class="ait-level" data-level="aiclass" hidden>
+<section class="ait-hero">
+  <div class="ait-hero-in">
+    <div class="ait-hero-l">
+      <span class="ait-hero-chip">교과별 생성형 AI 활용 수업 가이드</span>
+      <h1 class="ait-hero-title">AI로운 <span class="ait-hl">교사생활</span></h1>
+      <p class="ait-hero-sub">교과서 흐름을 그대로 따르면서, 학생이 막히는 결정적 순간에만 AI가 짧게 개입하는 수업. 교과를 고르면 단원별 AI 활용 흐름과 바로 쓰는 도구를 볼 수 있습니다. 학생은 AI 답을 그대로 쓰지 않고 자기 말로 다시 쓰도록 설계돼, 의존을 구조적으로 막습니다. 회원가입 없이 무료.</p>
+      <div class="ait-hero-cta">
+        <a href="#aiclass-m-sci1" class="ait-btn ait-btn-primary">중등 교과 보기 &#8594;</a>
+        <a href="#aiclass-h-kor1" class="ait-btn">고등 교과 보기</a>
+      </div>
+      <div class="ait-hero-stats">
+        <div class="ait-stat"><b>19</b><span>교과</span></div>
+        <div class="ait-stat"><b>중등10·고등9</b><span>교과 꾸러미</span></div>
+        <div class="ait-stat"><b>무료</b><span>회원가입 없이</span></div>
+        <div class="ait-stat"><b>2022 개정</b><span>교육과정 기준</span></div>
+      </div>
+    </div>
+    <div class="ait-hero-r">
+      <div class="ait-pcard"><span class="ait-pcard-l">왜 만들었나</span><h3>AI 수업, 어디서부터?를 줄이려고</h3><p>도구는 수십 가지인데 뭘 쓸지 막막한 선생님을 위해. 교과서 단원에 맞춘 활용 흐름만 담았습니다.</p></div>
+      <div class="ait-pcard"><span class="ait-pcard-l">무엇을 담았나</span><h3>교과별 단원 흐름 + 바로 쓰는 도구</h3><p>교과 개요, 단원별 AI 활용 표, 연간 로드맵, 단원별 클래스가이드 링크.</p></div>
+      <div class="ait-pcard"><span class="ait-pcard-l">어떻게 쓰나</span><h3>의존이 아니라 점검으로</h3><p>학생이 먼저 자기 생각을 쓴 뒤 도구로 점검합니다. 한 차시 5~10분, 답이 아니라 질문을 받습니다.</p></div>
+      <a class="ait-pcard ait-pcard-gyo" href="https://www.gyopool.com/blog/category/school_educase" target="_blank" rel="noopener"><span class="ait-pcard-l">누가 만들었나</span><h3>교풀이 교사들을 위해 &#8594;</h3><p>전교과 AI 에듀테크 교풀. 초중고 AI 교육 사례를 블로그에서 보세요.</p></a>
+    </div>
+  </div>
+</section>
+
+<div class="ait-shell">
+<main class="ait-main">
+<div class="ait-subnav" role="tablist" aria-label="교과 선택">
+  <div class="ait-subnav-group"><span class="ait-subnav-label">중등</span>
+    <button class="ait-chip" type="button" data-subj="m-sci1" role="tab" aria-selected="false">과학1</button>
+    <button class="ait-chip" type="button" data-subj="m-sci2" role="tab" aria-selected="false">과학2</button>
+    <button class="ait-chip" type="button" data-subj="m-soc2" role="tab" aria-selected="false">사회2</button>
+    <button class="ait-chip" type="button" data-subj="m-tech1" role="tab" aria-selected="false">기술가정1</button>
+    <button class="ait-chip" type="button" data-subj="m-tech2" role="tab" aria-selected="false">기술가정2</button>
+    <button class="ait-chip" type="button" data-subj="m-eng2" role="tab" aria-selected="false">영어2</button>
+    <button class="ait-chip" type="button" data-subj="m-hist2" role="tab" aria-selected="false">역사2</button>
+    <button class="ait-chip" type="button" data-subj="m-pe1" role="tab" aria-selected="false">체육1</button>
+    <button class="ait-chip" type="button" data-subj="m-pe2" role="tab" aria-selected="false">체육2</button>
+    <button class="ait-chip" type="button" data-subj="m-eth2" role="tab" aria-selected="false">도덕2</button>
+  </div>
+  <div class="ait-subnav-group"><span class="ait-subnav-label">고등</span>
+    <button class="ait-chip" type="button" data-subj="h-kor1" role="tab" aria-selected="false">공통국어1</button>
+    <button class="ait-chip" type="button" data-subj="h-eng1" role="tab" aria-selected="false">공통영어1</button>
+    <button class="ait-chip" type="button" data-subj="h-isoc1" role="tab" aria-selected="false">통합사회1</button>
+    <button class="ait-chip" type="button" data-subj="h-isci1" role="tab" aria-selected="false">통합과학1</button>
+    <button class="ait-chip" type="button" data-subj="h-hist1" role="tab" aria-selected="false">한국사1</button>
+    <button class="ait-chip" type="button" data-subj="h-eth" role="tab" aria-selected="false">윤리</button>
+    <button class="ait-chip" type="button" data-subj="h-tech" role="tab" aria-selected="false">기술가정</button>
+    <button class="ait-chip" type="button" data-subj="h-pe1" role="tab" aria-selected="false">체육1</button>
+    <button class="ait-chip" type="button" data-subj="h-music" role="tab" aria-selected="false">음악</button>
+  </div>
+</div>
+<div class="ait-subpanels">
+<section class="ait-subpanel" id="aiclass-m-sci1" data-subj="m-sci1" aria-labelledby="aiclass-m-sci1-h">
+  <h2 class="ait-h2" id="aiclass-m-sci1-h">중등 · 과학1</h2>
+<div class="ait-block"><h3 class="ait-h3">중학교 1학년 과학에서 생성형 AI 활용하기</h3><p class="ait-body">2022 개정 교육과정에서 과학 수업도 AI를 활용해야 하는 시대입니다. 하지만 AI를 쓸 때 가장 큰 걱정은 "학생이 의존하게 되지 않을까"하는 점입니다. 중학 과학 교실에서는 생성형 AI를 보조 도구로 활용합니다. 학생이 먼저 관찰하고 데이터를 기록한 뒤, 자신의 설명에 빠진 부분이 있으면 AI가 질문으로 되물어 생각을 깊게 합니다.</p><p class="ait-body">한 차시에 5~10분 정도만 사용하며, 학생은 AI 답변을 그대로 가져갈 수 없도록 설계되어 있습니다. 입자 모형으로 현상을 설명하거나, 탐구 데이터를 물리량으로 분석하거나, 관찰 결과를 과학 언어로 재구성할 때 AI가 촉매 역할을 합니다.</p></div><div class="ait-block"><h3 class="ait-h3">이 교과 교과서 정보</h3><ul class="ait-ul"><li>학년: 중학교 1학년</li><li>총 단원 수: 7개</li><li>총 차시 수: 96차시</li><li>교풀AI 도구 수: 27개(일반 20, 수행평가 7)</li><li>출판사: 미래엔</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>교풀AI 도구(대표)</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. 과학과 인류의 지속가능한 삶</td><td>과학적으로 생각하는 법</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/636?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=636" target="_blank" rel="noopener">과학적 탐구 설계 도우미</a></td><td>5/8 (63%)</td></tr><tr><td>2. 생물의 구성과 다양성</td><td>세포에서 생태계까지 연결</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/644?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=644" target="_blank" rel="noopener">[중·과1] 세포 탐구 튜터</a></td><td>13/17 (76%)</td></tr><tr><td>3. 열</td><td>입자 운동으로 현상 설명</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/652?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=652" target="_blank" rel="noopener">[중·과1] 열평형 탐구 튜터</a></td><td>9/13 (69%)</td></tr><tr><td>4. 물질의 상태 변화</td><td>입자 모형으로 현상 재구성</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/647?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=647" target="_blank" rel="noopener">[중·과1] 입자 모형 탐구 코치</a></td><td>5/16 (31%)</td></tr><tr><td>5. 힘의 작용</td><td>실험 데이터를 힘으로 분석</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/656?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=656" target="_blank" rel="noopener">[중·과1] 힘 벡터 탐구 도우미</a></td><td>7/18 (39%)</td></tr><tr><td>6. 기체의 성질</td><td>입자 모형으로 법칙 설명</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/659?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=659" target="_blank" rel="noopener">[중·과1] 기체 입자 탐구 코치</a></td><td>6/11 (55%)</td></tr><tr><td>7. 태양계</td><td>관찰·추론으로 천체 현상 설명</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/662?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=662" target="_blank" rel="noopener">[중·과1] 태양계 천체 분석 탐구 도우미</a></td><td>3/13 (23%)</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">연간 수업 로드맵: AI 활용 단계</h3><p class="ait-body"><strong>3~4월 (1단원): 1단계 교사 시범</strong><br/>교사가 과학적 탐구 설계 도우미를 시연하고, 학생은 AI와의 상호작용 방식을 관찰하며 인터페이스에 익숙해집니다.</p><p class="ait-body"><strong>5~6월 (2·3·4단원): 2단계 모둠 활용</strong><br/>모둠당 1대 디바이스로 열평형 탐구 튜터, 입자 모형 탐구 코치 등을 함께 사용하며 탐구 결과를 협력해 해석합니다.</p><p class="ait-body"><strong>9~10월 (5·6단원): 2단계 심화</strong><br/>학생 주도로 탐구 데이터를 AI 도구에 설명하고, 되물음에 답하며 개념을 정교화합니다.</p><p class="ait-body"><strong>11~12월 (7단원): 3단계 학생 주도</strong><br/>개인별로 달의 위상 변화 탐구 코치에 관찰 결과를 입력하고 과학 언어로 재구성·성찰합니다.</p></div><div class="ait-block"><h3 class="ait-h3">단원별 클래스가이드</h3><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/32?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=32" target="_blank" rel="noopener">과학과 인류의 지속가능한 삶 가이드</a> - 1단원 AI 활용 차시 안내</li><li><a href="https://www.gyopool.com/dashboard/guide/list/39?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=39" target="_blank" rel="noopener">생물의 구성과 다양성 가이드</a> - 2단원 AI 활용 차시 안내</li><li><a href="https://www.gyopool.com/dashboard/guide/list/33?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=33" target="_blank" rel="noopener">열 가이드</a> - 3단원 AI 활용 차시 안내</li><li><a href="https://www.gyopool.com/dashboard/guide/list/34?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=34" target="_blank" rel="noopener">물질의 상태 변화 가이드</a> - 4단원 AI 활용 차시 안내</li><li><a href="https://www.gyopool.com/dashboard/guide/list/35?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=35" target="_blank" rel="noopener">힘의 작용 가이드</a> - 5단원 AI 활용 차시 안내</li><li><a href="https://www.gyopool.com/dashboard/guide/list/36?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=36" target="_blank" rel="noopener">기체의 성질 가이드</a> - 6단원 AI 활용 차시 안내</li><li><a href="https://www.gyopool.com/dashboard/guide/list/38?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci1&amp;utm_content=38" target="_blank" rel="noopener">태양계 가이드</a> - 7단원 AI 활용 차시 안내</li></ul></div><div class="ait-keypoint"><strong>핵심</strong> AI는 보조 도구일 뿐입니다. 학생은 먼저 자신의 관찰·분석을 정리한 뒤, AI의 질문에 자기 말로 답하며 사고를 깊게 합니다. 한 차시 5~10분만 사용하고, 반드시 학생의 재작성 과정을 거쳐야 평가 대상이 됩니다.</div><p class="ait-src">출처: 중등 과학1 교풀AI 수업 활용 전체 개요 (2022 개정 교육과정 · 교육부 생성형 AI 활용 교육 가이드라인 참고)</p>
+</section>
+
+<section class="ait-subpanel" id="aiclass-m-sci2" data-subj="m-sci2" aria-labelledby="aiclass-m-sci2-h" hidden>
+  <h2 class="ait-h2" id="aiclass-m-sci2-h">중등 · 과학2</h2>
+<div class="ait-block">
+<h3 class="ait-h3">과학에서 생성형 AI를 어떻게 활용할까요?</h3>
+
+<p class="ait-body">2022 개정 교육과정이 시행되면서 교사들은 AI를 수업에 접목해야 한다는 요구를 받고 있습니다. 하지만 어떤 도구를 어떻게 활용해야 할지 불명확하고, AI가 학생의 사고력 발달을 방해할 수 있다는 우려도 있습니다. 교과서의 흐름을 유지하면서 학생이 막히는 결정적 순간에만 AI가 짧게 개입하는 방식이 필요합니다.</p>
+
+<p class="ait-body">과학(중학교 2학년) 교육과정 전 단원에는 8개의 교풀AI 도구가 차시별로 배치되어 있습니다. 각 도구는 구체적인 역할을 가지고 있어서 교사가 교과서 흐름을 그대로 따라 수업할 수 있습니다. 학생은 AI 답변을 그대로 가져가는 것이 아니라 반드시 자기 말로 다시 쓰는 과정을 거치도록 설계되어 있습니다.</p>
+
+<h3 class="ait-h3">교과서 정보</h3>
+
+<ul class="ait-ul">
+<li><strong>교과:</strong> 과학</li>
+<li><strong>학년:</strong> 중학교 2학년</li>
+<li><strong>총 단원 수:</strong> 8개</li>
+<li><strong>총 차시 수:</strong> 36차시</li>
+<li><strong>교풀AI 도구:</strong> 8개 (수행평가 코치)</li>
+<li><strong>출판사:</strong> 미래엔</li>
+</ul>
+
+<h3 class="ait-h3">단원별 AI 활용</h3>
+
+<div class="ait-tw"><table class="ait-table">
+<thead>
+<tr>
+<th>단원</th>
+<th>핵심 주제</th>
+<th>교풀AI 도구</th>
+<th>AI 활용 차시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 물질의 특성</td>
+<td>혼합물 분리 원리 설계</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/923?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=923" target="_blank" rel="noopener">[중·과2] 물질 특성·혼합물 논술 코치</a></td>
+<td>6/15</td>
+</tr>
+<tr>
+<td>2. 지권의 변화</td>
+<td>판 경계·지진화산 분석</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/927?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=927" target="_blank" rel="noopener">[중·과2] 지권 변화 논술 코치</a></td>
+<td>3/14</td>
+</tr>
+<tr>
+<td>3. 빛과 파동</td>
+<td>상 형성 원리·빛 경로</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/929?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=929" target="_blank" rel="noopener">[중·과2] 빛·파동 논술 코치</a></td>
+<td>5/10</td>
+</tr>
+<tr>
+<td>4. 물질의 구성</td>
+<td>전자 이동·이온 형성</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/933?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=933" target="_blank" rel="noopener">[중·과2] 물질 구성 논술 코치</a></td>
+<td>5/12</td>
+</tr>
+<tr>
+<td>5. 식물과 에너지</td>
+<td>광합성·호흡 오개념 반박</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/936?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=936" target="_blank" rel="noopener">[중·과2] 광합성·호흡 논술 코치</a></td>
+<td>4/7</td>
+</tr>
+<tr>
+<td>6. 동물과 에너지</td>
+<td>기관계 통합 흐름</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/939?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=939" target="_blank" rel="noopener">[중·과2] 기관계 통합 논술 코치</a></td>
+<td>5/15</td>
+</tr>
+<tr>
+<td>7. 전기와 자기</td>
+<td>옴의 법칙·소비 전력 설계</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/943?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=943" target="_blank" rel="noopener">[중·과2] 전기·자기 논술 코치</a></td>
+<td>5/9</td>
+</tr>
+<tr>
+<td>8. 별과 우주</td>
+<td>등급·거리·밝기 관계</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/946?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=946" target="_blank" rel="noopener">[중·과2] 별·우주 논술 코치</a></td>
+<td>3/4</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3 class="ait-h3">연간 학습 로드맵</h3>
+
+<div class="ait-tw"><table class="ait-table">
+<thead>
+<tr>
+<th>시기</th>
+<th>단원</th>
+<th>AI 활용 단계</th>
+<th>포인트</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3-4월</td>
+<td>1. 물질의 특성</td>
+<td>1단계 (교사 시범)</td>
+<td>물질 특성 탐구 코치를 교사 화면에 띄워 학생에게 도구 사용법을 시범 보입니다.</td>
+</tr>
+<tr>
+<td>5-6월</td>
+<td>2. 지권의 변화 · 3. 빛과 파동</td>
+<td>2단계 (모둠 활용)</td>
+<td>모둠 1대 디바이스로 빛·파동 논술 코치를 함께 사용하며 상 형성 원리를 협업 탐구합니다.</td>
+</tr>
+<tr>
+<td>9-10월</td>
+<td>4. 물질의 구성 · 5. 식물과 에너지 · 6. 동물과 에너지</td>
+<td>2단계 심화</td>
+<td>광합성·호흡 비교나 기관계 통합처럼 오개념 빈도가 높은 주제를 AI 반박 진술과 함께 깊게 다룹니다.</td>
+</tr>
+<tr>
+<td>11-12월</td>
+<td>7. 전기와 자기 · 8. 별과 우주</td>
+<td>3단계 (학생 주도)</td>
+<td>학생이 직접 도구를 선택해 우주 탐사 계획·전력 절약 설계 같은 종합 과제를 자기 주도로 수행합니다.</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3 class="ait-h3">수업 자료 가이드</h3>
+
+<ul class="ait-list">
+<li><a href="https://www.gyopool.com/dashboard/guide/list/40?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=40" target="_blank" rel="noopener">물질의 특성 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/44?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=44" target="_blank" rel="noopener">지권의 변화 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/45?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=45" target="_blank" rel="noopener">빛과 파동 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/46?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=46" target="_blank" rel="noopener">물질의 구성 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/41?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=41" target="_blank" rel="noopener">식물과 에너지 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/42?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=42" target="_blank" rel="noopener">동물과 에너지 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/47?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=47" target="_blank" rel="noopener">전기와 자기 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/43?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=43" target="_blank" rel="noopener">별과 우주 가이드</a></li>
+</ul>
+
+<h3 class="ait-h3">활용 시 안내</h3>
+
+<div class="ait-keypoint">
+<strong>AI는 학습의 보조 도구입니다.</strong> 교풀AI 도구는 한 차시 5-10분만 사용하며, 활동지에 "내 말로 다시 쓰기" 칸이 있어 학생이 AI 답변을 그대로 가져갈 수 없습니다. 과학과는 특히 실험·관찰 데이터를 학생이 직접 기록하고 해석하는 단계가 핵심이라 AI 의존이 자연스럽게 차단됩니다.
+</div>
+
+<div class="ait-src">
+<p><strong>출처:</strong> 2022 개정 교육과정 · 교육부 생성형 AI 활용 교육 가이드라인 참고</p>
+</div>
+
+</div>
+</section>
+
+<section class="ait-subpanel" id="aiclass-m-soc2" data-subj="m-soc2" aria-labelledby="aiclass-m-soc2-h" hidden>
+  <h2 class="ait-h2" id="aiclass-m-soc2-h">중등 · 사회2</h2>
+<div class="ait-block">
+  <h3 class="ait-h3">교과 개요</h3>
+  <p class="ait-body">2022 개정 교육과정이 시행되면서 AI를 수업에 접목하라는 요구가 점점 커지고 있습니다. 하지만 에듀테크 도구는 수십 가지인데 어떤 것을 어떻게 활용할지 불명확하고, AI에 대한 충분한 이해 없이도 수업은 당장 진행해야 합니다. 이 자료에는 사회(중학교 2학년) 교과서 전 단원에 걸쳐 48개의 교풀AI 도구가 차시별로 배치되어 있습니다.</p>
+  <p class="ait-body">각 도구는 '행정부 역할 탐구 도우미', '균형 가격 분석 도우미', '한반도 평화 전략 탐구 도구' 처럼 구체적인 역할을 가지고 있어, AI를 처음 접하는 교사도 활동지를 열고 바로 수업에 활용할 수 있습니다. 학생은 AI 답변을 그대로 가져가는 것이 아니라, 반드시 자기 말로 다시 쓰는 과정을 거치도록 설계되어 있습니다.</p>
+</div>
+
+<div class="ait-block">
+  <h3 class="ait-h3">교과서 정보</h3>
+  <ul class="ait-ul">
+    <li>교과: 사회</li>
+    <li>학년: 중학교 2학년</li>
+    <li>총 단원 수: 12개</li>
+    <li>총 차시 수: 74차시</li>
+    <li>교풀AI 도구 수: 48개 (일반 36 · 수행평가 12)</li>
+    <li>출판사: 미래엔</li>
+  </ul>
+</div>
+
+<div class="ait-block">
+  <h3 class="ait-h3">단원별 AI 활용</h3>
+  <div class="ait-tw"><table class="ait-table">
+    <thead>
+      <tr class="ait-table">
+        <th>단원</th>
+        <th>핵심 주제</th>
+        <th>교풀AI 도구</th>
+        <th>AI 활용 차시</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="ait-table">
+        <td>1. 헌법과 국가기관</td>
+        <td>헌법 원리·국가기관</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/776?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=776" target="_blank" rel="noopener">[중·사2] 행정부 역할 탐구 도우미</a></td>
+        <td>3/6 (50%)</td>
+      </tr>
+      <tr class="ait-table">
+        <td>2. 경제생활과 선택</td>
+        <td>선택과 자기 삶 연결</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/781?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=781" target="_blank" rel="noopener">[중·사2] 합리적 선택 코치</a></td>
+        <td>3/6 (50%)</td>
+      </tr>
+      <tr class="ait-table">
+        <td>3. 시장과 가격</td>
+        <td>수요·공급과 가격 변동</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/777?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=777" target="_blank" rel="noopener">[중·사2] 시장 탐구 코치</a></td>
+        <td>3/6 (50%)</td>
+      </tr>
+      <tr class="ait-table">
+        <td>4. 우리나라 경제와 세계화</td>
+        <td>경제 지표와 환율 변화</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/788?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=788" target="_blank" rel="noopener">[중·사2] 경제 성장 진단 코치</a></td>
+        <td>3/6 (50%)</td>
+      </tr>
+      <tr class="ait-table">
+        <td>5. 국제 사회와 한반도</td>
+        <td>국제관계와 세계시민</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/780?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=780" target="_blank" rel="noopener">[중·사2] 국제 사회 행위자 탐구 도우미</a></td>
+        <td>3/6 (50%)</td>
+      </tr>
+      <tr class="ait-table">
+        <td>6. 사회 변동과 사회문제</td>
+        <td>사회 변동·시민 실천</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/805?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=805" target="_blank" rel="noopener">[중·사2] 사회 변동 탐구 도우미</a></td>
+        <td>3/6 (50%)</td>
+      </tr>
+      <tr class="ait-table">
+        <td>7. 대한민국, 우리가 살아가는 곳</td>
+        <td>위치·장소감·국토 인식</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/784?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=784" target="_blank" rel="noopener">[중·사2] 우리나라 위치 탐구 코치</a></td>
+        <td>3/6 (50%)</td>
+      </tr>
+      <tr class="ait-table">
+        <td>8. 우리나라의 자연환경과 인간 생활</td>
+        <td>지형·기후·자연재해</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/786?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=786" target="_blank" rel="noopener">[중·사2] 지형 탐험 코치</a></td>
+        <td>3/6 (50%)</td>
+      </tr>
+      <tr class="ait-table">
+        <td>9. 중부 지역</td>
+        <td>수도권·강원·충청 변화</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/798?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=798" target="_blank" rel="noopener">[중·사2] 중부 지역 여행 코치</a></td>
+        <td>3/8 (38%)</td>
+      </tr>
+      <tr class="ait-table">
+        <td>10. 남부 지역</td>
+        <td>호남·영남·제주 다양성</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/796?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=796" target="_blank" rel="noopener">[중·사2] 남부 여행 탐구 코치</a></td>
+        <td>3/6 (50%)</td>
+      </tr>
+      <tr class="ait-table">
+        <td>11. 북부 지역</td>
+        <td>북한·분단·한반도 평화</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/808?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=808" target="_blank" rel="noopener">[중·사2] 북한 탐구 코치</a></td>
+        <td>5/6 (83%)</td>
+      </tr>
+      <tr class="ait-table">
+        <td>12. 지속가능한 세계와 글로컬 시민</td>
+        <td>자원·환경·시민 실천</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/811?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=811" target="_blank" rel="noopener">[중·사2] 자원 지속가능 확보 탐구 도우미</a></td>
+        <td>3/6 (50%)</td>
+      </tr>
+    </tbody>
+  </table></div>
+</div>
+
+<div class="ait-block">
+  <h3 class="ait-h3">연간 로드맵</h3>
+  <div class="ait-tw"><table class="ait-table">
+    <thead>
+      <tr class="ait-table">
+        <th>시기</th>
+        <th>단원</th>
+        <th>AI 활용 단계</th>
+        <th>포인트</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="ait-table">
+        <td>3~4월</td>
+        <td>1단원 헌법과 국가기관</td>
+        <td>1단계 (교사 시범)</td>
+        <td>교사가 행정부·국회·법원 도구를 차례로 시연하며 'AI는 답이 아니라 되묻는 친구'라는 운영 원칙을 학생에게 각인시킵니다.</td>
+      </tr>
+      <tr class="ait-table">
+        <td>5~7월</td>
+        <td>2~6단원 경제·국제사회·사회변동</td>
+        <td>2단계 (모둠 활용)</td>
+        <td>합리적 선택, 자산 포트폴리오, 사회문제 토의처럼 모둠 사고가 필수인 활동에서 AI를 모둠 사고 파트너로 본격 투입합니다.</td>
+      </tr>
+      <tr class="ait-table">
+        <td>9~10월</td>
+        <td>7~9단원 국토·자연환경·중부지역</td>
+        <td>2단계 심화</td>
+        <td>학생이 직접 입력 자료(장소 사진·지형 사례·여행지)를 준비해 AI에 분석을 요청하는 흐름을 정착시키고, 활동지 다시쓰기 칸의 깊이를 끌어올립니다.</td>
+      </tr>
+      <tr class="ait-table">
+        <td>11~12월</td>
+        <td>10~12단원 남부·북부·글로컬 시민</td>
+        <td>3단계 (학생 주도)</td>
+        <td>학생이 스스로 도구를 골라 토론·논증·실천 계획을 설계하고, 수행평가에서 AI 채점-자기 수정-최종 제출까지 자율적으로 운영합니다.</td>
+      </tr>
+    </tbody>
+  </table></div>
+</div>
+
+<div class="ait-block">
+  <h3 class="ait-h3">클래스가이드</h3>
+  <ul class="ait-list">
+      <li><a href="https://www.gyopool.com/dashboard/guide/list/54?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=54" target="_blank" rel="noopener">1단원 헌법과 국가기관 가이드</a></li>
+      <li><a href="https://www.gyopool.com/dashboard/guide/list/78?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=78" target="_blank" rel="noopener">2단원 경제생활과 선택 가이드</a></li>
+      <li><a href="https://www.gyopool.com/dashboard/guide/list/79?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=79" target="_blank" rel="noopener">3단원 시장과 가격 가이드</a></li>
+      <li><a href="https://www.gyopool.com/dashboard/guide/list/80?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=80" target="_blank" rel="noopener">4단원 우리나라 경제와 세계화 가이드</a></li>
+      <li><a href="https://www.gyopool.com/dashboard/guide/list/81?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=81" target="_blank" rel="noopener">5단원 국제 사회와 한반도 가이드</a></li>
+      <li><a href="https://www.gyopool.com/dashboard/guide/list/82?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=82" target="_blank" rel="noopener">6단원 사회 변동과 사회문제 가이드</a></li>
+      <li><a href="https://www.gyopool.com/dashboard/guide/list/83?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=83" target="_blank" rel="noopener">7단원 대한민국, 우리가 살아가는 곳 가이드</a></li>
+      <li><a href="https://www.gyopool.com/dashboard/guide/list/84?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=84" target="_blank" rel="noopener">8단원 우리나라의 자연환경과 인간 생활 가이드</a></li>
+      <li><a href="https://www.gyopool.com/dashboard/guide/list/85?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=85" target="_blank" rel="noopener">9단원 중부 지역 가이드</a></li>
+      <li><a href="https://www.gyopool.com/dashboard/guide/list/86?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=86" target="_blank" rel="noopener">10단원 남부 지역 가이드</a></li>
+      <li><a href="https://www.gyopool.com/dashboard/guide/list/87?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=87" target="_blank" rel="noopener">11단원 북부 지역 가이드</a></li>
+      <li><a href="https://www.gyopool.com/dashboard/guide/list/88?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-soc2&amp;utm_content=88" target="_blank" rel="noopener">12단원 지속가능한 세계와 글로컬 시민 가이드</a></li>
+    </ul>
+</div>
+
+<div class="ait-block">
+  <h3 class="ait-h3">안내</h3>
+  <div class="ait-keypoint">
+    <p><strong>AI는 학습의 보조 도구입니다.</strong> 학생은 AI 답변을 반드시 자기 말로 다시 써야 하며, 교사의 판단 안에서 평가됩니다.</p>
+    <p><strong>활동지의 '다시 쓰기' 칸을 통해 독창성을 확보합니다.</strong> 한 차시 5~10분만 AI를 활용하며, 학생이 AI 결과물을 그대로 제출할 수 없는 설계로 의존성을 방지합니다.</p>
+  </div>
+  <div class="ait-src">
+    <p>*이 자료는 2022 개정 교육과정과 교육부 생성형 AI 활용 교육 가이드라인을 참고하여 작성되었습니다.*</p>
+  </div>
+</div>
+</section>
+
+<section class="ait-subpanel" id="aiclass-m-tech1" data-subj="m-tech1" aria-labelledby="aiclass-m-tech1-h" hidden>
+  <h2 class="ait-h2" id="aiclass-m-tech1-h">중등 · 기술가정1</h2>
+<div class="ait-block"><h3 class="ait-h3">기술·가정 교실에서 생성형 AI 활용</h3><p class="ait-body">2022 개정 교육과정의 AI 수업 요구에 응하되, 학생 의존을 방지하는 것이 핵심입니다. 이 교과에서는 교과서의 흐름을 그대로 유지하면서, 학생이 막히는 결정적 순간에만 AI가 짧게 개입하는 방식으로 설계했습니다. 전반부 가정 영역(1~4단원)은 자아 탐색, 관계 맺기, 건강 관리, 진로 설계처럼 학생 자신을 되돌아보게 하는 성찰 중심이고, 후반부 기술 영역(5~8단원)은 기술 전망, 문제 정의, 설계, 재료 선택처럼 주변 세계를 분석하고 설계하게 돕는 탐구·설계 중심입니다.</p><p class="ait-body">모든 도구는 한 차시 5~10분만 사용하며, 학생이 AI 답변을 그대로 가져갈 수 없도록 활동지에 "자기 말로 다시 쓰기" 칸을 배치했습니다. 특히 자아 탐색, 갈등 해결 같은 도구는 학생 경험이 출발점이므로 AI가 정답을 제시할 수 없는 구조로 설계되어 있습니다.</p></div><div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>교과: 기술·가정</li><li>학년: 중학교 1학년</li><li>총 단원: 8개 단원</li><li>총 차시: 128차시</li><li>교풀AI 도구: 27개(일반 19개, 수행평가 8개)</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>교풀AI 도구</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. 청소년기의 발달과 관계 맺기</td><td>자기 경험과 개념 연결</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/730?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=730" target="_blank" rel="noopener">자아 탐색 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/731?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=731" target="_blank" rel="noopener">관계 탐구 도우미</a></td><td>6/14</td></tr><tr><td>2. 청소년의 건강한 마음</td><td>안전한 1:1 자기 성찰</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/732?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=732" target="_blank" rel="noopener">성 인지 감수성 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/733?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=733" target="_blank" rel="noopener">마음 건강 탐구 도우미</a></td><td>8/16</td></tr><tr><td>3. 청소년의 건강한 관계 형성</td><td>내 상황에 개념 적용</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/734?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=734" target="_blank" rel="noopener">갈등 해결 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/735?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=735" target="_blank" rel="noopener">가족 문화 탐색 도우미</a></td><td>6/16</td></tr><tr><td>4. 청소년의 생활 문화</td><td>일상 습관과 진로 개별 코칭</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/736?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=736" target="_blank" rel="noopener">식생활 진단 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/738?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=738" target="_blank" rel="noopener">진로 설계 도우미</a></td><td>7/18</td></tr><tr><td>5. 기술과 사회</td><td>기술을 내 삶에 투영</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/741?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=741" target="_blank" rel="noopener">미래 기술 전망 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/742?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=742" target="_blank" rel="noopener">적정 기술 설계 도우미</a></td><td>8/16</td></tr><tr><td>6. 문제 해결과 발명</td><td>아이디어 발전 사고 파트너</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/748?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=748" target="_blank" rel="noopener">문제 해결 설계 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/749?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=749" target="_blank" rel="noopener">지식 재산 탐구 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/750?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=750" target="_blank" rel="noopener">발명 아이디어 코치</a></td><td>8/16</td></tr><tr><td>7. 재료와 제조</td><td>재료 특성과 설계 연결</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/743?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=743" target="_blank" rel="noopener">재료 선택 탐구 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/744?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=744" target="_blank" rel="noopener">신소재 미래 탐구 도구</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/745?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=745" target="_blank" rel="noopener">제품 설계 아이디어 코치</a></td><td>6/16</td></tr><tr><td>8. 에너지와 수송</td><td>정보에서 분석·판단으로</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/746?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=746" target="_blank" rel="noopener">친환경 에너지 탐구 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/747?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=747" target="_blank" rel="noopener">수송 미래 탐구 도우미</a></td><td>4/16</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">연간 수업 로드맵</h3><p class="ait-body">학기가 진행될수록 학생의 AI 활용 주도성이 높아지도록 설계되었습니다. 3~4월 초반은 교사가 도구를 시범으로 보여주며 사용 규칙과 "다시 쓰기" 원칙을 반복 강조합니다. 5~6월부터는 모둠 활동으로 전환하여 민감 주제도 안전하게 다루고, 가을부터는 학생이 주도적으로 AI에 질문을 설계하는 방식으로 확대됩니다. 특히 11~12월 후반부는 개인별 제품 설계, 에너지 탐구 프로젝트에서 AI를 자기 연구 보조로 활용하는 3단계 학생 주도 활동으로 마무리합니다.</p></div><div class="ait-block"><h3 class="ait-h3">단원별 수업 가이드</h3><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/48?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=48" target="_blank" rel="noopener">청소년기의 발달과 관계 맺기 가이드</a> - 1단원 6차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/51?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=51" target="_blank" rel="noopener">청소년의 건강한 마음 가이드</a> - 2단원 8차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/53?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=53" target="_blank" rel="noopener">청소년의 건강한 관계 형성 가이드</a> - 3단원 6차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/55?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=55" target="_blank" rel="noopener">청소년의 생활 문화 가이드</a> - 4단원 7차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/56?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=56" target="_blank" rel="noopener">기술과 사회 가이드</a> - 5단원 8차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/57?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=57" target="_blank" rel="noopener">문제 해결과 발명 가이드</a> - 6단원 8차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/58?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=58" target="_blank" rel="noopener">재료와 제조 가이드</a> - 7단원 6차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/70?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech1&amp;utm_content=70" target="_blank" rel="noopener">에너지와 수송 가이드</a> - 8단원 4차시 AI 활용</li></ul></div><div class="ait-keypoint"><strong>핵심</strong> AI는 보조 역할입니다. 학생이 먼저 자기 경험과 생각을 정리한 뒤, 필요할 때만 AI를 활용하고, 반드시 자기 말로 다시 써야 합니다. 2022 개정 교육과정과 교육부 생성형 AI 활용 교육 가이드라인을 참고하여 설계했습니다.</div>
+</section>
+
+<section class="ait-subpanel" id="aiclass-m-tech2" data-subj="m-tech2" aria-labelledby="aiclass-m-tech2-h" hidden>
+  <h2 class="ait-h2" id="aiclass-m-tech2-h">중등 · 기술가정2</h2>
+<div class="ait-block"><h3 class="ait-h3">이 교과에서 생성형 AI 활용 방식</h3><p class="ait-body">중등 기술가정에서 생성형 AI는 교과서 학습 흐름을 유지하면서 학생이 막히는 결정적 순간에만 개입합니다. 교사가 수업 설계를 따로 바꿀 필요 없이, 현재의 교과서와 활동 안에서 자연스럽게 AI가 학습을 돕습니다.</p><p class="ait-body">의식주·소비 영역에서는 학생 개인 경험(자신의 자원 관리, 구매 결정, 생활 환경)이 출발점이므로 AI가 정답을 주는 구조가 될 수 없습니다. 학생은 AI 답변을 그대로 가져가지 않고, 반드시 자기 말로 다시 쓰도록 활동지가 설계되어 있습니다. 한 차시당 5~10분만 사용하기 때문에 학생의 AI 의존을 최소화할 수 있습니다.</p></div><div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>학년: 중학교 2학년</li><li>총 단원 수: 8개</li><li>총 차시 수: 128차시</li><li>교풀AI 도구 수: 29개 (일반 도구 21개, 수행평가 도구 8개)</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>교풀AI 도구</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. 의식주 생활 자원</td><td>내 자원의 순환 경로 추적</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/760?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=760" target="_blank" rel="noopener">의식주 자원 순환 탐구 코치</a></td><td>16/20차시 (80%)</td></tr><tr><td>2. 의식주 생활 환경</td><td>내 조건에 지속가능 적용</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/753?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=753" target="_blank" rel="noopener">업사이클링 아이디어 코치</a></td><td>9/20차시 (45%)</td></tr><tr><td>3. 의식주 자원의 흐름</td><td>소비 성찰·디지털 시민성</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/754?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=754" target="_blank" rel="noopener">의식주 자원 순환 성찰 코치</a></td><td>8/14차시 (57%)</td></tr><tr><td>4. 소비 생활</td><td>내 소비에 원칙 적용</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/759?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=759" target="_blank" rel="noopener">합리적 구매 결정 코치</a></td><td>12/16차시 (75%)</td></tr><tr><td>5. 구조물과 건설</td><td>혁신 논거와 지속가능 설계</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/771?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=771" target="_blank" rel="noopener">지속가능한 구조물 설계 컨설턴트</a></td><td>9/16차시 (56%)</td></tr><tr><td>6. 정보 통신과 인공지능</td><td>내 경험에서 기술 영향 분석</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/768?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=768" target="_blank" rel="noopener">AI 개발 설계 도우미</a></td><td>6/12차시 (50%)</td></tr><tr><td>7. 자동화와 로봇</td><td>실습 직전 개념 자기 언어화</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/767?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=767" target="_blank" rel="noopener">로봇 제어 탐구 튜터</a></td><td>9/16차시 (56%)</td></tr><tr><td>8. 생명 기술과 융합</td><td>최신 사례 탐구·윤리 평가</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/774?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=774" target="_blank" rel="noopener">생명 윤리 논거 도우미</a></td><td>11/14차시 (79%)</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">연간 학습 흐름: AI 활용 단계</h3><p class="ait-body">학기가 진행될수록 학생의 역할이 커집니다. 초기에는 교사가 도구를 시연하며 "다시 쓰기" 규칙을 강조하고, 학기 후반부로 갈수록 학생이 주도적으로 AI에 질문을 설계하는 방식으로 전환합니다.</p><ul class="ait-ul"><li><strong>3~4월 (1단원):</strong> 교사 시범 단계 - 교사가 도구를 직접 시연하고, 학생은 자신의 생활 자원 1개를 입력하며 사용법 익히기</li><li><strong>5~6월 (2~3단원):</strong> 모둠 활용 단계 - 모둠당 1대로 업사이클링·식단·주거를 탐구하고, "AI 답을 내 말로 다시 쓰기" 반복</li><li><strong>9~10월 (4~5단원):</strong> 모둠 심화 단계 - 학생이 광고·건설 사례를 직접 선정해 AI에 질문 설계, 교사는 질문 품질 코칭</li><li><strong>11~12월 (6~8단원):</strong> 학생 주도 단계 - 최신 기술 사례를 개별·모둠 프로젝트로 조사하고, 사회 영향을 평가</li></ul></div><div class="ait-block"><h3 class="ait-h3">단원별 클래스가이드</h3><p class="ait-body">각 단원의 클래스가이드는 수업 도입 시 교실 화면에 띄워 전체 흐름을 한눈에 보여주거나, 수업 후 복습 자료로 학생에게 공유할 수 있습니다.</p><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/49?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=49" target="_blank" rel="noopener">1단원 의식주 생활 자원 가이드</a> - 16차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/71?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=71" target="_blank" rel="noopener">2단원 의식주 생활 환경 가이드</a> - 9차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/72?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=72" target="_blank" rel="noopener">3단원 의식주 자원의 흐름 가이드</a> - 8차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/73?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=73" target="_blank" rel="noopener">4단원 소비 생활 가이드</a> - 12차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/74?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=74" target="_blank" rel="noopener">5단원 구조물과 건설 가이드</a> - 9차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/75?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=75" target="_blank" rel="noopener">6단원 정보 통신과 인공지능 가이드</a> - 6차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/76?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=76" target="_blank" rel="noopener">7단원 자동화와 로봇 가이드</a> - 9차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/77?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-tech2&amp;utm_content=77" target="_blank" rel="noopener">8단원 생명 기술과 융합 가이드</a> - 11차시 AI 활용</li></ul></div><div class="ait-keypoint"><strong>핵심</strong> AI는 보조 도구입니다. 학생은 AI 답변을 그대로 가져가지 않고, 반드시 자기 말로 다시 쓰는 과정을 거칩니다. 평가 대상도 학생이 다시 쓴 글이지, AI 답변 자체가 아닙니다. 2022 개정 교육과정과 교육부 생성형 AI 활용 교육 가이드라인을 참고하여 설계되었습니다.</div>
+</section>
+
+<section class="ait-subpanel" id="aiclass-m-eng2" data-subj="m-eng2" aria-labelledby="aiclass-m-eng2-h" hidden>
+  <h2 class="ait-h2" id="aiclass-m-eng2-h">중등 · 영어2</h2>
+<div class="ait-block">
+<h3 class="ait-h3">교과 개요</h3>
+<p class="ait-body">영어는 의사소통 능력과 문화 이해를 기르는 교과입니다. 2022 개정 교육과정에서는 학생들이 다양한 맥락에서 영어로 생각하고 표현하며, 나아가 세계 문화를 이해하는 역량을 강조합니다. 중학교 2학년 영어는 도움과 공감 표현, 소통과 관계 맺기, 소비와 윤리, 문화 감상 등 학생 삶과 가까운 주제들을 통해 실제 의사소통 능력을 발달시키는 단계입니다.</p>
+<p class="ait-body">교풀AI는 교과서의 흐름을 그대로 유지하면서, 학생이 막히는 결정적 순간에만 짧게 개입하는 도구를 제공합니다. 교사가 수업 설계를 바꿀 필요 없이, 지금 쓰고 있는 교과서 안에서 AI가 자연스럽게 녹아드는 방식입니다. 각 도구는 학생이 자신의 언어로 답변을 다시 쓰도록 설계되어 있어 AI 의존을 원천 차단합니다.</p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">교과서 정보</h3>
+<ul class="ait-ul">
+<li>교과: 영어</li>
+<li>학년: 중학교 2학년</li>
+<li>총 단원 수: 8개</li>
+<li>총 차시: 85차시</li>
+<li>교풀AI 도구: 28개 (일반 20개 · 수행평가 8개)</li>
+<li>출판사: 동아</li>
+</ul>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">단원별 AI 활용</h3>
+<div class="ait-tw"><table class="ait-table">
+<thead>
+<tr class="ait-table">
+<th>단원</th>
+<th>핵심 주제</th>
+<th>교풀AI 도구</th>
+<th>AI 활용 차시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="ait-table">
+<td>1. The Future Is in Our Hands</td>
+<td>도움·공감 의사소통</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/690?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=690" target="_blank" rel="noopener">[중·영2] 희망·안심 대화 코치</a></td>
+<td>5/12</td>
+</tr>
+<tr class="ait-table">
+<td>2. How Teens Talk Now</td>
+<td>되묻기·이메일 소통</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/726?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=726" target="_blank" rel="noopener">[중·영2] 되묻기·소통 대화 코치</a></td>
+<td>4/10</td>
+</tr>
+<tr class="ait-table">
+<td>3. What a Great Idea!</td>
+<td>발명 아이디어 영작</td>
+<td></td>
+<td>1/10</td>
+</tr>
+<tr class="ait-table">
+<td>4. Are You Money Smart?</td>
+<td>스마트 소비 영어</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/701?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=701" target="_blank" rel="noopener">[중·영2] 쇼핑 대화 코치</a></td>
+<td>4/10</td>
+</tr>
+<tr class="ait-table">
+<td>5. The City as a Canvas</td>
+<td>거리 예술 감상·비평</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/719?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=719" target="_blank" rel="noopener">[중·영2] 런던 거리 예술 탐구 도우미</a></td>
+<td>3/11</td>
+</tr>
+<tr class="ait-table">
+<td>6. The Greatest Love for All</td>
+<td>위인 전기·감사 표현</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/716?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=716" target="_blank" rel="noopener">[중·영2] 추천 대화 코치</a></td>
+<td>5/11</td>
+</tr>
+<tr class="ait-table">
+<td>7. Let's Enjoy Festivals</td>
+<td>세계 축제와 선호</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/723?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=723" target="_blank" rel="noopener">[중·영2] 선호 표현 대화 코치</a></td>
+<td>5/11</td>
+</tr>
+<tr class="ait-table">
+<td>8. Time Travel</td>
+<td>SF 독해와 창작 영작</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/727?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=727" target="_blank" rel="noopener">[중·영2] 나비효과 독해 코치</a></td>
+<td>5/10</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">연간 로드맵</h3>
+<p class="ait-body"><strong>1단계 (3~4월): 교사 시범</strong><br/>
+교사가 교실 TV로 희망·안심 대화 코치를 직접 시연해 학생이 "AI는 피드백 파트너"라는 개념을 처음 경험합니다.</p>
+<p class="ait-body"><strong>2단계 (5~10월): 모둠 활용과 심화</strong><br/>
+5~6월에는 모둠 3~4명이 디바이스 1대로 돌려 쓰며 AI 활용 리듬을 익히고, 9~10월에는 낯선 문화·역사 텍스트를 다루는 단원에서 AI를 조사·해석 파트너로 깊이 활용합니다.</p>
+<p class="ait-body"><strong>3단계 (11~12월): 학생 주도</strong><br/>
+축제 홍보문·타임캡슐 편지·이야기 이어쓰기 등 창작 과제에서 학생이 AI 활용 시점과 질문을 스스로 결정하도록 돕습니다.</p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">클래스가이드</h3>
+<ul class="ait-list">
+<li><a href="https://www.gyopool.com/dashboard/guide/list/94?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=94" target="_blank" rel="noopener">The Future Is in Our Hands 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/99?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=99" target="_blank" rel="noopener">How Teens Talk Now 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/100?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=100" target="_blank" rel="noopener">What a Great Idea! 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/101?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=101" target="_blank" rel="noopener">Are You Money Smart? 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/102?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=102" target="_blank" rel="noopener">The City as a Canvas 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/103?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=103" target="_blank" rel="noopener">The Greatest Love for All 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/104?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=104" target="_blank" rel="noopener">Let's Enjoy Festivals 가이드</a></li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/105?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eng2&amp;utm_content=105" target="_blank" rel="noopener">Time Travel 가이드</a></li>
+</ul>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">안내</h3>
+<div class="ait-keypoint">
+<p><strong>AI는 학습의 보조 도구입니다.</strong> 교풀AI 도구는 한 차시 5~10분만 사용하며, 학생이 AI 답변을 그대로 가져갈 수 없도록 활동지에 "내 말로 다시 쓰기" 칸이 마련되어 있습니다. 특히 영어과에서는 짝 대화와 역할극이 먼저이고 AI는 그 이후에만 개입하므로 학생 간 상호작용 시간이 줄지 않습니다.</p>
+<p><strong>평가 대상은 학생의 표현입니다.</strong> 평가 대상은 학생이 자기 언어로 다시 쓴 글이지, AI 답변 자체가 아닙니다. 각 단원의 수행평가 도구는 학생 영작을 개념 이해·경험/근거 연결·논거 타당성·표현 명확성 4요소로 분석해 채점 근거를 제공합니다.</p>
+</div>
+<div class="ait-src">
+<p>이 자료는 2022 개정 교육과정과 교육부 생성형 AI 활용 교육 가이드라인을 참고하여 작성되었습니다.</p>
+</div>
+</div>
+</section>
+
+<section class="ait-subpanel" id="aiclass-m-hist2" data-subj="m-hist2" aria-labelledby="aiclass-m-hist2-h" hidden>
+  <h2 class="ait-h2" id="aiclass-m-hist2-h">중등 · 역사2</h2>
+<div class="ait-keypoint"><strong>핵심</strong> 중등 역사2에서는 18개의 교풀AI 도구가 교과서 6단원 전반에 차시별로 배치되어 있습니다. 학생이 사료를 먼저 읽고 개념을 탐구한 후, 막히는 순간에만 AI가 짧게 개입합니다. 한 차시 5~10분 활용하며, 학생은 반드시 AI 답변을 자신의 언어로 다시 써야 합니다.</div><div class="ait-block"><h3 class="ait-h3">이 교과에서의 생성형 AI 활용</h3><p class="ait-body">중등 역사2 교실에서 생성형 AI는 학생이 스스로 사료를 읽고 역사를 해석하는 과정을 돕는 '사고의 파트너' 역할을 합니다. 고조선의 8조법 사회를 탐구할 때, 삼국통일의 의의를 논쟁할 때, 조선의 정치 변동을 분석할 때 - 학생이 막히는 결정적 순간에만 AI가 관점을 짚어주고 질문을 던집니다. 도구는 차시별로 구체적인 역할을 가지고 있어서, 교과서 흐름 안에서 자연스럽게 녹아듭니다.</p><p class="ait-body">평가도 동일한 방식입니다. 학생은 논술 초안을 작성하고 AI 피드백을 받으면, "다시 쓰기" 칸에 자기 말로 재서술합니다. 교사는 초안과 수정본 사이의 자기수정 흔적을 보면서 학생의 역사 이해 수준을 판단합니다. AI는 보조일 뿐, 최종 성장은 학생 자신입니다.</p></div><div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>학년: 중학교 2학년</li><li>총 단원: 6개 단원</li><li>총 차시: 53차시</li><li>교풀AI 도구: 24개 (일반 18개 + 수행평가 6개)</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>대표 AI 도구</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. 국가의 형성과 발전</td><td>고조선·삼국 동아시아 맥락</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/833?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=833" target="_blank" rel="noopener">[중·한2] 고조선 탐구 튜터</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/835?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=835" target="_blank" rel="noopener">[중·한2] 삼국 성장 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/837?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=837" target="_blank" rel="noopener">[중·한2] 삼국·가야 문화유산 탐구</a></td><td>6/10 (60%)</td></tr><tr><td>2. 통일 신라와 발해</td><td>통일의 의의와 두 나라 비교</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/828?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=828" target="_blank" rel="noopener">[중·역2] 삼국 통일 논쟁 탐구 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/831?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=831" target="_blank" rel="noopener">[중·역2] 통일 신라·발해 정치 비교반</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/832?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=832" target="_blank" rel="noopener">[중·역2] 동아시아 문화 교류 탐구반</a></td><td>7/9 (78%)</td></tr><tr><td>3. 고려의 성립과 변천</td><td>왕권·무신·원 간섭 인과</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/824?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=824" target="_blank" rel="noopener">[중·역2] 고려 통치 체제 탐구 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/829?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=829" target="_blank" rel="noopener">[중·역2] 고려 위기 극복 분석가</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/830?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=830" target="_blank" rel="noopener">[중·역2] 고려 문화 유산 큐레이터</a></td><td>8/9 (89%)</td></tr><tr><td>4. 조선의 성립과 발전</td><td>건국 이념·사림·왜란 4자 관점</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/823?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=823" target="_blank" rel="noopener">[중·역2] 조선 건국 탐구 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/824?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=824" target="_blank" rel="noopener">[중·역2] 사림·붕당 탐구 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/826?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=826" target="_blank" rel="noopener">[중·역2] 왜란·호란 국제정세 분석가</a></td><td>6/8 (75%)</td></tr><tr><td>5. 조선 사회의 변동</td><td>탕평·실학 의의·한계 균형</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/836?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=836" target="_blank" rel="noopener">[중·역2] 붕당·탕평 정치 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/838?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=838" target="_blank" rel="noopener">[중·역2] 실학 사상가 탐구 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/839?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=839" target="_blank" rel="noopener">[중·역2] 조선 후기 사회 변동 탐구 코치</a></td><td>7/9 (78%)</td></tr><tr><td>6. 근·현대 사회로의 전환</td><td>근대 개혁과 오늘날 과제</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/424?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=424" target="_blank" rel="noopener">[중·역2] 근대 개혁 탐구 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/821?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=821" target="_blank" rel="noopener">[중·역2] 민족 운동 분석가</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/825?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=825" target="_blank" rel="noopener">[중·역2] 민주·미래 탐구 도우미</a></td><td>4/8 (50%)</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">연간 AI 활용 로드맵</h3><p class="ait-body">학기 초에는 교사가 논술 도구를 직접 시연하여 학생에게 AI 피드백의 4요소(사실 이해·해석, 맥락·논거 타당성, 표현 명확성, 자기수정)를 체험하게 합니다. 3~4월 국가 형성 단원에서 첫 번째 논술을 함께 진행하면서 자기수정 방법을 익히고, 5~6월에는 모둠별로 도구를 사용해 고려의 제도나 통일 신라의 정치를 정리합니다.</p><p class="ait-body">9~10월에는 다자 관점 분석을 심화합니다. 왜란·호란의 국제정세를 4자(명·청·일본·조선) 관점에서 분석하고, 탕평·실학을 균형 있게 평가하는 논술을 훈련합니다. 11~12월 근·현대 단원에서는 학생이 개혁·민족 운동·민주화 도구를 스스로 선택해 탐구하고, 최종 논술에서 이 모든 개념을 오늘날 민주주의 과제와 연결합니다. 동일한 채점 프레임을 여섯 번 반복하면서 학생은 자기 답안을 스스로 점검하는 수준까지 성장합니다.</p></div><div class="ait-block"><h3 class="ait-h3">단원별 클래스가이드</h3><p class="ait-body">각 단원 도입 차시에 학생 앞에서 클래스가이드를 열어, 이 단원에서 AI를 언제·어떻게 활용할 것인지 전체 흐름을 안내하세요. 수업 후 학생에게 가이드 링크를 공유하면 복습과 결석 보충에도 그대로 사용할 수 있습니다.</p><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/50?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=50" target="_blank" rel="noopener">1단원 국가의 형성과 발전 가이드</a></li><li><a href="https://www.gyopool.com/dashboard/guide/list/59?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=59" target="_blank" rel="noopener">2단원 통일 신라와 발해 가이드</a></li><li><a href="https://www.gyopool.com/dashboard/guide/list/89?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=89" target="_blank" rel="noopener">3단원 고려의 성립과 변천 가이드</a></li><li><a href="https://www.gyopool.com/dashboard/guide/list/60?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=60" target="_blank" rel="noopener">4단원 조선의 성립과 발전 가이드</a></li><li><a href="https://www.gyopool.com/dashboard/guide/list/61?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=61" target="_blank" rel="noopener">5단원 조선 사회의 변동 가이드</a></li><li><a href="https://www.gyopool.com/dashboard/guide/list/62?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-hist2&amp;utm_content=62" target="_blank" rel="noopener">6단원 근·현대 사회로의 전환 가이드</a></li></ul></div><div class="ait-keypoint"><strong>안내</strong> 생성형 AI는 보조일 뿐입니다. 학생은 먼저 사료를 읽고, 자신의 관점으로 역사를 해석한 뒤, AI 피드백을 받으면 자신의 말로 다시 써야 합니다. 이 가이드는 2022 개정 교육과정과 교육부 생성형 AI 활용 교육 가이드라인을 참고하여 작성되었습니다.<p class="ait-src">출처: 중등 역사2 교풀AI 수업 활용 전체 개요</p></div>
+</section>
+
+<section class="ait-subpanel" id="aiclass-m-pe1" data-subj="m-pe1" aria-labelledby="aiclass-m-pe1-h" hidden>
+  <h2 class="ait-h2" id="aiclass-m-pe1-h">중등 · 체육1</h2>
+<div class="ait-block"><h3 class="ait-h3">중등 체육1의 AI 활용 방식</h3><p class="ait-body">중학교 체육 수업은 기능 연습과 실기가 대부분이기 때문에, 생성형 AI는 학생이 판단에 막힐 때만 짧게 개입합니다. 예를 들어 1단원에서는 자신의 체력 수준에 맞는 운동 계획을 세울 때, 2단원의 표현 활동에서는 창의적 신체 표현의 원리를 탐구할 때, 3단원의 스포츠에서는 환경에 맞는 전략을 판단할 때 AI가 사고 파트너로 되묻기 질문을 던집니다.</p><p class="ait-body">한 차시에 AI 도구는 5~10분만 사용되며, 학생은 AI 답변을 그대로 옮기지 않고 반드시 자기 말로 다시 쓰는 과정을 거칩니다. 이 과정에서 학생이 진정 이해했는지 확인하고, AI는 학생의 의존을 키우지 않으면서도 사고를 깊게 하는 촉매 역할을 합니다.</p></div><div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>학년: 중학교 1학년</li><li>총 단원 수: 3개</li><li>총 차시 수: 132차시</li><li>교풀AI 도구: 10개 (수업용 7개 · 수행평가용 3개)</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>교풀AI 도구</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. 운동</td><td>나에게 맞는 운동 판단</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/889?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe1&amp;utm_content=889" target="_blank" rel="noopener">내 운동 처방 코치</a></td><td>6/49 (12%)</td></tr><tr><td>2. 표현</td><td>개인 창의 신체 표현</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/902?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe1&amp;utm_content=902" target="_blank" rel="noopener">표현 탐구 코치</a></td><td>7/41 (17%)</td></tr><tr><td>3. 스포츠(생태형)</td><td>환경별 전략적 판단</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/904?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe1&amp;utm_content=904" target="_blank" rel="noopener">생태형 스포츠 전략 코치</a></td><td>6/42 (14%)</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">연간 학습에서 AI 활용 로드맵</h3><p class="ait-body">3월부터 6월까지는 교사가 직접 대시보드를 띄워 AI 사용 방식을 시연하는 단계입니다. 학생은 관찰한 후 모둠 1대로 함께 따라 입력해봅니다. 5월부터 6월에는 표현·전략 활동처럼 근거가 필요한 국면에서 모둠이 AI를 사고 파트너로 활용하는 단계로 진행됩니다. 7월과 9월에는 전략 판단·친환경 성찰처럼 더 심화된 판단이 필요한 상황에서 AI 되묻기를 활용합니다. 2학기 후반, 11월부터 12월에는 학생이 수행평가 도구로 스스로 논술 답안을 작성하고 AI 채점을 받아 자기수정을 한 후 제출하는 학생 주도 단계로 나아갑니다.</p></div><div class="ait-block"><h3 class="ait-h3">단원별 학습 가이드</h3><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/90?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe1&amp;utm_content=90" target="_blank" rel="noopener">1단원 운동 가이드</a> - 체력 기반 개인 맞춤 운동 계획 수립</li><li><a href="https://www.gyopool.com/dashboard/guide/list/97?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe1&amp;utm_content=97" target="_blank" rel="noopener">2단원 표현 가이드</a> - 창의적 신체 표현의 원리 탐구</li><li><a href="https://www.gyopool.com/dashboard/guide/list/92?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe1&amp;utm_content=92" target="_blank" rel="noopener">3단원 스포츠(생태형 스포츠) 가이드</a> - 환경에 맞는 전략적 판단과 친환경 실천</li></ul><p class="ait-src">각 클래스가이드는 수업 도입 3분에 교실 TV로 열어 오늘의 AI 활용 방식을 학생에게 한 장으로 보여줍니다. 수업 후 학생 복습용이나 결석 보강 자료로도 활용할 수 있습니다.</p></div><div class="ait-keypoint"><strong>핵심</strong> AI는 보조 도구입니다. 학생은 AI 답변을 그대로 제출하지 않고 반드시 자기 말로 다시 써야 합니다. 수행평가에서 평가 대상도 학생이 자기 언어로 다시 쓴 글이지, AI 답변 자체가 아닙니다.</div><p class="ait-src">이 자료는 2022 개정 교육과정과 교육부 생성형 AI 활용 교육 가이드라인을 참고하여 작성되었습니다.</p>
+</section>
+
+<section class="ait-subpanel" id="aiclass-m-pe2" data-subj="m-pe2" aria-labelledby="aiclass-m-pe2-h" hidden>
+  <h2 class="ait-h2" id="aiclass-m-pe2-h">중등 · 체육2</h2>
+<div class="ait-block"><h3 class="ait-h3">중학교 2학년 체육 교실에서의 생성형 AI 활용</h3><p class="ait-body">중학교 2학년 체육 수업에서 생성형 AI는 학생이 자신의 동작과 경기 경험을 언어로 풀어내는 순간에 개입합니다. 기록 분석, 동작 원리 파악, 경기 전술 설계 등 학생이 막히는 지점에서만 짧게(한 차시 5~10분) 작동하며, 학생은 반드시 AI의 제안을 자기 말로 다시 쓰는 과정을 거칩니다. 이는 AI 의존을 방지하면서 체육 수업의 중심인 실기와 경기 경험을 방해하지 않는 설계입니다.</p><p class="ait-body">교사는 수업 설계를 바꿀 필요 없이, 지금 쓰는 교과서와 교육과정 흐름 안에서 AI 도구를 자연스럽게 녹여낼 수 있습니다. 학기 초에는 교사가 AI 활용을 시범으로 보여주고, 중반에는 모둠이 함께 활용하며, 학년 말에는 학생이 스스로 도구를 다루는 단계로 진행됩니다.</p></div><div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>학년: 중학교 2학년</li><li>총 단원 수: 6개</li><li>총 차시 수: 91차시</li><li>교풀AI 도구 수: 19개 (일반 13 · 수행평가 6)</li><li>교과서 출판사: 동아</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>교풀AI 도구</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. 기록형 스포츠</td><td>기록 측정과 데이터 분석</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/879?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=879" target="_blank" rel="noopener">기록 도전 탐구 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/881?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=881" target="_blank" rel="noopener">이어달리기 전략 분석기</a></td><td>4/8 (50%)</td></tr><tr><td>2. 동작형 스포츠</td><td>수행 원리 이해와 자기 점검</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/876?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=876" target="_blank" rel="noopener">마루 동작 수행 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/884?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=884" target="_blank" rel="noopener">마루 경기 전략 탐구 도구</a></td><td>2/6 (33%)</td></tr><tr><td>3. 투기형 스포츠</td><td>동작 분석과 전략 시나리오</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/872?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=872" target="_blank" rel="noopener">투기형 기술 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/874?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=874" target="_blank" rel="noopener">투기형 경기 전략 설계사</a></td><td>8/16 (50%)</td></tr><tr><td>4. 영역형 스포츠</td><td>경기 판단과 팀워크 소통</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/877?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=877" target="_blank" rel="noopener">영역형 경기 전략 탐구 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/882?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=882" target="_blank" rel="noopener">포지션 & 팀 전술 설계 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/883?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=883" target="_blank" rel="noopener">경기 성찰 & 팀워크 코치</a></td><td>4/16 (25%)</td></tr><tr><td>5. 필드형 스포츠</td><td>기능 원리와 상황 판단력</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/878?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=878" target="_blank" rel="noopener">필드형 기능 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/880?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=880" target="_blank" rel="noopener">공격·수비 전략 분석기</a></td><td>4/19 (21%)</td></tr><tr><td>6. 네트형 스포츠</td><td>개별 피드백과 전략 언어화</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/873?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=873" target="_blank" rel="noopener">네트형 기능 탐구 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/875?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=875" target="_blank" rel="noopener">네트 경기 전략 수립 파트너</a></td><td>10/26 (38%)</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">학기별 AI 활용 단계</h3><ul class="ait-ul"><li><strong>3~4월 (기록형 스포츠)</strong>: 교사가 기록 분석 도구를 직접 시연하며 AI 활용 방식을 보여줍니다. 학생은 자기 기록을 입력해 보며 기본 감각을 익힙니다.</li><li><strong>5~6월 (동작형·투기형 스포츠)</strong>: 모둠당 1대씩 AI를 돌려가며 사용합니다. 영상 관찰과 자신의 동작·기술을 AI와 함께 언어화하는 연습이 중심입니다.</li><li><strong>9~10월 (영역형·필드형 스포츠)</strong>: 팀별 경기 데이터를 AI로 분석해 전술과 포지션을 토의합니다. AI 제안을 비판적으로 검토하고 모둠 합의로 재해석하는 단계입니다.</li><li><strong>11~12월 (네트형 스포츠)</strong>: 학생이 자기 경기 장면을 스스로 AI와 풀어가며 전략을 설계합니다. 교사는 순회하며 학생의 자기 언어 사용 여부를 점검합니다.</li></ul></div><div class="ait-block"><h3 class="ait-h3">단원별 클래스가이드</h3><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/95?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=95" target="_blank" rel="noopener">1단원 기록형 스포츠 가이드</a> - 수업 도입 및 AI 활용 포인트 안내</li><li><a href="https://www.gyopool.com/dashboard/guide/list/96?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=96" target="_blank" rel="noopener">2단원 동작형 스포츠 가이드</a> - 동작 분석 및 원리 이해 흐름</li><li><a href="https://www.gyopool.com/dashboard/guide/list/98?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=98" target="_blank" rel="noopener">3단원 투기형 스포츠 가이드</a> - 기술 분석과 경기 전략 설계</li><li><a href="https://www.gyopool.com/dashboard/guide/list/106?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=106" target="_blank" rel="noopener">4단원 영역형 스포츠 가이드</a> - 팀 전술과 역할 이해</li><li><a href="https://www.gyopool.com/dashboard/guide/list/107?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=107" target="_blank" rel="noopener">5단원 필드형 스포츠 가이드</a> - 기능 원리와 상황 판단</li><li><a href="https://www.gyopool.com/dashboard/guide/list/108?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-pe2&amp;utm_content=108" target="_blank" rel="noopener">6단원 네트형 스포츠 가이드</a> - 기능 탐구와 전략 수립</li></ul></div><div class="ait-keypoint"><strong>핵심</strong> AI는 학생의 답변 대체가 아닙니다. AI가 제시한 분석을 학생이 자기 말로 다시 쓰고, 경기 경험과 맥락 속에서 재해석하는 과정이 학습입니다. 이 교과 교실에서는 실기·경기가 중심이고, AI는 그 과정을 언어로 풀어내는 짧은 구간의 보조 도구입니다.</div><p class="ait-src">출처: 중등 · 체육2 교풀AI 수업 활용 전체 개요 / 2022 개정 교육과정, 교육부 생성형 AI 활용 교육 가이드라인</p>
+</section>
+
+<section class="ait-subpanel" id="aiclass-m-eth2" data-subj="m-eth2" aria-labelledby="aiclass-m-eth2-h" hidden>
+  <h2 class="ait-h2" id="aiclass-m-eth2-h">중등 · 도덕2</h2>
+<div class="ait-block"><h3 class="ait-h3">중등 도덕2에서의 생성형 AI 활용</h3><p class="ait-body">중학교 2학년 도덕 수업에서는 학생의 도덕 추론 능력을 기르는 데 생성형 AI가 짧게 개입합니다. 도덕 판단, 갈등 해결, 윤리 분석 같은 결정적 순간에 학생이 먼저 자기 생각을 정리한 후, AI가 다른 관점이나 근거를 제시하면 학생이 자기 언어로 다시 쓰도록 설계되어 있습니다. 한 차시에 5~10분만 사용하며, AI 답변은 "한 가지 분석"으로만 다루어 학생의 의존을 방지합니다.</p><p class="ait-body">교사는 학기 초에 도덕 추론 코치를 칠판에 띄워 시범을 보이고, 학기 중반에는 학생들이 모둠 단위로 자기 사례를 입력해 함께 검토하며, 학기 말에는 학생이 자기 관심사(환경 실천, 직업 선택, 사회정의 등)를 직접 진단해 캠페인 초안까지 설계하도록 단계적으로 진행합니다.</p></div>
+
+<div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>학년: 중학교 2학년</li><li>총 단원 수: 4개</li><li>총 차시 수: 71차시</li><li>교풀AI 도구 수: 13개 (학생용 일반 도구)</li><li>수행평가 도구: 4개</li><li>교과서 출판사: 천재</li></ul></div>
+
+<div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>차시</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. 자신과의 관계</td><td>자기 성찰과 도덕 판단</td><td>27</td><td>10/27 (37%)</td></tr><tr><td>2. 타인과의 관계</td><td>관계 속 공감과 갈등</td><td>19</td><td>8/19 (42%)</td></tr><tr><td>3. 사회·공동체와의 관계</td><td>공동체 도덕 판단</td><td>16</td><td>4/16 (25%)</td></tr><tr><td>4. 자연과의 관계</td><td>자연관과 환경 책임</td><td>9</td><td>9/9 (100%)</td></tr></tbody></table></div>
+
+<div class="ait-block"><h3 class="ait-h3">교풀AI 도구 (학생용)</h3><ul class="ait-ul"><li><a href="https://www.gyopool.com/dashboard/ai/apps/1060?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1060" target="_blank" rel="noopener">[중·도2] 도덕 추론 코치</a> - 1단원 5~7차시 | 일상 도덕 추론 점검</li><li><a href="https://www.gyopool.com/dashboard/ai/apps/1063?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1063" target="_blank" rel="noopener">[중·도2] 인생 의미 코치</a> - 1단원 11~12, 16~18차시 | 의미·평온 분기 코치</li><li><a href="https://www.gyopool.com/dashboard/ai/apps/1065?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1065" target="_blank" rel="noopener">[중·도2] 진로·직업윤리 설계 도우미</a> - 1단원 24~26차시 | 직업윤리 헌장 설계</li><li><a href="https://www.gyopool.com/dashboard/ai/apps/1071?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1071" target="_blank" rel="noopener">[중·도2] 공감 소통 코치</a> - 2단원 30~31차시 | 자기 대화 사례 점검</li><li><a href="https://www.gyopool.com/dashboard/ai/apps/1073?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1073" target="_blank" rel="noopener">[중·도2] 갈등 해결 시뮬레이터</a> - 2단원 34~35, 36~37차시 | 갈등·폭력 분기 점검</li><li><a href="https://www.gyopool.com/dashboard/ai/apps/1074?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1074" target="_blank" rel="noopener">[중·도2] 성 편견 점검 도우미</a> - 2단원 44~45차시 | 일상 표현 편견 분석</li><li><a href="https://www.gyopool.com/dashboard/ai/apps/1056?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1056" target="_blank" rel="noopener">[중·도2] 정의로운 분배 토론 코치</a> - 3단원 49차시 | 분배 기준 근거 다지기</li><li><a href="https://www.gyopool.com/dashboard/ai/apps/1057?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1057" target="_blank" rel="noopener">[중·도2] 시민·국가 윤리 쟁점 분석 튜터</a> - 3단원 53차시 | 시민 불복종 도덕 분석</li><li><a href="https://www.gyopool.com/dashboard/ai/apps/1059?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1059" target="_blank" rel="noopener">[중·도2] 세계시민 실천 기획 코치</a> - 3단원 57차시 | 글로벌 실천 방안 설계</li><li><a href="https://www.gyopool.com/dashboard/ai/apps/1062?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1062" target="_blank" rel="noopener">[중·도2] 과학기술 윤리 분석 컨설턴트</a> - 3단원 61차시 | 기술 쟁점 다각 분석</li><li><a href="https://www.gyopool.com/dashboard/ai/apps/1058?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1058" target="_blank" rel="noopener">[중·도2] 자연관 비교 탐구 도우미</a> - 4단원 72~74차시 | 세 자연관으로 입장 분석</li><li><a href="https://www.gyopool.com/dashboard/ai/apps/1061?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1061" target="_blank" rel="noopener">[중·도2] 환경 위기 책임 윤리 코치</a> - 4단원 75~76차시 | 일상 소비 책임 되짚기</li><li><a href="https://www.gyopool.com/dashboard/ai/apps/1064?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=1064" target="_blank" rel="noopener">[중·도2] 자연 공존 실천 액션플래너</a> - 4단원 77~80차시 | 생활 공간 실천 설계</li></ul></div>
+
+<div class="ait-block"><h3 class="ait-h3">연간 수업 로드맵: AI 활용 단계</h3><ul class="ait-ul"><li><strong>3~4월 (1단원)</strong>: 교사 시범 - 도덕 추론 코치를 칠판에 띄워 사례 1건을 함께 풀어보며 사실·가치·도덕 판단 분리를 보이고, 학생이 활동지 "다시 쓰기" 칸을 채우는 흐름을 익힙니다.</li><li><strong>5~6월 (2단원)</strong>: 모둠 활용 - 공감 소통 코치·갈등 해결 시뮬레이터를 모둠당 1대로 운영하며, 자기 대화·갈등 사례를 모둠 안에서 순차 입력해 분석 결과를 함께 검토하고 모둠 토의로 확장합니다.</li><li><strong>9~10월 (3단원)</strong>: 모둠 심화 - 분배·시민·세계시민·과학기술 네 쟁점에서 학생이 입장을 먼저 정한 뒤 AI에게 반론·누락 쟁점을 받아옵니다. 가치 판단 영역임을 매 차시 강조해 AI 답변을 "한 가지 분석"으로만 다룹니다.</li><li><strong>11~12월 (4단원)</strong>: 학생 주도 - 학생이 자기 환경 이슈·일상 소비·생활 공간을 직접 진단해 자연관 비교·책임 윤리·실천 액션플래너 세 도구를 차례로 사용하고, 자기만의 캠페인 초안까지 설계·발표합니다.</li></ul></div>
+
+<div class="ait-block"><h3 class="ait-h3">클래스가이드</h3><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/115?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=115" target="_blank" rel="noopener">1단원 자신과의 관계 가이드</a> - 10차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/116?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=116" target="_blank" rel="noopener">2단원 타인과의 관계 가이드</a> - 8차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/117?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=117" target="_blank" rel="noopener">3단원 사회·공동체와의 관계 가이드</a> - 4차시 AI 활용</li><li><a href="https://www.gyopool.com/dashboard/guide/list/118?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-eth2&amp;utm_content=118" target="_blank" rel="noopener">4단원 자연과의 관계 가이드</a> - 9차시 AI 활용</li></ul></div>
+
+<div class="ait-keypoint"><strong>핵심</strong> AI는 교사와 학생의 도덕 사고를 돕는 보조 도구입니다. 학생은 AI 답변을 그대로 가져가지 않고 반드시 자기 말로 다시 쓰며, 한 차시 5~10분만 활용해 의존을 방지합니다. 도덕은 가치 판단 영역이므로 AI 답변을 "한 가지 분석"으로만 다루도록 안내하세요.</div><p class="ait-src">출처: 중등 도덕2 교풀AI 수업 활용 전체 개요 (2022 개정 교육과정, 교육부 생성형 AI 활용 교육 가이드라인 참고)</p>
+</section>
+
+<section class="ait-subpanel" id="aiclass-h-kor1" data-subj="h-kor1" aria-labelledby="aiclass-h-kor1-h" hidden>
+  <h2 class="ait-h2" id="aiclass-h-kor1-h">고등 · 공통국어1</h2>
+<div class="ait-block"><h3 class="ait-h3">고등 공통국어 1에서 생성형 AI 활용</h3><p class="ait-body">고등학교 1학년 국어 교실에서는 생성형 AI가 학생이 막히는 결정적 순간에 짧게 개입합니다. 문학 갈래별 형상화 분석, 논증 타당성 평가, 매체 비판적 분석, 문법 점검 등 각 단원의 학습 활동 직후 한 차시 5~10분 범위로 도구를 활용합니다. 학생은 자신이 먼저 쓴 해석, 논증, 분석을 AI로 점검받은 후 반드시 자기 말로 다시 써야 하기 때문에, AI 답변을 그대로 가져갈 수 없습니다.</p><p class="ait-body">도구는 정답을 주지 않고 학생의 사고를 한 겹 더 밀어주는 질문만 제시합니다. 예를 들어 '방문객 맥락 탐구 튜터'는 작품을 네 가지 맥락(저자·텍스트·독자·현재)으로 점검하는 질문을 던지고, '논증 타당성 평가 길잡이'는 학생이 제시한 논증을 전제-추론-결론으로 분해해 타당성 검토 포인트를 안내합니다. 학생이 스스로 생각을 정리한 뒤 도구로 보강받는 구조이므로, 의존을 구조적으로 차단합니다.</p></div><div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>학년: 고등학교 1학년</li><li>총 단원 수: 13개</li><li>총 차시 수: 66차시</li><li>교풀AI 도구 수: 39개(일반 26 · 수행평가 13)</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>대표 교풀AI 도구</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1-1. 방문객</td><td>네 맥락으로 작품 감상</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1171?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1171" target="_blank" rel="noopener">방문객 맥락 탐구 튜터</a></td><td>2/3 (67%)</td></tr><tr><td>1-2. 함께 읽고 매체로 소통하기</td><td>주제 통합 읽기 · 매체 제작</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1173?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1173" target="_blank" rel="noopener">주제 통합 읽기 길잡이</a></td><td>4/7 (57%)</td></tr><tr><td>2-1. 수라</td><td>시 형상화 방법 분석</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1175?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1175" target="_blank" rel="noopener">시 형상화 방법 탐구 길잡이</a></td><td>4/5 (80%)</td></tr><tr><td>2-2. 엇박자 D</td><td>소설 형상화 분석</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1177?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1177" target="_blank" rel="noopener">소설 형상화 방법 탐구 길잡이</a></td><td>4/5 (80%)</td></tr><tr><td>2-3. 파수꾼</td><td>희곡 상징 · 풍자 해석</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1179?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1179" target="_blank" rel="noopener">희곡 형상화 방법 탐구 길잡이</a></td><td>4/5 (80%)</td></tr><tr><td>2-4. 선의를 믿는 것의 어려움</td><td>수필 경험 · 깨달음 구성</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1181?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1181" target="_blank" rel="noopener">수필 경험·깨달음 구성 탐구 길잡이</a></td><td>4/5 (80%)</td></tr><tr><td>3-1. 투표를 안 해도 될까</td><td>논증 타당성 · 재구성</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1183?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1183" target="_blank" rel="noopener">논증 타당성 평가 길잡이</a></td><td>4/6 (67%)</td></tr><tr><td>3-2. 매체가 비추는 세계</td><td>매체 비판적 분석</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1185?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1185" target="_blank" rel="noopener">매체 자료 비판적 분석 길잡이</a></td><td>4/6 (67%)</td></tr><tr><td>4-1. 음운의 변동</td><td>음운 변동 탐구</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1187?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1187" target="_blank" rel="noopener">음운 변동 탐구 코치</a></td><td>4/6 (67%)</td></tr><tr><td>4-2. 문법 요소와 어휘의 활용</td><td>표현 효과 평가 · 생성</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1189?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1189" target="_blank" rel="noopener">표현 효과 평가 코치</a></td><td>4/4 (100%)</td></tr><tr><td>4-3. 마음을 잇는 대화</td><td>대화 원리 · 담화 관습</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1191?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1191" target="_blank" rel="noopener">대화 점검 코치</a></td><td>2/2 (100%)</td></tr><tr><td>5-1. 학교 급식에 '채식의 날'을 도입해야 한다</td><td>쟁점별 논증 · 반박 설계</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1193?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1193" target="_blank" rel="noopener">토론 논증 타당성 점검 길잡이</a></td><td>4/6 (67%)</td></tr><tr><td>5-2. 공동체를 위한 글 쓰기</td><td>견해 글 근거 · 전개</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1195?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=1195" target="_blank" rel="noopener">근거 자료 적절성 점검 코치</a></td><td>4/6 (67%)</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">연간 수업 로드맵</h3><p class="ait-body"><strong>1단계 (3~4월, 1-1 · 1-2단원): 교사 시범</strong><br>교사가 화면으로 도구 질문 흐름을 시연하여 학생이 "AI는 정답이 아니라 점검 파트너"임을 체감합니다. 처음 접하는 학생들이 도구의 역할과 자기 언어로 다시 쓰기 필요성을 이해하는 단계입니다.</p><p class="ait-body"><strong>2단계 (5~6월, 2-1 · 2-2 · 2-3 · 2-4단원): 모둠 활용</strong><br>문학 갈래별 형상화 분석을 모둠 사고 파트너로 운영하고, 도구 응답을 모둠 토의로 검증합니다. 학생들이 협력하여 AI 피드백을 함께 검토하는 경험을 쌓습니다.</p><p class="ait-body"><strong>2단계 심화 (9~10월, 3-1 · 3-2 · 4-1 · 4-2단원): 자기주도 점검</strong><br>읽기 · 문법 점검 도구를 학생이 스스로 호출해 자기 분석을 다듬도록 유도합니다. 도구 활용의 숙련도가 누적되면서 자기주도 학습으로 전환되는 단계입니다.</p><p class="ait-body"><strong>3단계 (11~12월, 4-3 · 5-1 · 5-2단원): 학생 주도</strong><br>화법 · 작문 수행평가와 연계하여 학생이 도구로 자기 점검 후 최종 답안을 자기 언어로 완성합니다. 학년 말 평가 단계에서 AI는 검증 도구로 역할을 합니다.</p></div><div class="ait-block"><h3 class="ait-h3">단원별 클래스가이드</h3><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/119?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=119" target="_blank" rel="noopener">1-1. 방문객 가이드</a> - 교사 시범형 네 맥락 감상 흐름</li><li><a href="https://www.gyopool.com/dashboard/guide/list/120?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=120" target="_blank" rel="noopener">1-2. 함께 읽고 매체로 소통하기 가이드</a> - 주제 통합 읽기와 매체 기획 흐름</li><li><a href="https://www.gyopool.com/dashboard/guide/list/121?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=121" target="_blank" rel="noopener">2-1. 수라 가이드</a> - 시 갈래별 형상화 분석</li><li><a href="https://www.gyopool.com/dashboard/guide/list/122?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=122" target="_blank" rel="noopener">2-2. 엇박자 D 가이드</a> - 소설 형상화와 서술 방식 분석</li><li><a href="https://www.gyopool.com/dashboard/guide/list/123?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=123" target="_blank" rel="noopener">2-3. 파수꾼 가이드</a> - 희곡 형상화와 상징 해석</li><li><a href="https://www.gyopool.com/dashboard/guide/list/124?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=124" target="_blank" rel="noopener">2-4. 선의를 믿는 것의 어려움 가이드</a> - 수필 구성과 자기 경험 표현</li><li><a href="https://www.gyopool.com/dashboard/guide/list/125?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=125" target="_blank" rel="noopener">3-1. 투표를 안 해도 될까 가이드</a> - 논증 평가와 관점 재구성</li><li><a href="https://www.gyopool.com/dashboard/guide/list/126?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=126" target="_blank" rel="noopener">3-2. 매체가 비추는 세계 가이드</a> - 매체 맥락과 신뢰성 분석</li><li><a href="https://www.gyopool.com/dashboard/guide/list/127?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=127" target="_blank" rel="noopener">4-1. 음운의 변동 가이드</a> - 음운 변동 유형과 환경 탐구</li><li><a href="https://www.gyopool.com/dashboard/guide/list/128?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=128" target="_blank" rel="noopener">4-2. 문법 요소와 어휘의 활용 가이드</a> - 표현 효과와 맥락 표현</li><li><a href="https://www.gyopool.com/dashboard/guide/list/129?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=129" target="_blank" rel="noopener">4-3. 마음을 잇는 대화 가이드</a> - 대화 원리와 담화 관습</li><li><a href="https://www.gyopool.com/dashboard/guide/list/130?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=130" target="_blank" rel="noopener">5-1. 학교 급식에 '채식의 날'을 도입해야 한다 가이드</a> - 정책 쟁점 토론과 논증 설계</li><li><a href="https://www.gyopool.com/dashboard/guide/list/131?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-kor1&amp;utm_content=131" target="_blank" rel="noopener">5-2. 공동체를 위한 글 쓰기 가이드</a> - 견해 글 근거 평가와 설득 표현</li></ul></div><div class="ait-keypoint"><strong>핵심</strong> AI는 보조, 학생은 자기 말로 다시 쓰기. 한 차시 5~10분만 활용하며, 학생이 자신의 생각을 먼저 정리한 후 AI 피드백을 검증해 최종 답안을 자기 언어로 완성합니다.</div><p class="ait-src">출처: 고등 · 공통국어1 교풀AI 수업 활용 전체 개요</p>
+</section>
+
+<section class="ait-subpanel" id="aiclass-h-eng1" data-subj="h-eng1" aria-labelledby="aiclass-h-eng1-h" hidden>
+  <h2 class="ait-h2" id="aiclass-h-eng1-h">고등 · 공통영어1</h2>
+<div class="ait-block"><h3 class="ait-h3">고등 공통영어1에서 생성형 AI 활용 방식</h3><p class="ait-body">고등 공통영어1 교실에서 생성형 AI는 학생이 읽고, 쓰고, 말하는 통합 활동의 결정적 순간에 자기 답을 먼저 만든 뒤 점검받는 방식으로 활용됩니다. AI는 함축 의미 추론, 어휘 표현 점검, 발표 구성 점검을 돕지만, 학생은 반드시 자기 말로 다시 쓰는 과정을 거칩니다. 한 차시에 5~10분만 사용하므로 AI 의존을 방지할 수 있습니다.</p><p class="ait-body">교사는 30명 학급에서도 개별 피드백 부담을 덜고, 학생은 읽기·쓰기·발표 과정에서 자신의 사고를 스스로 검토합니다. 교과서의 Task 2 읽기 → Task 3 쓰기 → Task 4 발표 흐름을 그대로 따르면서 AI가 자연스럽게 녹아듭니다.</p></div><div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>교과: 공통영어1</li><li>학년: 고1</li><li>총 단원: 4개</li><li>총 차시: 48차시</li><li>교풀AI 도구: 16개 (일반 12개 · 수행평가 채점 4개)</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>교풀AI 도구</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. My Life</td><td>새 학기 학교생활 통합</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1216?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=1216" target="_blank" rel="noopener">학교생활 조언 글 읽기 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1217?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=1217" target="_blank" rel="noopener">감정 일기 표현 다듬기 튜터</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1218?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=1218" target="_blank" rel="noopener">새 학기 다짐 발표 코치</a></td><td>8/12 (67%)</td></tr><tr><td>2. Tasty Journeys</td><td>음식·여행 경험 통합</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1219?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=1219" target="_blank" rel="noopener">음식 조합 글 읽기 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1220?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=1220" target="_blank" rel="noopener">음식점 소감문 표현 다듬기 튜터</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1221?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=1221" target="_blank" rel="noopener">비밀 요리법 발표 코치</a></td><td>8/12 (67%)</td></tr><tr><td>3. Nature Connections</td><td>자연·생명의 소중함</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1222?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=1222" target="_blank" rel="noopener">문어 이야기 글쓴이 심정 읽기 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1223?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=1223" target="_blank" rel="noopener">식물 관찰 보고서 표현 다듬기 튜터</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1224?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=1224" target="_blank" rel="noopener">야생동물 행사 홍보 발표 코치</a></td><td>8/12 (67%)</td></tr><tr><td>4. A Sunshine Break</td><td>여행·여가 경험 통합</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1225?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=1225" target="_blank" rel="noopener">여행기 흐름·사건 읽기 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1226?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=1226" target="_blank" rel="noopener">여행 이메일 답장 표현 다듬기 튜터</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1227?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=1227" target="_blank" rel="noopener">우리 동네 촬영 명소 발표 코치</a></td><td>8/12 (67%)</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">연간 학기별 AI 활용 로드맵</h3><ul class="ait-ul"><li><strong>3~4월 (1단원 My Life):</strong> 교사 시범 단계. 새 학기 친숙한 소재로 교사가 읽기 코치를 직접 시연해 도구 사용법을 정착시킵니다.</li><li><strong>5~6월 (2단원 Tasty Journeys):</strong> 모둠 활용 단계. 음식·여행 경험을 모둠이 함께 쓰고 표현 다듬기 튜터로 상호 점검합니다.</li><li><strong>9~10월 (3단원 Nature Connections):</strong> 개별 활용 심화 단계. 화자 심정 추론처럼 고차 읽기를 개별로 심화하고 수행평가와 연계합니다.</li><li><strong>11~12월 (4단원 A Sunshine Break):</strong> 학생 주도 단계. 학생이 이메일·발표 실용문을 스스로 작성·점검하고 자가점검 도우미로 마무리합니다.</li></ul><p class="ait-body">학기 초 교사 시범에서 출발해 중반에는 모둠·개별 활용으로 확장하며, 학기 말에는 학생이 스스로 AI를 사고 파트너로 활용하는 단계로 전환됩니다.</p></div><div class="ait-block"><h3 class="ait-h3">단원별 클래스가이드</h3><p class="ait-body">각 단원별 클래스가이드는 도구·차시·수행평가를 한 화면에 모은 교사용 안내입니다. 수업 도입에서 학생 앞에 열어 활동 흐름을 보여 주거나, 수업 후 학생에게 복습·자기주도 학습용으로 공유할 수 있습니다.</p><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/132?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=132" target="_blank" rel="noopener">1단원 My Life 클래스가이드</a> - 새 학기 학교생활 통합</li><li><a href="https://www.gyopool.com/dashboard/guide/list/133?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=133" target="_blank" rel="noopener">2단원 Tasty Journeys 클래스가이드</a> - 음식·여행 경험 통합</li><li><a href="https://www.gyopool.com/dashboard/guide/list/134?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=134" target="_blank" rel="noopener">3단원 Nature Connections 클래스가이드</a> - 자연·생명의 소중함</li><li><a href="https://www.gyopool.com/dashboard/guide/list/135?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eng1&amp;utm_content=135" target="_blank" rel="noopener">4단원 A Sunshine Break 클래스가이드</a> - 여행·여가 경험 통합</li></ul></div><div class="ait-keypoint"><strong>핵심</strong> AI는 학생의 자신감 없는 첫 답안에 대한 질문 파트너일 뿐, 답변을 제공하는 것이 아닙니다. 학생은 AI 피드백을 받은 후 반드시 자기 말로 다시 써야 합니다. 한 차시 5~10분만 사용하고, 평가는 학생이 자신의 언어로 다시 쓴 글을 대상으로 합니다. 2022 개정 교육과정과 교육부 생성형 AI 활용 교육 가이드라인을 기반으로 설계되었습니다.</div><p class="ait-src">출처: 공통영어1 교풀AI 수업 활용 전체 개요</p>
+</section>
+
+<section class="ait-subpanel" id="aiclass-h-isoc1" data-subj="h-isoc1" aria-labelledby="aiclass-h-isoc1-h" hidden>
+  <h2 class="ait-h2" id="aiclass-h-isoc1-h">고등 · 통합사회1</h2>
+<div class="ait-block"><h3 class="ait-h3">통합사회 교실에서 생성형 AI 활용하기</h3><p class="ait-body">고등학교 1학년 통합사회 수업에서 생성형 AI는 학생의 학습을 보조하는 역할을 합니다. 교사는 교과서의 기존 흐름을 유지하면서 학생이 자기 사례를 분석한 직후 결정적인 순간에만 AI가 보완 시각과 놓친 관점을 제시하도록 설계되어 있습니다. 학생은 한 차시에 5~10분 정도 AI 도구를 사용하며, AI 답변을 그대로 가져가는 것이 아니라 반드시 자기 말로 다시 쓰는 과정을 거칩니다.</p><p class="ait-body">이러한 구조는 학생의 AI 의존을 방지하면서도, 시공간·사회·윤리 관점 분석(1단원), 행복·자연환경·문화·산업화 등 복잡한 개념을 깊이 있게 탐구하도록 지원합니다. 한 번 도구 사용법을 익히면 단원이 바뀌어도 같은 흐름으로 운영할 수 있어 교수설계의 부담을 덜 수 있습니다.</p></div><div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>학년: 고등학교 1학년</li><li>총 단원 수: 18개</li><li>총 차시 수: 31차시</li><li>제공되는 교풀AI 도구 수: 52개 (일반 34개·수행평가 18개)</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>교풀AI 도구</th><th>활용 차시</th></tr></thead><tbody><tr><td>1-1. 인간, 사회, 환경을 바라보는 다양한 관점</td><td>다관점 분석</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1368?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1368" target="_blank" rel="noopener">시공간 관점 분석 튜터</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1381?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1381" target="_blank" rel="noopener">사회·윤리 관점 탐구 코치</a></td><td>2/2</td></tr><tr><td>1-2. 통합적 관점의 필요성과 적용</td><td>통합적 관점 적용</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1383?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1383" target="_blank" rel="noopener">통합적 관점 적용 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1385?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1385" target="_blank" rel="noopener">쟁점 통합 탐구 가이드</a></td><td>2/2</td></tr><tr><td>2-1. 행복의 기준과 의미</td><td>행복 기준 분석</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1387?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1387" target="_blank" rel="noopener">시대·지역별 행복 기준 분석 튜터</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1389?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1389" target="_blank" rel="noopener">행복의 진정한 의미 성찰 코치</a></td><td>2/2</td></tr><tr><td>2-2. 행복한 삶을 실현하기 위한 조건</td><td>행복 4조건 진단</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1391?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1391" target="_blank" rel="noopener">행복 조건 4축 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1394?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1394" target="_blank" rel="noopener">한국 행복도 진단 토의 도우미</a></td><td>2/2</td></tr><tr><td>3-1. 자연환경과 인간 생활</td><td>환경-인간 관계 분석</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1398?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1398" target="_blank" rel="noopener">기후별 자연환경-인간 생활 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1401?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1401" target="_blank" rel="noopener">지형별 자연환경-인간 생활 분석 코치</a></td><td>2/2</td></tr><tr><td>3-2. 자연환경의 변화 속에서 안전하고 쾌적하게 살아갈 권리</td><td>환경권 탐구</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1403?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1403" target="_blank" rel="noopener">기후변화 인간생활 영향 추적 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1405?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1405" target="_blank" rel="noopener">안전·환경 권리 시민제안 코치</a></td><td>2/2</td></tr><tr><td>3-3. 자연과 인간의 관계</td><td>자연관 비교</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1407?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1407" target="_blank" rel="noopener">자연관 비교 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1409?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1409" target="_blank" rel="noopener">인간-자연 공존 제안 코치</a></td><td>2/2</td></tr><tr><td>3-4. 환경 문제의 발생과 해결을 위한 노력</td><td>환경 문제 원인·해결</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1432?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1432" target="_blank" rel="noopener">환경 문제 원인 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1433?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1433" target="_blank" rel="noopener">생태시민 실천 제안 코치</a></td><td>2/2</td></tr><tr><td>4-1. 다양한 문화권의 특징과 삶의 방식</td><td>문화권 비교</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1435?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1435" target="_blank" rel="noopener">문화권 형성 요인 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1436?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1436" target="_blank" rel="noopener">세계 문화권 비교 탐구 튜터</a></td><td>2/2</td></tr><tr><td>4-2. 문화 변동의 양상</td><td>문화 변동 요인</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1438?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1438" target="_blank" rel="noopener">문화 변동 요인 분류 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1439?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1439" target="_blank" rel="noopener">문화 접변 양상 사례 분석 튜터</a></td><td>1/1</td></tr><tr><td>4-3. 전통문화의 의의와 창조적 계승 방안</td><td>전통문화 계승</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1441?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1441" target="_blank" rel="noopener">전통문화 의의 다섯 갈래 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1442?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1442" target="_blank" rel="noopener">전통문화 창조적 계승 기획 튜터</a></td><td>1/1</td></tr><tr><td>4-4. 문화 상대주의와 보편 윤리</td><td>윤리적 가치</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1444?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1444" target="_blank" rel="noopener">문화 이해 태도 4갈래 진단 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1445?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1445" target="_blank" rel="noopener">보편 윤리 기준 자·타 문화 성찰 튜터</a></td><td>2/2</td></tr><tr><td>4-5. 문화적 다양성을 존중하는 다문화 사회</td><td>다문화 정책</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1447?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1447" target="_blank" rel="noopener">다문화 정책 두 모형 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1448?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1448" target="_blank" rel="noopener">다문화 갈등 해결 방안 균형 점검 튜터</a></td><td>1/1</td></tr><tr><td>5-1. 산업화와 도시화에 따른 우리 생활의 변화</td><td>산업화·도시화 영향</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1450?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1450" target="_blank" rel="noopener">산업화·도시화 공간 변화 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1451?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1451" target="_blank" rel="noopener">산업화·도시화 생활양식 변화 양면 분석 튜터</a></td><td>2/2</td></tr><tr><td>5-2. 산업화와 도시화에 따른 문제점과 해결 방안</td><td>도시 문제 해결</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1453?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1453" target="_blank" rel="noopener">산업화·도시화 문제 해결 방안 설계 코치</a></td><td>1/1</td></tr><tr><td>5-3. 교통·통신 및 과학기술의 발달에 따른 변화</td><td>과학기술 영향</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1455?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1455" target="_blank" rel="noopener">생활공간·생활양식 변화 탐구 코치</a></td><td>1/1</td></tr><tr><td>5-4. 교통·통신 및 과학기술의 발달에 따른 문제점과 해결 방안</td><td>기술 문제 해결</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1457?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1457" target="_blank" rel="noopener">교통·통신·과학기술 문제 진단 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1458?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1458" target="_blank" rel="noopener">교통·통신·과학기술 주체별 해결 방안 설계 튜터</a></td><td>2/2</td></tr><tr><td>5-5. 우리 지역의 공간 변화</td><td>지역사회 변화</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1460?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1460" target="_blank" rel="noopener">우리 지역 공간 변화 탐구 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1461?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=1461" target="_blank" rel="noopener">지역사회 변화 실천 방안 설계 튜터</a></td><td>2/2</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">학기별 AI 활용 로드맵</h3><p class="ait-body">학기 초에는 교사가 직접 도구를 시연하며 학생에게 AI가 어떤 보완 시각을 제시하는지 보여주는 단계에서 시작합니다. 이후 학생이 모둠에서 직접 자기 사례를 입력하고 결과를 비교하며 토의하는 단계로 진행되며, 학기 말에는 학생이 단원과 도구를 스스로 선택하여 활용하는 자주적 학습 수준에 도달하는 것을 목표로 합니다.</p><ul class="ait-ul"><li>3~4월 (1단원): 교사가 시공간·사회·윤리 4관점을 화면에 띄워 시범 시연. 학생은 보고 따라 적기</li><li>5~6월 (2~3단원): 모둠당 1대로 학생이 직접 자기 사례를 입력하고 모둠 안에서 결과 비교</li><li>9~10월 (4단원): AI 답변을 받은 뒤 "다시 쓰기"로 자기 언어 정리 강화</li><li>11~12월 (5단원): 학생이 스스로 사례와 도구를 선택하여 분석. 교사는 결과만 점검</li></ul></div><div class="ait-block"><h3 class="ait-h3">단원별 클래스가이드</h3><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/186?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=186" target="_blank" rel="noopener">1-1. 인간, 사회, 환경을 바라보는 다양한 관점 가이드</a> - 다관점 분석의 기초 설정 및 도구 안내</li><li><a href="https://www.gyopool.com/dashboard/guide/list/187?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=187" target="_blank" rel="noopener">1-2. 통합적 관점의 필요성과 적용 가이드</a> - 통합적 사고 발달 및 쟁점 탐구 안내</li><li><a href="https://www.gyopool.com/dashboard/guide/list/188?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=188" target="_blank" rel="noopener">2-1. 행복의 기준과 의미 가이드</a> - 행복의 시대·지역적 다양성 탐색</li><li><a href="https://www.gyopool.com/dashboard/guide/list/189?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=189" target="_blank" rel="noopener">2-2. 행복한 삶을 실현하기 위한 조건 가이드</a> - 행복의 네 가지 조건 및 한국 사회 진단</li><li><a href="https://www.gyopool.com/dashboard/guide/list/190?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=190" target="_blank" rel="noopener">3-1. 자연환경과 인간 생활 가이드</a> - 기후와 지형에 따른 생활양식 분석</li><li><a href="https://www.gyopool.com/dashboard/guide/list/191?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=191" target="_blank" rel="noopener">3-2. 자연환경의 변화 속에서 안전하고 쾌적하게 살아갈 권리 가이드</a> - 기후변화와 환경권 탐구</li><li><a href="https://www.gyopool.com/dashboard/guide/list/192?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=192" target="_blank" rel="noopener">3-3. 자연과 인간의 관계 가이드</a> - 다양한 자연관 비교 및 공존 모색</li><li><a href="https://www.gyopool.com/dashboard/guide/list/193?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=193" target="_blank" rel="noopener">3-4. 환경 문제의 발생과 해결을 위한 노력 가이드</a> - 환경 문제 원인 분석 및 생태시민 실천</li><li><a href="https://www.gyopool.com/dashboard/guide/list/194?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=194" target="_blank" rel="noopener">4-1. 다양한 문화권의 특징과 삶의 방식 가이드</a> - 문화권 형성 요인 및 비교 탐구</li><li><a href="https://www.gyopool.com/dashboard/guide/list/195?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=195" target="_blank" rel="noopener">4-2. 문화 변동의 양상 가이드</a> - 문화 변동 요인 및 접변 양상 분석</li><li><a href="https://www.gyopool.com/dashboard/guide/list/196?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=196" target="_blank" rel="noopener">4-3. 전통문화의 의의와 창조적 계승 방안 가이드</a> - 전통문화의 의미와 현대적 재해석</li><li><a href="https://www.gyopool.com/dashboard/guide/list/197?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=197" target="_blank" rel="noopener">4-4. 문화 상대주의와 보편 윤리 가이드</a> - 문화 이해 태도 및 보편 윤리 기준</li><li><a href="https://www.gyopool.com/dashboard/guide/list/198?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=198" target="_blank" rel="noopener">4-5. 문화적 다양성을 존중하는 다문화 사회 가이드</a> - 다문화 정책 모형 및 갈등 해결</li><li><a href="https://www.gyopool.com/dashboard/guide/list/199?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=199" target="_blank" rel="noopener">5-1. 산업화와 도시화에 따른 우리 생활의 변화 가이드</a> - 산업화·도시화의 공간 및 생활양식 변화</li><li><a href="https://www.gyopool.com/dashboard/guide/list/200?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=200" target="_blank" rel="noopener">5-2. 산업화와 도시화에 따른 문제점과 해결 방안 가이드</a> - 도시 문제 진단 및 해결 설계</li><li><a href="https://www.gyopool.com/dashboard/guide/list/201?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=201" target="_blank" rel="noopener">5-3. 교통·통신 및 과학기술의 발달에 따른 변화 가이드</a> - 기술 발달과 생활 공간·양식 변화</li><li><a href="https://www.gyopool.com/dashboard/guide/list/202?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=202" target="_blank" rel="noopener">5-4. 교통·통신 및 과학기술의 발달에 따른 문제점과 해결 방안 가이드</a> - 기술 문제 진단 및 주체별 해결</li><li><a href="https://www.gyopool.com/dashboard/guide/list/203?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isoc1&amp;utm_content=203" target="_blank" rel="noopener">5-5. 우리 지역의 공간 변화 가이드</a> - 지역 사례 탐구 및 실천 방안 설계</li></ul><p class="ait-src">수업 도입에서 학생 앞에 띄워 단원 한눈에 보기와 도구 안내를 함께 보여주거나, 수업 후 학생에게 복습 자료로 공유할 수 있습니다.</p></div><div class="ait-keypoint"><strong>핵심</strong> 생성형 AI는 보조 도구입니다. 학생은 먼저 자기 사례로 분석한 뒤, AI 답변을 읽고 반드시 자기 말로 다시 써야 합니다. 한 차시 5~10분 정도의 짧은 활용으로 AI 의존을 방지하면서도 깊이 있는 탐구를 지원합니다.<p class="ait-src">2022 개정 교육과정 및 교육부 생성형 AI 활용 교육 가이드라인을 참고하여 작성되었습니다.</p></div>
+</section>
+
+<section class="ait-subpanel" id="aiclass-h-isci1" data-subj="h-isci1" aria-labelledby="aiclass-h-isci1-h" hidden>
+  <h2 class="ait-h2" id="aiclass-h-isci1-h">고등 · 통합과학1</h2>
+<div class="ait-block"><h3 class="ait-h3">이 교과에서 생성형 AI를 어떻게 활용할까요?</h3><p class="ait-body">고등학교 1학년 통합과학에서는 학생이 막히는 결정적 순간에만 AI가 짧게 개입합니다. 한 차시 5~10분만 AI 도구를 사용하며, 학생이 자신의 관찰이나 실험 결과를 먼저 정리한 뒤에만 AI를 활용하도록 설계되어 있습니다. 이를 통해 AI는 정답을 주지 않고 학생의 사고를 되짚어 주는 질문만 던집니다.</p><p class="ait-body">학생은 AI 응답을 그대로 가져갈 수 없습니다. 활동지에 마련된 "다시 쓰기" 칸에서 자신의 말로 다시 정리하는 과정을 거쳐야 하므로, AI에 대한 의존이 자연스럽게 방지됩니다. 디바이스가 부족하다면 모둠당 1대만으로도 충분합니다. 모둠이 함께 입력하고 토의 재료로 삼거나, 릴레이 방식으로 돌아가며 사용할 수 있습니다.</p></div><div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>학년: 고등학교 1학년</li><li>총 단원 수: 7개</li><li>총 차시 수: 51차시</li><li>교풀AI 도구 수: 29개 (일반 22 · 수행평가 7)</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>교풀AI 도구</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. 과학의 기본량</td><td>시·공간 규모와 기본량</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1155?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1155" target="_blank" rel="noopener">시공간 규모 탐험</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1159?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1159" target="_blank" rel="noopener">측정 방법 변천 탐구</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1161?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1161" target="_blank" rel="noopener">스마트폰 사양 분석 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1163?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1163" target="_blank" rel="noopener">기본량·단위 정리 도우미</a></td><td>4/5 (80%)</td></tr><tr><td>2. 과학의 측정과 우리 사회</td><td>측정 표준과 디지털 변환</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1154?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1154" target="_blank" rel="noopener">측정 표준 탐정</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1157?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1157" target="_blank" rel="noopener">디지털 변환 탐구 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1158?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1158" target="_blank" rel="noopener">디지털 기술 사례 분석가</a></td><td>4/5 (80%)</td></tr><tr><td>3. 자연의 구성 원소</td><td>우주의 원소 생성 추론</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1149?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1149" target="_blank" rel="noopener">스펙트럼 탐정</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1151?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1151" target="_blank" rel="noopener">별빛 여정 코치</a></td><td>4/7 (57%)</td></tr><tr><td>4. 물질의 규칙성과 성질</td><td>주기성과 화학 결합</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1153?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1153" target="_blank" rel="noopener">주기율표 사고 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1167?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1167" target="_blank" rel="noopener">화학 결합 시화 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1168?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1168" target="_blank" rel="noopener">화성 생존 키트 분석가</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1169?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1169" target="_blank" rel="noopener">반도체 일상 사례 분석가</a></td><td>4/13 (31%)</td></tr><tr><td>5. 지구시스템</td><td>권역 상호작용과 판구조</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1148?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1148" target="_blank" rel="noopener">지구시스템 권역 탐구 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1150?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1150" target="_blank" rel="noopener">판구조 시나리오 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1152?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1152" target="_blank" rel="noopener">지권 변화 대책 컨설턴트</a></td><td>4/7 (57%)</td></tr><tr><td>6. 역학 시스템</td><td>중력 운동과 충격량</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1156?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1156" target="_blank" rel="noopener">자유 낙하·중력 운동 탐구 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1160?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1160" target="_blank" rel="noopener">운동량·충격량 분석기</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1162?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1162" target="_blank" rel="noopener">안전장치 설계 컨설턴트</a></td><td>4/7 (57%)</td></tr><tr><td>7. 생명 시스템</td><td>세포·효소·유전정보 흐름</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1164?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1164" target="_blank" rel="noopener">세포 시스템 탐구 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1165?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1165" target="_blank" rel="noopener">효소 반응 분석 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1166?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=1166" target="_blank" rel="noopener">유전정보 흐름 시뮬레이터</a></td><td>6/7 (86%)</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">학기별 AI 활용 단계</h3><ul class="ait-ul"><li><strong>3~4월 (과학의 기본량)</strong> - 1단계: 교사가 도구를 화면에 띄워 입력과 발문 흐름을 시범으로 보여줍니다. 학생은 관찰하며 도구 사용법에 익숙해집니다.</li><li><strong>5~6월 (측정과 우리 사회, 자연의 구성 원소)</strong> - 2단계: 모둠당 1대로 함께 입력하고, AI 응답을 모둠 토의 재료로 삼습니다.</li><li><strong>9~10월 (물질의 규칙성과 성질, 지구시스템)</strong> - 2단계 심화: 학생이 자신의 사례를 개별 입력해 분석하고, 활동지에서 다시 쓰기로 정리합니다.</li><li><strong>11~12월 (역학 시스템, 생명 시스템)</strong> - 3단계: 학생이 스스로 도구를 선택해 사용하고, AI 응답을 비판적으로 검토하는 자율 활용 단계입니다.</li></ul></div><div class="ait-block"><h3 class="ait-h3">단원별 클래스가이드</h3><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/136?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=136" target="_blank" rel="noopener">1단원 과학의 기본량 가이드</a></li><li><a href="https://www.gyopool.com/dashboard/guide/list/143?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=143" target="_blank" rel="noopener">2단원 과학의 측정과 우리 사회 가이드</a></li><li><a href="https://www.gyopool.com/dashboard/guide/list/144?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=144" target="_blank" rel="noopener">3단원 자연의 구성 원소 가이드</a></li><li><a href="https://www.gyopool.com/dashboard/guide/list/145?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=145" target="_blank" rel="noopener">4단원 물질의 규칙성과 성질 가이드</a></li><li><a href="https://www.gyopool.com/dashboard/guide/list/146?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=146" target="_blank" rel="noopener">5단원 지구시스템 가이드</a></li><li><a href="https://www.gyopool.com/dashboard/guide/list/147?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=147" target="_blank" rel="noopener">6단원 역학 시스템 가이드</a></li><li><a href="https://www.gyopool.com/dashboard/guide/list/148?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-isci1&amp;utm_content=148" target="_blank" rel="noopener">7단원 생명 시스템 가이드</a></li></ul></div><div class="ait-keypoint"><strong>핵심</strong> AI는 보조일 뿐입니다. 학생은 먼저 자기 말로 관찰이나 실험 결과를 정리한 뒤, AI 응답을 보고 필요한 부분을 자신의 언어로 다시 써야 합니다. 이것이 AI 의존을 방지하고 진정한 학습을 만드는 핵심입니다.</div><p class="ait-src">출처: 고등 · 통합과학1 교풀AI 수업 활용 전체 개요 (2022 개정 교육과정 및 교육부 생성형 AI 활용 교육 가이드라인 참고)</p>
+</section>
+
+<section class="ait-subpanel" id="aiclass-h-hist1" data-subj="h-hist1" aria-labelledby="aiclass-h-hist1-h" hidden>
+  <h2 class="ait-h2" id="aiclass-h-hist1-h">고등 · 한국사1</h2>
+<div class="ait-block">
+<h3 class="ait-h3">이 교과 교실에서 생성형 AI 활용하기</h3>
+<p class="ait-body">한국사 교실에서 생성형 AI는 학생이 막히는 결정적 순간에만 짧게 개입하는 방식으로 활용됩니다. 학생은 먼저 사료 한 구절을 자신의 언어로 해석하고, AI는 그 다음 근거의 타당성을 점검해줍니다. 교사가 수업 설계를 바꿀 필요 없이 현재의 교과서와 수업 흐름 안에서 자연스럽게 활용할 수 있습니다.</p>
+<p class="ait-body">각 도구는 한 차시에 5~10분만 사용하며, 활동지의 "내 말로 다시 쓰기" 칸을 통해 학생이 AI 답변을 그대로 옮기지 않도록 설계되었습니다. 학생의 사고가 항상 출발점에 있고, AI는 그 과정을 점검하고 보강하는 보조 역할을 합니다.</p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">교과서 정보</h3>
+<ul class="ait-ul">
+<li>교과: 한국사</li>
+<li>학년: 고등학교 1학년</li>
+<li>총 단원 수: 13개</li>
+<li>총 차시 수: 69차시</li>
+<li>교풀AI 도구: 39개 (일반 26 · 수행평가 13)</li>
+</ul>
+</div>
+
+<div class="ait-tw">
+<table class="ait-table">
+<thead>
+<tr>
+<th>단원</th>
+<th>핵심 주제</th>
+<th>교풀AI 도구</th>
+<th>차시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 고대 국가의 성장</td>
+<td>사료 해석과 통치 체제 비교</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1270?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1270" target="_blank" rel="noopener">고대 국가 사료 탐구 코치</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>2. 고려의 통치 체제와 정치 변동</td>
+<td>고려 정치 변동의 인과</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1316?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1316" target="_blank" rel="noopener">고려 정치 변동 사료 탐구 코치</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>3. 조선 사회의 성립과 발전</td>
+<td>조선 정치 운영의 쟁점</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1319?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1319" target="_blank" rel="noopener">조선 통치 체제 사료 탐구 코치</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>4. 조선 후기의 새로운 흐름</td>
+<td>조선 후기 정치 변화 평가</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1322?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1322" target="_blank" rel="noopener">조선 후기 정치 변화 사료 탐구 코치</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>5. 국제 관계와 대외 교류</td>
+<td>시대별 국제 관계 비교</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1325?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1325" target="_blank" rel="noopener">시대별 국제 관계 비교 코치</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>6. 수취 체제와 경제생활</td>
+<td>수취 제도 변천과 경제생활</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1328?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1328" target="_blank" rel="noopener">수취 제도 변화 분석 코치</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>7. 신분제와 사회 구조</td>
+<td>신분 구조와 시대 시선</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1331?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1331" target="_blank" rel="noopener">신분제 구조 분석 코치</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>8. 사상과 문화</td>
+<td>사상 흐름과 문화유산 해설</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1334?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1334" target="_blank" rel="noopener">사상 흐름 분석 코치</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>9. 근대 이전 한국사 주제 탐구</td>
+<td>쟁점 탐구와 사료 비판</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1338?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1338" target="_blank" rel="noopener">쟁점 탐구 질문 코치</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>10. 국제 질서의 변동과 개항</td>
+<td>동아시아 3국 대응 비교</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1342?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1342" target="_blank" rel="noopener">동아시아 3국 대응 비교 코치</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>11. 근대 국가 수립을 위한 노력</td>
+<td>근대 개혁 운동의 연결</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1345?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1345" target="_blank" rel="noopener">근대 개혁 운동 비교 코치</a></td>
+<td>9</td>
+</tr>
+<tr>
+<td>12. 사회·경제 변화와 문화 변동</td>
+<td>경제 침탈과 수호 운동</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1349?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1349" target="_blank" rel="noopener">열강의 경제 침탈 분석 코치</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>13. 국권 침탈과 국권 수호 운동</td>
+<td>항일 운동과 애국 계몽 운동</td>
+<td><a href="https://www.gyopool.com/dashboard/ai/apps/1355?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=1355" target="_blank" rel="noopener">항일 의병·의열 투쟁 흐름 분석 코치</a></td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">연간 AI 활용 로드맵</h3>
+<ul class="ait-ul">
+<li><strong>3~4월 (1·2단원): 교사 시범 단계</strong> - 첫 사료 탐구 코치를 교사가 시범하며 "학생 답이 먼저, AI는 그 다음" 원칙을 정착시킵니다. 사료 해석 입력 → AI 점검 → 다시 쓰기 사이클을 반복 노출합니다.</li>
+<li><strong>5~6월 (3·4단원): 모둠 활용 단계</strong> - 모둠당 1대로 비교 분석·정책 평가 도구를 운영합니다. 모둠의 마지막 질문에만 AI를 사용하도록 안내해 처음부터 의존하지 않게 합니다.</li>
+<li><strong>9~10월 (5~9단원): 심화 활용 단계</strong> - 사료 탐구 + 인터뷰형 + 비교 분석 도구를 단원마다 조합해 운영합니다. 9단원 주제 탐구에서는 학생이 직접 쟁점·질문·자료를 설계하도록 유도합니다.</li>
+<li><strong>11~12월 (10~13단원): 학생 주도 단계</strong> - 학생이 주도적으로 인과 연결·비교 기준 점검 도구를 활용합니다. 단원당 차시는 짧지만 분석 밀도가 높으므로 활동지 "다시 쓰기" 칸을 평가 근거로 단단히 확보합니다.</li>
+</ul>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">단원별 클래스가이드</h3>
+<ul class="ait-list">
+<li><a href="https://www.gyopool.com/dashboard/guide/list/172?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=172" target="_blank" rel="noopener">고대 국가의 성장 가이드</a> - 1단원</li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/174?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=174" target="_blank" rel="noopener">고려의 통치 체제와 정치 변동 가이드</a> - 2단원</li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/175?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=175" target="_blank" rel="noopener">조선 사회의 성립과 발전 가이드</a> - 3단원</li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/176?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=176" target="_blank" rel="noopener">조선 후기의 새로운 흐름 가이드</a> - 4단원</li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/177?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=177" target="_blank" rel="noopener">국제 관계와 대외 교류 가이드</a> - 5단원</li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/178?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=178" target="_blank" rel="noopener">수취 체제와 경제생활 가이드</a> - 6단원</li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/179?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=179" target="_blank" rel="noopener">신분제와 사회 구조 가이드</a> - 7단원</li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/180?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=180" target="_blank" rel="noopener">사상과 문화 가이드</a> - 8단원</li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/181?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=181" target="_blank" rel="noopener">근대 이전 한국사 주제 탐구 가이드</a> - 9단원</li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/182?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=182" target="_blank" rel="noopener">국제 질서의 변동과 개항 가이드</a> - 10단원</li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/183?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=183" target="_blank" rel="noopener">근대 국가 수립을 위한 노력 가이드</a> - 11단원</li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/184?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=184" target="_blank" rel="noopener">사회·경제 변화와 문화 변동 가이드</a> - 12단원</li>
+<li><a href="https://www.gyopool.com/dashboard/guide/list/185?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-hist1&amp;utm_content=185" target="_blank" rel="noopener">국권 침탈과 국권 수호 운동 가이드</a> - 13단원</li>
+</ul>
+<p class="ait-src">클래스가이드는 단원 도입 차시에 학생 앞에서 함께 열어 단원 흐름과 AI 활용 포인트를 안내하거나, 수업 후 복습용으로 학생에게 공유해 자기 페이스로 다시 보게 할 수 있습니다.</p>
+</div>
+
+<div class="ait-keypoint"><strong>핵심</strong> AI는 보조, 학생은 자기 말로 다시 쓰기. 교풀AI 도구의 "내 말로 다시 쓰기" 칸을 통해 학생이 AI 답변을 그대로 옮기지 않도록 설계되었습니다. 평가 대상은 학생이 자신의 언어로 작성한 글이며, 한 차시 5~10분 범위에서만 AI를 활용합니다.</div>
+<div class="ait-src">고등 · 한국사1 교풀AI 수업 활용 전체 개요. 2022 개정 교육과정과 교육부 생성형 AI 활용 교육 가이드라인을 참고하여 작성됨.</div>
+</section>
+
+<section class="ait-subpanel" id="aiclass-h-eth" data-subj="h-eth" aria-labelledby="aiclass-h-eth-h" hidden>
+  <h2 class="ait-h2" id="aiclass-h-eth-h">고등 · 윤리</h2>
+<div class="ait-block"><h3 class="ait-h3">고등학교 윤리 교실에서 생성형 AI 활용</h3><p class="ait-body">고등학교 윤리 수업에서 생성형 AI는 학생이 도덕적 추론에 막힐 때, 그 결정적 순간에만 개입합니다. 학생이 먼저 자신의 입장과 근거를 적은 뒤, AI가 빠진 논거나 반대 관점을 되묻기 형태로 제시하는 방식입니다. 이를 통해 학생은 동서양 윤리 사상을 실제 쟁점에 적용하고, 다관점 분석으로 자신의 추론을 다지게 됩니다.</p><p class="ait-body">교풀AI에서 제공하는 23개 도구는 교과서의 6개 단원 64차시를 모두 포함합니다. 한 차시에서 AI 활동은 5~10분에 그치며, 마지막 종합은 늘 학생이 자기 언어로 마무리합니다. 학생의 AI 의존을 막기 위해, 모든 활동지에 "내 말로 다시 쓰기" 칸을 배치했습니다.</p></div><div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>교과: 현대사회와 윤리</li><li>학년: 고등학교</li><li>총 단원 수: 6개</li><li>총 차시 수: 64차시</li><li>교풀AI 도구: 23개 (일반 17 · 수행평가 6)</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>대표 교풀AI 도구</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. 현대 생활과 윤리</td><td>도덕적 추론과 동서양 윤리</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1244?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eth&amp;utm_content=1244" target="_blank" rel="noopener">도덕적 추론 점검 코치</a></td><td>5/9 (56%)</td></tr><tr><td>2. 생명 윤리와 생태 윤리</td><td>생명·생태 윤리 쟁점</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1246?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eth&amp;utm_content=1246" target="_blank" rel="noopener">생명 윤리 쟁점 다관점 분석 코치</a></td><td>11/11 (100%)</td></tr><tr><td>3. 과학과 디지털 학습 환경 윤리</td><td>과학·정보·AI 윤리</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1256?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eth&amp;utm_content=1256" target="_blank" rel="noopener">인공지능 윤리 쟁점 탐구 도구</a></td><td>10/10 (100%)</td></tr><tr><td>4. 민주시민과 윤리</td><td>직업·정의·시민 윤리</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1260?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eth&amp;utm_content=1260" target="_blank" rel="noopener">사회 정의 쟁점 탐구 도구</a></td><td>12/12 (100%)</td></tr><tr><td>5. 문화와 경제생활의 윤리</td><td>문화와 소비의 윤리</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1264?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eth&amp;utm_content=1264" target="_blank" rel="noopener">다문화 사회 윤리 쟁점 탐구 도구</a></td><td>11/11 (100%)</td></tr><tr><td>6. 평화와 공존의 윤리</td><td>평화와 공존의 윤리</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1268?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eth&amp;utm_content=1268" target="_blank" rel="noopener">지구촌 평화 쟁점 탐구 도구</a></td><td>11/11 (100%)</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">연간 학기별 AI 활용 로드맵</h3><p class="ait-body">한 해 동안 학생의 AI 활용이 교사 시범에서 학생 주도로 자연스럽게 무게중심을 옮깁니다. 학기 초에는 도덕적 추론의 기본기를 다지고, 중반에는 모둠이 함께 쟁점의 다관점을 분석합니다. 학기 말에는 학생이 쟁점을 스스로 선택해 자기 입장을 종합하는 단계로 나아갑니다.</p><ul class="ait-ul"><li><strong>3~4월 (1단원)</strong>: 교사 시범 · 도덕 판단 분해 과정을 함께 보며 "AI는 보조"의 원칙을 세웁니다.</li><li><strong>5~6월 (2~3단원)</strong>: 모둠 활용 · 찬반이 갈리는 생명·정보·AI 쟁점을 모둠당 1대 기기로 함께 다룹니다.</li><li><strong>9~10월 (4~5단원)</strong>: 다관점 심화 · 사상적 기준(롤스·노직 등)과 자기 일상 사례를 함께 적용합니다.</li><li><strong>11~12월 (6단원)</strong>: 학생 주도 · 평화·공존 쟁점을 스스로 고르고 자기 입장을 수행평가 논술로 종합합니다.</li></ul></div><div class="ait-block"><h3 class="ait-h3">단원별 클래스가이드</h3><p class="ait-body">각 단원의 클래스가이드에는 도구, 활동, 수행평가가 한 페이지에 모여 있습니다. 수업 도입에서 학생 앞에 열어 그날의 AI 활동 흐름을 안내하거나, 수업 후 복습·확인용으로 공유할 수 있습니다.</p><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/137?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eth&amp;utm_content=137" target="_blank" rel="noopener">1단원 현대 생활과 윤리 가이드</a> - 도덕적 추론의 기본기</li><li><a href="https://www.gyopool.com/dashboard/guide/list/138?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eth&amp;utm_content=138" target="_blank" rel="noopener">2단원 생명 윤리와 생태 윤리 가이드</a> - 생명·환경 쟁점 탐구</li><li><a href="https://www.gyopool.com/dashboard/guide/list/139?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eth&amp;utm_content=139" target="_blank" rel="noopener">3단원 과학과 디지털 학습 환경 윤리 가이드</a> - 기술·AI 윤리</li><li><a href="https://www.gyopool.com/dashboard/guide/list/140?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eth&amp;utm_content=140" target="_blank" rel="noopener">4단원 민주시민과 윤리 가이드</a> - 정의와 시민 윤리</li><li><a href="https://www.gyopool.com/dashboard/guide/list/141?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eth&amp;utm_content=141" target="_blank" rel="noopener">5단원 문화와 경제생활의 윤리 가이드</a> - 문화·소비 윤리</li><li><a href="https://www.gyopool.com/dashboard/guide/list/142?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-eth&amp;utm_content=142" target="_blank" rel="noopener">6단원 평화와 공존의 윤리 가이드</a> - 평화·공존 윤리</li></ul></div><div class="ait-keypoint"><strong>핵심</strong> AI는 보조 도구입니다. 학생이 자신의 입장과 근거를 먼저 적은 뒤, 빠진 논거나 반대 관점을 점검하는 자리에만 AI가 들어옵니다. 학생은 AI 답변을 그대로 가져가지 않고 반드시 자기 말로 다시 씁니다.</div><p class="ait-src">출처: 현대사회와 윤리 교풀AI 수업 활용 전체 개요 (2022 개정 교육과정 · 교육부 생성형 AI 활용 교육 가이드라인 참고)</p>
+</section>
+
+<section class="ait-subpanel" id="aiclass-h-tech" data-subj="h-tech" aria-labelledby="aiclass-h-tech-h" hidden>
+  <h2 class="ait-h2" id="aiclass-h-tech-h">고등 · 기술가정</h2>
+<div class="ait-block">
+  <h3 class="ait-h3">기술·가정 교실에서 생성형 AI 활용하기</h3>
+  <p class="ait-body">2022 개정 교육과정에서 AI 수업의 중요성이 강조되지만, 현장의 고민은 깊습니다. 어떤 도구를 어떻게 활용할지 모르겠고, 학생이 AI에 의존하지 않을지 걱정됩니다. 기술·가정 수업에서는 학생이 자신의 가족·생활 경험을 먼저 떠올린 뒤, AI가 그것을 개념과 근거로 연결해 주는 방식으로 진행됩니다. 교과서 흐름을 그대로 따르면서 학생이 막히는 결정적 순간에만 한 차시 5~10분 정도 AI가 짧게 개입합니다.</p>
+  <p class="ait-body">이 교과에는 16개 단원에 걸쳐 61개의 교풀AI 도구가 차시별로 배치되어 있습니다. 탐구 코치·튜터 계열 도구는 학생이 활동지에 먼저 쓴 관찰을 받아 개념 연결을 점검하고, 설계 도우미·문제 해결 코치 계열 도구는 학생 아이디어를 구체화하는 사고 파트너 역할을 합니다. 무엇보다 학생은 AI 답변을 그대로 가져가지 않고, 반드시 자기 말로 다시 쓰는 과정을 거치도록 설계되어 있어 AI 의존을 자연스럽게 방지합니다.</p>
+</div>
+
+<div class="ait-block">
+  <h3 class="ait-h3">교과서 정보</h3>
+  <ul class="ait-ul">
+    <li>교과: 기술·가정 (고등학교 1학년)</li>
+    <li>총 단원 수: 16개</li>
+    <li>총 차시 수: 64차시</li>
+    <li>교풀AI 도구: 61개 (일반 45개 · 수행평가 16개)</li>
+  </ul>
+</div>
+
+<div class="ait-tw">
+  <table class="ait-table">
+    <thead>
+      <tr>
+        <th>단원</th>
+        <th>핵심 주제</th>
+        <th>교풀AI 도구</th>
+        <th>AI 활용 차시</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1. 생활 문화의 이해와 다양한 의식주 생활 문화</td>
+        <td>생활 문화와 의식주</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1271?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1271" target="_blank" rel="noopener">생활 문화 변화 탐구 코치</a></td>
+        <td>4/8 (50%)</td>
+      </tr>
+      <tr>
+        <td>2. 미래의 의식주 생활 문화</td>
+        <td>미래 의식주 변화</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1273?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1273" target="_blank" rel="noopener">미래 식생활 변화 분석 코치</a></td>
+        <td>3/4 (75%)</td>
+      </tr>
+      <tr>
+        <td>3. 생활 설계와 소비 생활</td>
+        <td>생애 설계·재무 관리</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1275?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1275" target="_blank" rel="noopener">전 생애 생활 설계 코치</a></td>
+        <td>3/5 (60%)</td>
+      </tr>
+      <tr>
+        <td>4. 생활 복지 서비스와 스마트 복지</td>
+        <td>복지 서비스·빅데이터</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1277?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1277" target="_blank" rel="noopener">빅데이터 복지 서비스 탐구 코치</a></td>
+        <td>2/3 (67%)</td>
+      </tr>
+      <tr>
+        <td>5. 성년기의 건강한 관계 맺기와 부모됨</td>
+        <td>관계·부모됨·생식건강</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1280?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1280" target="_blank" rel="noopener">건강한 관계 맺기 성찰 코치</a></td>
+        <td>3/5 (60%)</td>
+      </tr>
+      <tr>
+        <td>6. 중년기와 노년기의 생활</td>
+        <td>발달·인생 설계·유니버설 디자인</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1284?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1284" target="_blank" rel="noopener">세대 간 발달 특성 비교 코치</a></td>
+        <td>3/3 (100%)</td>
+      </tr>
+      <tr>
+        <td>7. 가족의 치유와 회복</td>
+        <td>회복탄력성·위기 치유</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1286?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1286" target="_blank" rel="noopener">회복 탄력성 진단 코치</a></td>
+        <td>3/4 (75%)</td>
+      </tr>
+      <tr>
+        <td>8. 공학의 세계</td>
+        <td>공학 발달·문제 해결·융합</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1288?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1288" target="_blank" rel="noopener">공학 발달과 미래 예측 탐구 튜터</a></td>
+        <td>4/4 (100%)</td>
+      </tr>
+      <tr>
+        <td>9. 공학 소양과 진로</td>
+        <td>공학자 역할·진로 탐색</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1291?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1291" target="_blank" rel="noopener">공학 소양 탐구 코치</a></td>
+        <td>3/3 (100%)</td>
+      </tr>
+      <tr>
+        <td>10. 디지털 기반의 설계와 공학적 문제 해결</td>
+        <td>아이디어 시각화·산출물 평가</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1295?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1295" target="_blank" rel="noopener">아이디어 시각화 탐구 튜터</a></td>
+        <td>3/3 (100%)</td>
+      </tr>
+      <tr>
+        <td>11. 로봇과 자동화</td>
+        <td>로봇 구성·자동 제어</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1299?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1299" target="_blank" rel="noopener">로봇 구성 탐구 튜터</a></td>
+        <td>3/3 (100%)</td>
+      </tr>
+      <tr>
+        <td>12. 친환경 에너지와 첨단 수송 기술</td>
+        <td>에너지 전환·모빌리티 기술</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1302?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1302" target="_blank" rel="noopener">친환경 에너지 탐구 튜터</a></td>
+        <td>5/5 (100%)</td>
+      </tr>
+      <tr>
+        <td>13. 정보 통신 공학</td>
+        <td>정보 통신 기술·윤리·초연결</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1304?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1304" target="_blank" rel="noopener">정보 통신 기술 탐구 튜터</a></td>
+        <td>4/4 (100%)</td>
+      </tr>
+      <tr>
+        <td>14. 스마트 도시와 건설 공학</td>
+        <td>스마트 도시 기술·건설 공학</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1306?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1306" target="_blank" rel="noopener">스마트 도시 기술 탐구 튜터</a></td>
+        <td>3/3 (100%)</td>
+      </tr>
+      <tr>
+        <td>15. 생명 공학</td>
+        <td>생명 공학 활용·윤리</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1308?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1308" target="_blank" rel="noopener">생명 공학 활용 탐구 튜터</a></td>
+        <td>3/3 (100%)</td>
+      </tr>
+      <tr>
+        <td>16. 첨단 융합 공학</td>
+        <td>융합 공학 사례·윤리</td>
+        <td><a href="https://www.gyopool.com/dashboard/ai/apps/1310?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=1310" target="_blank" rel="noopener">융합 공학 사례 탐구 튜터</a></td>
+        <td>4/4 (100%)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="ait-block">
+  <h3 class="ait-h3">연간 AI 활용 로드맵</h3>
+  <ul class="ait-ul">
+    <li><strong>3~4월 (1단원)</strong>: 1단계 교사 시범. 첫 단원에서 교사가 탐구 코치 도구를 학생 앞에 직접 시연해 "내 답이 먼저, AI는 그 다음" 운영 원칙을 정착시킵니다.</li>
+    <li><strong>5~6월 (2~3단원)</strong>: 2단계 모둠 활용. 모둠당 1대 디바이스로 생활 설계·생애 발달 도구를 활용해 모둠 토의 마지막 5분에 AI 점검을 끼워 넣습니다.</li>
+    <li><strong>9~10월 (4~5단원)</strong>: 2단계 심화. 공학적 문제 해결 과정을 모둠별로 진행하며 설계 도우미·아이디어 코치 도구를 단계마다 짧게 호출해 답을 구체화합니다.</li>
+    <li><strong>11~12월 (6~16단원)</strong>: 3단계 학생 주도. 학기 말 학생이 스스로 윤리 토론·융합 사례 탐구 도구를 선택해 자신의 탐구 주제에 맞게 활용합니다.</li>
+  </ul>
+</div>
+
+<div class="ait-block">
+  <h3 class="ait-h3">단원별 클래스가이드</h3>
+  <ul class="ait-list">
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/149?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=149" target="_blank" rel="noopener">1단원 생활 문화의 이해와 다양한 의식주 생활 문화 가이드</a> - 4차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/150?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=150" target="_blank" rel="noopener">2단원 미래의 의식주 생활 문화 가이드</a> - 3차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/151?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=151" target="_blank" rel="noopener">3단원 생활 설계와 소비 생활 가이드</a> - 3차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/152?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=152" target="_blank" rel="noopener">4단원 생활 복지 서비스와 스마트 복지 가이드</a> - 2차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/153?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=153" target="_blank" rel="noopener">5단원 성년기의 건강한 관계 맺기와 부모됨 가이드</a> - 3차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/154?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=154" target="_blank" rel="noopener">6단원 중년기와 노년기의 생활 가이드</a> - 3차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/155?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=155" target="_blank" rel="noopener">7단원 가족의 치유와 회복 가이드</a> - 3차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/156?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=156" target="_blank" rel="noopener">8단원 공학의 세계 가이드</a> - 4차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/157?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=157" target="_blank" rel="noopener">9단원 공학 소양과 진로 가이드</a> - 3차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/158?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=158" target="_blank" rel="noopener">10단원 디지털 기반의 설계와 공학적 문제 해결 가이드</a> - 3차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/159?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=159" target="_blank" rel="noopener">11단원 로봇과 자동화 가이드</a> - 3차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/160?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=160" target="_blank" rel="noopener">12단원 친환경 에너지와 첨단 수송 기술 가이드</a> - 5차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/161?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=161" target="_blank" rel="noopener">13단원 정보 통신 공학 가이드</a> - 4차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/162?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=162" target="_blank" rel="noopener">14단원 스마트 도시와 건설 공학 가이드</a> - 3차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/163?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=163" target="_blank" rel="noopener">15단원 생명 공학 가이드</a> - 3차시</li>
+    <li><a href="https://www.gyopool.com/dashboard/guide/list/164?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-tech&amp;utm_content=164" target="_blank" rel="noopener">16단원 첨단 융합 공학 가이드</a> - 4차시</li>
+  </ul>
+  <p class="ait-src">클래스가이드는 수업 도입에서 학생 앞에 띄워 그 차시의 활동 흐름과 사용할 교풀AI 도구를 한눈에 보여주는 용도로 활용하면 좋습니다.</p>
+</div>
+
+<div class="ait-keypoint"><strong>핵심</strong> AI는 보조일 뿐입니다. 학생이 자신의 생활 경험을 먼저 떠올린 뒤, AI가 그것을 개념·근거와 연결해 주는 방식으로 진행됩니다. 모든 활동지는 "내 말로 다시 쓰기" 칸을 포함해 학생이 AI 답변을 그대로 옮기지 않도록 설계되었습니다. 한 차시 5~10분 정도만 AI를 사용하므로 교과서 흐름을 바꿀 필요가 없습니다.</div>
+
+<p class="ait-src">기술·가정 교풀AI 수업 활용 전체 개요 · 2022 개정 교육과정과 교육부 생성형 AI 활용 교육 가이드라인 참고</p>
+</section>
+
+<section class="ait-subpanel" id="aiclass-h-pe1" data-subj="h-pe1" aria-labelledby="aiclass-h-pe1-h" hidden>
+  <h2 class="ait-h2" id="aiclass-h-pe1-h">고등 · 체육1</h2>
+<div class="ait-block"><h3 class="ait-h3">고등 체육1에서 생성형 AI 활용</h3><p class="ait-body">체육 수업에서 생성형 AI는 학생의 직접 경험을 대체하지 않습니다. 대신 학생이 자기 신체 활동 데이터를 입력하거나 경기 장면을 분석할 때, 자신의 생각을 정리하기 위한 짧은 보조 역할을 합니다. 한 차시에 5~10분 정도 사용하며, AI가 제시한 내용은 학생이 반드시 자기 말로 다시 써야 합니다.</p><p class="ait-body">1단원 건강 관리에서는 자기 생활 데이터(식단, 운동, 수면) 분석으로 시작하고, 2단원 전략형 스포츠에서는 경기 기능과 팀 협력을 과학적으로 분석합니다. 3단원 생태형 스포츠에서는 종목 문화와 환경의 관계를 탐구합니다. 각 단계에서 AI는 사실 기반의 정보 제공과 질문으로만 개입하므로, 학생의 신체 경험이 항상 중심이 됩니다.</p></div><div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>교과: 체육</li><li>학년: 고등학교 1학년</li><li>총 단원: 3개</li><li>총 차시: 34차시</li><li>교풀AI 도구: 12개 (일반 9개 · 수행평가 3개)</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>교풀AI 도구</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. 건강 관리</td><td>자기 생활에 닿는 건강 관리</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1337?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-pe1&amp;utm_content=1337" target="_blank" rel="noopener">[고·체1] 신체활동 건강 효과 탐구 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1351?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-pe1&amp;utm_content=1351" target="_blank" rel="noopener">[고·체1] 청소년기 건강 관리 계획 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1354?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-pe1&amp;utm_content=1354" target="_blank" rel="noopener">[고·체1] 운동 상황 안전 사례 분석 도우미</a></td><td>6/9 (67%)</td></tr><tr><td>2. 전략형 스포츠</td><td>종목을 가로지르는 공통 사고</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1361?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-pe1&amp;utm_content=1361" target="_blank" rel="noopener">[고·체1] 전략형 스포츠 유형 비교 탐구 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1363?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-pe1&amp;utm_content=1363" target="_blank" rel="noopener">[고·체1] 경기 기능 개선 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1365?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-pe1&amp;utm_content=1365" target="_blank" rel="noopener">[고·체1] 경기 전략·팀 협력 분석 도우미</a></td><td>9/17 (53%)</td></tr><tr><td>3. 생태형 스포츠</td><td>종목 문화·과학·생태 감수성</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1371?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-pe1&amp;utm_content=1371" target="_blank" rel="noopener">[고·체1] 생태형 스포츠 문화 탐색 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1373?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-pe1&amp;utm_content=1373" target="_blank" rel="noopener">[고·체1] 경기 기능 과학 원리 분석 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1374?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-pe1&amp;utm_content=1374" target="_blank" rel="noopener">[고·체1] 생태 감수성 실천 설계 컨설턴트</a></td><td>6/8 (75%)</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">연간 AI 활용 로드맵</h3><p class="ait-body"><strong>1단계 (3~4월, 건강 관리 단원):</strong> 학생이 자기 생활 데이터를 입력하는 첫 경험입니다. 교사가 도구 사용 방식과 활동지 흐름(STEP 1~3)을 모두 시연하며 안내합니다.</p><p class="ait-body"><strong>2단계 (4월, 생태형 스포츠; 5~6월, 전략형 스포츠):</strong> 모둠당 1대의 디바이스로 도구를 돌려가며 사용합니다. 각 모둠이 도구를 활용해 분석하고 발표로 결과를 공유합니다.</p><p class="ait-body"><strong>3단계 (7월, 9~10월, 전략형 스포츠 후반):</strong> 학생이 자율적으로 도구를 선택해 경기 전략 분석과 자기 성찰을 진행합니다. 도구 사용 방식과 방법을 이미 알고 있어 독립적으로 활동합니다.</p></div><div class="ait-block"><h3 class="ait-h3">단원별 클래스가이드</h3><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/169?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-pe1&amp;utm_content=169" target="_blank" rel="noopener">단원 1 건강 관리 클래스가이드</a> - AI 활용 6차시</li><li><a href="https://www.gyopool.com/dashboard/guide/list/170?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-pe1&amp;utm_content=170" target="_blank" rel="noopener">단원 2 전략형 스포츠 클래스가이드</a> - AI 활용 9차시</li><li><a href="https://www.gyopool.com/dashboard/guide/list/171?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-pe1&amp;utm_content=171" target="_blank" rel="noopener">단원 3 생태형 스포츠 클래스가이드</a> - AI 활용 6차시</li></ul></div><div class="ait-keypoint"><strong>핵심</strong> AI는 보조 역할입니다. 학생의 신체 경험과 자기 언어가 항상 중심입니다. AI 답변을 그대로 옮기지 말고 반드시 자기 말로 다시 쓰도록 지도하세요.</div><p class="ait-src">출처: 고등 체육 1학년 교풀AI 수업 활용 전체 개요</p>
+</section>
+
+<section class="ait-subpanel" id="aiclass-h-music" data-subj="h-music" aria-labelledby="aiclass-h-music-h" hidden>
+  <h2 class="ait-h2" id="aiclass-h-music-h">고등 · 음악</h2>
+<div class="ait-block"><h3 class="ait-h3">고등 음악에서의 생성형 AI 활용</h3><p class="ait-body">음악 수업에서 생성형 AI는 학생의 곡 해석과 표현 설계에 필요한 순간만 짧게 개입합니다. 분위기 탐구, 악기 연습 계획, 음악 비평, 창작 아이디어 발산 등 구체적인 역할을 가진 도구들이 한 차시에 5~10분 범위 내에서 학생의 사고를 한 칸 앞으로 옮겨 줄 뿐, 학생은 반드시 AI 답변을 자기 말로 다시 쓰는 과정을 거칩니다.</p><p class="ait-body">1학기는 곡과 악기를 자기 언어로 풀어내는 "탐구와 설계"에 집중하고, 2학기는 감상을 비평 언어로 정리한 뒤 학생 스스로 창작하는 단계로 진행됩니다. 학생의 곡 해석, 연습 설계, 창작 의도가 평가의 최종 근거이며, AI는 음악 용어로 옮길 때의 후보만 제공합니다.</p></div><div class="ait-block"><h3 class="ait-h3">교과서 정보</h3><ul class="ait-ul"><li>교과: 음악</li><li>학년: 고등학교 1학년</li><li>총 단원: 4개</li><li>총 차시: 68차시</li><li>교풀AI 도구: 16개 (일반 12 · 수행평가 4)</li></ul></div><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>교풀AI 도구</th><th>AI 활용</th></tr></thead><tbody><tr><td>1. 함께 노래하는 음악</td><td>곡 해석과 표현 설계</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1346?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=1346" target="_blank" rel="noopener">대중음악 분위기 탐구 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1353?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=1353" target="_blank" rel="noopener">가곡·예술가곡 해석 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1357?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=1357" target="_blank" rel="noopener">국악·합창 협업 코치</a></td><td>10/25차시 (40%)</td></tr><tr><td>2. 악기로 표현하는 음악</td><td>주법 원리·연습 설계</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1364?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=1364" target="_blank" rel="noopener">악기 연습 계획 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1367?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=1367" target="_blank" rel="noopener">앙상블 역할 설계 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1370?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=1370" target="_blank" rel="noopener">국악기·서양악기 비교 탐구 코치</a></td><td>8/12차시 (67%)</td></tr><tr><td>3. 감상으로 만나는 음악</td><td>시대 양식과 비평</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1375?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=1375" target="_blank" rel="noopener">음악사 시대 비교 탐구 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1377?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=1377" target="_blank" rel="noopener">악기 음색 탐구 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1379?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=1379" target="_blank" rel="noopener">음악 비평문 작성 코치</a></td><td>19/20차시 (95%)</td></tr><tr><td>4. 우리가 만드는 음악</td><td>발상·구조·창작</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/1392?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=1392" target="_blank" rel="noopener">음악 창작 아이디어 발상 코치</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1404?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=1404" target="_blank" rel="noopener">작곡·장단 구조 설계 도우미</a> · <a href="https://www.gyopool.com/dashboard/ai/apps/1411?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=1411" target="_blank" rel="noopener">뮤지컬 협업·음악 진로 탐색 코치</a></td><td>11/11차시 (100%)</td></tr></tbody></table></div><div class="ait-block"><h3 class="ait-h3">연간 수업 로드맵</h3><p class="ait-body"><strong>1학기 (3~4월)</strong>: 교사가 대중음악 분위기 탐구 코치를 시연해 "AI는 메타 정보를 짚어주고 해석은 학생이 한다"는 규칙을 첫 단원에서 학생이 체화하도록 합니다.</p><p class="ait-body"><strong>1학기 (5~6월)</strong>: 모둠당 1대로 악기 연습 계획과 앙상블 역할 설계 코치를 활용해, 학생이 자기 연습 단계를 직접 작성하고 점검하는 사이클을 만듭니다.</p><p class="ait-body"><strong>2학기 (9~10월)</strong>: 음악사 시대 비교 코치로 시대 양식을 정리한 뒤, 비평문 작성 코치를 활용해 감상문이 아닌 비평문으로 옮기는 단계를 학생이 주도합니다.</p><p class="ait-body"><strong>2학기 (11~12월)</strong>: 학생이 발상 코치와 구조 설계 도우미를 스스로 선택해 활용하며, 교사는 창작 결과물의 자기 결정 근거를 평가합니다.</p></div><div class="ait-block"><h3 class="ait-h3">단원별 클래스가이드</h3><ul class="ait-list"><li><a href="https://www.gyopool.com/dashboard/guide/list/165?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=165" target="_blank" rel="noopener">함께 노래하는 음악 가이드</a> - 1단원 곡 해석 및 표현 설계 활동</li><li><a href="https://www.gyopool.com/dashboard/guide/list/166?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=166" target="_blank" rel="noopener">악기로 표현하는 음악 가이드</a> - 2단원 주법 원리와 연습 설계</li><li><a href="https://www.gyopool.com/dashboard/guide/list/167?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=167" target="_blank" rel="noopener">감상으로 만나는 음악 가이드</a> - 3단원 시대 양식 이해와 비평 쓰기</li><li><a href="https://www.gyopool.com/dashboard/guide/list/168?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=h-music&amp;utm_content=168" target="_blank" rel="noopener">우리가 만드는 음악 가이드</a> - 4단원 창작 아이디어와 구조 설계</li></ul><p class="ait-src">클래스가이드는 수업 도입 전 학생 앞에서 열어 단원 흐름과 도구 활용 시점을 안내할 수 있으며, 수업 후에는 학생의 자기 학습 정리용으로 공유할 수 있습니다.</p></div><div class="ait-keypoint"><strong>핵심</strong> AI는 보조 도구입니다. 학생은 AI 답변을 그대로 가져가지 않고 반드시 자기 말로 다시 쓰는 과정을 거칩니다. 곡 해석, 연습 설계, 창작 의도가 평가의 최종 근거입니다.</div><p class="ait-src">이 가이드는 2022 개정 교육과정과 교육부 생성형 AI 활용 교육 가이드라인을 참고하여 작성되었습니다. (고등 음악 교풀AI 수업 활용 전체 개요)</p>
+</section>
+
+</div>
+</main>
+</div>
+<script>
+(function(){
+  var lvl=document.querySelector('.ait-level[data-level="aiclass"]'); if(!lvl)return;
+  var chips=[].slice.call(lvl.querySelectorAll('.ait-chip'));
+  var panels=[].slice.call(lvl.querySelectorAll('.ait-subpanel'));
+  function showSubj(s){
+    panels.forEach(function(p){p.hidden=(p.getAttribute('data-subj')!==s);});
+    chips.forEach(function(c){var on=c.getAttribute('data-subj')===s;c.classList.toggle('active',on);c.setAttribute('aria-selected',on);});
+    try{ if(window.gtag) gtag('event','subject_select',{portal_level:'aiclass',subject:s}); }catch(e){}
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){showSubj(c.getAttribute('data-subj'));});});
+  var tabBtn=document.querySelector('.ait-tab[data-level="aiclass"]');
+  if(tabBtn) tabBtn.addEventListener('click',function(){ if(!lvl.querySelector('.ait-chip.active')&&chips[0]) showSubj(chips[0].getAttribute('data-subj')); });
+  if(chips[0]) showSubj(chips[0].getAttribute('data-subj'));
+})();
+</script>
 
 </div>
 
