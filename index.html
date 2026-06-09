@@ -5714,7 +5714,7 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
     var tgt=targetCont(); if(!tgt) return;
     for(var k in conts){ conts[k].hidden=(conts[k]!==tgt); }
     if(LEVEL_AWARE[state.cat]){
-      var hero=tgt.querySelector('.ait-hero'); if(hero) hero.hidden=(state.cat!=='start');
+      var hero=tgt.querySelector('.ait-hero'); if(hero) hero.hidden=true;
       tgt.querySelectorAll('.ait-section').forEach(function(s){ s.hidden=(s.getAttribute('data-cat')!==state.cat); });
       rebuildToc(tgt);
     } else if(state.cat==='aiclass'){
