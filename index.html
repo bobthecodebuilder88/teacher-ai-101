@@ -14,7 +14,11 @@
 <meta property="og:title" content="AI로운 교사생활 - 초중고 교사를 위한 생성형 AI 활용 가이드">
 <meta property="og:description" content="초등 중등 고등 특성화고 특수 교사를 위한 생성형 AI 업무활용 안내. 교육부/교육청 공식자료 기반, 무료.">
 <meta property="og:url" content="https://ai101.gyopooledu.com/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://ai101.gyopooledu.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ai101.gyopooledu.com/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"AI로운 교사생활","url":"https://ai101.gyopooledu.com/","description":"초중고 특성화고 특수 교사를 위한 생성형 AI 업무활용 가이드. 교육부 교육청 공식자료 기반, 무료.","inLanguage":"ko-KR","publisher":{"@type":"Organization","name":"교풀에듀","url":"https://www.gyopool.com/"}}
 </script>
@@ -283,6 +287,9 @@ strong{font-weight:700}
 #ait-aiclass-note[hidden]{display:none}
 .ait-level[data-level="aiclass"]>.ait-section{max-width:var(--maxw);margin-left:auto;margin-right:auto;padding-left:22px;padding-right:22px}
 .ait-section[hidden]{display:none}
+.ait-share{font:inherit;font-size:.7rem;font-weight:600;color:var(--teal-d);background:#fff;border:1px solid var(--teal-bd);border-radius:999px;padding:3px 10px;margin-left:10px;cursor:pointer;vertical-align:3px;white-space:nowrap}
+.ait-share:hover{background:var(--bg-soft)}
+@media(max-width:919px){.ait-tabbar-in{flex-wrap:wrap;overflow-x:visible;padding-bottom:4px}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC8M7K7HC4"></script>
 <script>
@@ -302,7 +309,8 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
     if(/notion\.site$/.test(h)) return 'guide';
     if(/gyopooledu\.com$/.test(h)) return 'gyopooledu';
     return 'gyopool_home'; }
-  var level='go';
+  var level='cho';
+  window.addEventListener('error',function(e){ try{ ev('js_error',{msg:String(e&&e.message||'').slice(0,100), src:String(e&&e.filename||'').slice(0,80), line:(e&&e.lineno)||0}); }catch(_){ } });
   function gl(){return (window.__aitState&&window.__aitState.lv)||level;}
   function gc(){return (window.__aitState&&window.__aitState.cat)||'start';}
   document.addEventListener('click', function(e){
@@ -376,7 +384,7 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
   </div>
 </div>
 
-<div class="ait-level" data-level="cho" hidden>
+<div class="ait-level" data-level="cho">
 <section class="ait-hero">
   <div class="ait-hero-in">
     <div class="ait-hero-l">
@@ -1974,7 +1982,7 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
 
 </div>
 
-<div class="ait-level" data-level="go">
+<div class="ait-level" data-level="go" hidden>
 <section class="ait-hero">
   <div class="ait-hero-in">
     <div class="ait-hero-l">
@@ -5029,7 +5037,7 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
 
 <section class="ait-subpanel" id="aiclass-m-sci2" data-subj="m-sci2" aria-labelledby="aiclass-m-sci2-h" hidden>
   <h2 class="ait-h2" id="aiclass-m-sci2-h">중등 · 과학2</h2>
-<div class="ait-block"><h3 class="ait-h3">이 교과에서 생성형 AI는</h3><p class="ait-body">과학 단원을 배울 때 학생은 개념 이해, 실험 설계, 자료 해석 단계에서 막힙니다. 교풀AI 도구는 이런 결정적 순간에만 개입해 학생의 탐구 과정을 돕고, 학생이 AI 답변을 자기 말로 다시 써야 하는 구조로 설계돼 의존을 원천 차단합니다. 한 차시에 5~10분만 사용하며, 실험·관찰 데이터는 학생이 직접 기록하고 해석합니다.</p></div><div class="ait-block"><h3 class="ait-h3">이렇게 수업합니다 - 예시 단원 2개</h3><div class="ait-unit"><p class="ait-unit-h">3. 빛과 파동</p><p class="ait-unit-tag">상 형성 원리·빛 경로</p><ul class="ait-ul"><li><strong>만든 AI 도구:</strong> <a href="https://www.gyopool.com/dashboard/ai/apps/929?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=929" target="_blank" rel="noopener">[중·과2] 거울·렌즈 탐구 도우미</a></li><li><strong>이렇게 교육합니다:</strong> 학생이 거울과 렌즈 실험을 진행한 뒤 형성된 상의 성질을 관찰 기록하면, AI가 상 형성 원리를 시각적으로 설명해 학생의 추상적 개념 이해를 구체화합니다. 이후 학생은 자신의 실험 결과와 비교해 다시 정리합니다.</li><li><strong>가능한 발문:</strong> "AI가 설명한 상의 성질이 네 실험 결과와 같은지 비교해 봐" / "왜 오목거울에서는 크기가 커진 상이 나타났을까?"</li></ul></div><div class="ait-unit"><p class="ait-unit-h">6. 동물과 에너지</p><p class="ait-unit-tag">기관계 통합 흐름</p><ul class="ait-ul"><li><strong>만든 AI 도구:</strong> <a href="https://www.gyopool.com/dashboard/ai/apps/933?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=933" target="_blank" rel="noopener">[중·과2] 혈액순환 경로 탐구 도우미</a></li><li><strong>이렇게 교육합니다:</strong> 학생이 심장의 구조와 혈관의 역할을 배운 뒤 혈액의 경로를 순서대로 쓰면, AI가 경로를 시각화하고 각 단계에서 혈액의 변화를 설명합니다. 학생은 AI 설명을 읽고 자신의 말로 혈액순환의 의미를 재구성합니다.</li><li><strong>가능한 발문:</strong> "AI가 그린 혈액 경로에서 산소가 가장 많은 부분은 어디일까?" / "폐와 심장 사이를 오가는 혈액이 다른 곳과 어떻게 다를지 생각해 봐"</li></ul></div></div><div class="ait-keypoint"><strong>핵심</strong> 이 도구들은 중등 과학 교육과정 성취기준에 맞춰 설계돼, 교사가 기존 수업 계획에 도구만 더해 그대로 진행할 수 있습니다(준비 시간 절감). 학생은 답을 베끼지 않고 자기 말로 다시 쓰고, 교사는 학생의 AI 활동을 실시간으로 보며 추가 발문을 던질 수 있습니다.</div><div class="ait-block"><h3 class="ait-h3">이 교과 전체 단원 한눈에</h3><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>교풀AI 도구</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. 물질의 특성</td><td>혼합물 분리 원리 설계</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/923?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=923" target="_blank" rel="noopener">[중·과2] 물질 특성 탐구 튜터</a></td><td>6/15</td></tr><tr><td>2. 지권의 변화</td><td>판 경계·지진화산 분석</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/927?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=927" target="_blank" rel="noopener">[중·과2] 판 경계 빅데이터 탐구</a></td><td>3/14</td></tr><tr><td>3. 빛과 파동</td><td>상 형성 원리·빛 경로</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/929?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=929" target="_blank" rel="noopener">[중·과2] 거울·렌즈 탐구 도우미</a></td><td>5/10</td></tr><tr><td>4. 물질의 구성</td><td>전자 이동·이온 형성</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/933?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=933" target="_blank" rel="noopener">[중·과2] 원소·화학식 탐구 도우미</a></td><td>5/12</td></tr><tr><td>5. 식물과 에너지</td><td>광합성·호흡 오개념 반박</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/936?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=936" target="_blank" rel="noopener">[중·과2] 광합성 탐구 실험 코치</a></td><td>4/7</td></tr><tr><td>6. 동물과 에너지</td><td>기관계 통합 흐름</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/939?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=939" target="_blank" rel="noopener">[중·과2] 혈액순환 경로 탐구 도우미</a></td><td>5/15</td></tr><tr><td>7. 전기와 자기</td><td>옴의 법칙·소비 전력 설계</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/943?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=943" target="_blank" rel="noopener">[중·과2] 전기 에너지 절약 설계사</a></td><td>5/9</td></tr><tr><td>8. 별과 우주</td><td>등급·거리·밝기 관계</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/946?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=946" target="_blank" rel="noopener">[중·과2] 별 등급 탐구 도우미</a></td><td>3/4</td></tr></tbody></table></div><p class="ait-src">출처: 과학 교풀AI 수업 활용 전체 개요</p></div>
+<div class="ait-block"><h3 class="ait-h3">이 교과에서 생성형 AI는</h3><p class="ait-body">과학 단원을 배울 때 학생은 개념 이해, 실험 설계, 자료 해석 단계에서 막힙니다. 교풀AI 도구는 이런 결정적 순간에만 개입해 학생의 탐구 과정을 돕고, 학생이 AI 답변을 자기 말로 다시 써야 하는 구조로 설계돼 의존을 원천 차단합니다. 한 차시에 5~10분만 사용하며, 실험·관찰 데이터는 학생이 직접 기록하고 해석합니다.</p></div><div class="ait-block"><h3 class="ait-h3">이렇게 수업합니다 - 예시 단원 2개</h3><div class="ait-unit"><p class="ait-unit-h">3. 빛과 파동</p><p class="ait-unit-tag">상 형성 원리·빛 경로</p><ul class="ait-ul"><li><strong>만든 AI 도구:</strong> <a href="https://www.gyopool.com/dashboard/ai/apps/929?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=929" target="_blank" rel="noopener">[중·과2] 거울·렌즈 탐구 도우미</a></li><li><strong>이렇게 교육합니다:</strong> 학생이 거울과 렌즈 실험을 진행한 뒤 형성된 상의 성질을 관찰 기록하면, AI가 상 형성 원리를 시각적으로 설명해 학생의 추상적 개념 이해를 구체화합니다. 이후 학생은 자신의 실험 결과와 비교해 다시 정리합니다.</li><li><strong>가능한 발문:</strong> "AI가 설명한 상의 성질이 네 실험 결과와 같은지 비교해 봐" / "왜 오목거울에서는 크기가 커진 상이 나타났을까?"</li></ul></div><div class="ait-unit"><p class="ait-unit-h">6. 동물과 에너지</p><p class="ait-unit-tag">기관계 통합 흐름</p><ul class="ait-ul"><li><strong>만든 AI 도구:</strong> <a href="https://www.gyopool.com/dashboard/ai/apps/939?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=933" target="_blank" rel="noopener">[중·과2] 혈액순환 경로 탐구 도우미</a></li><li><strong>이렇게 교육합니다:</strong> 학생이 심장의 구조와 혈관의 역할을 배운 뒤 혈액의 경로를 순서대로 쓰면, AI가 경로를 시각화하고 각 단계에서 혈액의 변화를 설명합니다. 학생은 AI 설명을 읽고 자신의 말로 혈액순환의 의미를 재구성합니다.</li><li><strong>가능한 발문:</strong> "AI가 그린 혈액 경로에서 산소가 가장 많은 부분은 어디일까?" / "폐와 심장 사이를 오가는 혈액이 다른 곳과 어떻게 다를지 생각해 봐"</li></ul></div></div><div class="ait-keypoint"><strong>핵심</strong> 이 도구들은 중등 과학 교육과정 성취기준에 맞춰 설계돼, 교사가 기존 수업 계획에 도구만 더해 그대로 진행할 수 있습니다(준비 시간 절감). 학생은 답을 베끼지 않고 자기 말로 다시 쓰고, 교사는 학생의 AI 활동을 실시간으로 보며 추가 발문을 던질 수 있습니다.</div><div class="ait-block"><h3 class="ait-h3">이 교과 전체 단원 한눈에</h3><div class="ait-tw"><table class="ait-table"><thead><tr><th>단원</th><th>핵심 주제</th><th>교풀AI 도구</th><th>AI 활용 차시</th></tr></thead><tbody><tr><td>1. 물질의 특성</td><td>혼합물 분리 원리 설계</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/923?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=923" target="_blank" rel="noopener">[중·과2] 물질 특성 탐구 튜터</a></td><td>6/15</td></tr><tr><td>2. 지권의 변화</td><td>판 경계·지진화산 분석</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/927?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=927" target="_blank" rel="noopener">[중·과2] 판 경계 빅데이터 탐구</a></td><td>3/14</td></tr><tr><td>3. 빛과 파동</td><td>상 형성 원리·빛 경로</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/929?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=929" target="_blank" rel="noopener">[중·과2] 거울·렌즈 탐구 도우미</a></td><td>5/10</td></tr><tr><td>4. 물질의 구성</td><td>전자 이동·이온 형성</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/933?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=933" target="_blank" rel="noopener">[중·과2] 원소·화학식 탐구 도우미</a></td><td>5/12</td></tr><tr><td>5. 식물과 에너지</td><td>광합성·호흡 오개념 반박</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/936?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=936" target="_blank" rel="noopener">[중·과2] 광합성 탐구 실험 코치</a></td><td>4/7</td></tr><tr><td>6. 동물과 에너지</td><td>기관계 통합 흐름</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/939?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=939" target="_blank" rel="noopener">[중·과2] 혈액순환 경로 탐구 도우미</a></td><td>5/15</td></tr><tr><td>7. 전기와 자기</td><td>옴의 법칙·소비 전력 설계</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/943?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=943" target="_blank" rel="noopener">[중·과2] 전기 에너지 절약 설계사</a></td><td>5/9</td></tr><tr><td>8. 별과 우주</td><td>등급·거리·밝기 관계</td><td><a href="https://www.gyopool.com/dashboard/ai/apps/946?utm_source=ai101&amp;utm_medium=portal_aiclass&amp;utm_campaign=m-sci2&amp;utm_content=946" target="_blank" rel="noopener">[중·과2] 별 등급 탐구 도우미</a></td><td>3/4</td></tr></tbody></table></div><p class="ait-src">출처: 과학 교풀AI 수업 활용 전체 개요</p></div>
 </section>
 
 <section class="ait-subpanel" id="aiclass-m-soc2" data-subj="m-soc2" aria-labelledby="aiclass-m-soc2-h" hidden>
@@ -6044,7 +6052,7 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
   <div class="ait-shell">
     <p class="ait-ft-disc">본 안내는 교육부/교육청 공식 자료를 교사 편의를 위해 재구성한 정보물입니다. 규정의 최종 해석과 기재의 책임은 교사와 학교에 있으며, 실제 적용 전 원문과 소속 시도교육청 지침을 확인하시기 바랍니다.</p>
     <p class="ait-ft-gyo">이 작업들을 더 빠르게 - 전교과 AI 에듀테크 <a href="https://gyopooledu.com/promotion" target="_blank" rel="noopener">교풀AI 살펴보기</a> · <a href="https://www.gyopool.com/blog/category/school_educase" target="_blank" rel="noopener">초중고 AI 교육 사례</a></p>
-    <p class="ait-ft-meta">출처 전체 보기는 "자료실 &amp; 출처" 섹션 · 최종 갱신 2026-06</p>
+    <p class="ait-ft-meta">만든 곳: 교풀에듀 (주식회사 휴몬랩) · 출처 전체 보기는 "자료실 &amp; 출처" 섹션 · 최종 갱신 2026-06</p>
   </div>
 </footer>
 
@@ -6058,8 +6066,12 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
   var lvbtns=[].slice.call(document.querySelectorAll('.ait-lv'));
   var introwrap=document.getElementById('ait-introwrap');
   var levelbar=document.getElementById('ait-levelbar');
-  var state={cat:"start", lv:(localStorage.getItem("ait_level")||"cho")};
-  if(LEVELS.indexOf(state.lv)<0) state.lv="go";
+  var state={cat:"start", lv:"cho"};
+  try{ state.lv=localStorage.getItem("ait_level")||"cho"; }catch(_){ }
+  if(LEVELS.indexOf(state.lv)<0) state.lv="cho";
+  var CATNAME={start:"시작하기",aiclass:"AI활용수업",admin:"행정·생기부",eval:"평가",special:"특수교육",jungjeom:"AI중점학교",tool:"도구"};
+  function syncUrl(h){ try{ history.replaceState(null,"",h); }catch(_){ } }
+  function catHash(){ return "#"+state.cat+((LEVEL_AWARE[state.cat]||state.cat==="aiclass")?"-"+state.lv:""); }
   window.__aitState=state;
   function targetCont(){ return LEVEL_AWARE[state.cat] ? conts[state.lv] : conts[DEDICATED[state.cat]]; }
   function rebuildToc(cont){
@@ -6068,7 +6080,7 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
     cont.querySelectorAll('.ait-section').forEach(function(s){
       if(s.hidden) return;
       var hh=s.querySelector('h2'); if(!hh) return;
-      var txt=(hh.textContent||'').replace(/\s+/g,' ').trim().slice(0,34);
+      var txt=(hh.getAttribute('data-ttl')||hh.textContent||'').replace(/\s+/g,' ').trim().slice(0,34);
       if(!s.id||!txt) return;
       var cls=/-ait-now$/.test(s.id)?' class="ait-timely"':'';
       items.push('<li><a href="#'+s.id+'"'+cls+'>'+txt+'</a></li>');
@@ -6097,6 +6109,7 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
     lvbtns.forEach(function(b){b.setAttribute('aria-pressed', b.getAttribute('data-lv')===state.lv?'true':'false');});
     if(levelbar) levelbar.classList.toggle('ait-hide', !(LEVEL_AWARE[state.cat]||state.cat==='aiclass'));
     if(introwrap) introwrap.hidden=(state.cat!=='start');
+    try{ document.title=(CATNAME[state.cat]||"")+" - AI로운 교사생활"; }catch(_){ }
     window.scrollTo(0,0);
   }
   document.addEventListener('click',function(e){
@@ -6108,15 +6121,15 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
         if(ac){
           if(ac!==state.cat){state.cat=ac;chg=true;}
           if(al&&al!=='any'&&LEVELS.indexOf(al)>=0&&al!==state.lv){state.lv=al;try{localStorage.setItem('ait_level',al);}catch(_){ }chg=true;}
-          if(chg){e.preventDefault();render();try{ael.scrollIntoView();}catch(_){ }return;}
+          if(chg){e.preventDefault();render();syncUrl("#"+aid);try{ael.scrollIntoView();}catch(_){ }return;}
         }
       }
     }
     var t=e.target.closest&&e.target.closest('.ait-tab');
-    if(t){ state.cat=t.getAttribute('data-cat'); render();
+    if(t){ state.cat=t.getAttribute('data-cat'); render(); syncUrl(catHash());
       try{if(window.gtag)gtag('event','category_select',{portal_category:state.cat,portal_level:state.lv});}catch(_){ } return; }
     var lb=e.target.closest&&e.target.closest('.ait-lv');
-    if(lb){ state.lv=lb.getAttribute('data-lv'); try{localStorage.setItem('ait_level',state.lv);}catch(_){ } render();
+    if(lb){ state.lv=lb.getAttribute('data-lv'); try{localStorage.setItem('ait_level',state.lv);}catch(_){ } render(); syncUrl(catHash());
       try{if(window.gtag)gtag('event','level_select',{portal_level:state.lv,portal_category:state.cat});}catch(_){ } return; }
   });
   document.querySelectorAll('.ait-navtoggle').forEach(function(btn){
@@ -6148,7 +6161,37 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
     if(c) setIntro(true);
     introHd.addEventListener('click',function(){setIntro(!introBox.classList.contains('ait-closed'));});
   }
-  render();
+  document.querySelectorAll('.ait-section[id]').forEach(function(sec){
+    var hh=sec.querySelector('h2'); if(!hh) return;
+    var ttl=(hh.textContent||'').replace(/\s+/g,' ').trim();
+    hh.setAttribute('data-ttl',ttl);
+    var b=document.createElement('button'); b.type='button'; b.className='ait-share'; b.textContent='링크 복사'; b.setAttribute('aria-label','이 섹션 링크 복사');
+    b.addEventListener('click',function(ev){
+      ev.stopPropagation();
+      var url=location.origin+location.pathname+'#'+sec.id;
+      var text=ttl+' - AI로운 교사생활\n'+url;
+      function done(){ b.textContent='복사됨'; setTimeout(function(){b.textContent='링크 복사';},1500); }
+      function fb(){ var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta); }
+      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done,function(){fb();done();}); } else { fb(); done(); }
+      try{ if(window.gtag) gtag('event','share',{section_id:sec.id, portal_level:state.lv, portal_category:state.cat, method:'copy_link'}); }catch(_){ }
+    });
+    hh.appendChild(b);
+  });
+  (function boot(){
+    var h=(location.hash||'').slice(1), el=null;
+    try{ el=h&&document.getElementById(decodeURIComponent(h)); }catch(_){ el=h&&document.getElementById(h); }
+    if(el&&el.classList&&el.classList.contains('ait-section')){
+      var c=el.getAttribute('data-cat'), l=el.getAttribute('data-level');
+      if(c&&(LEVEL_AWARE[c]||DEDICATED[c])) state.cat=c;
+      if(l&&LEVELS.indexOf(l)>=0){ state.lv=l; try{localStorage.setItem('ait_level',l);}catch(_){ } }
+      render();
+      setTimeout(function(){ try{el.scrollIntoView();}catch(_){ } },0);
+      return;
+    }
+    var m=h.match(/^(start|aiclass|admin|eval|special|jungjeom|tool)(?:-(cho|jung|go|teuk))?$/);
+    if(m){ state.cat=m[1]; if(m[2]){ state.lv=m[2]; try{localStorage.setItem('ait_level',m[2]);}catch(_){ } } }
+    render();
+  })();
 })();
 
 // TOOLJS_START

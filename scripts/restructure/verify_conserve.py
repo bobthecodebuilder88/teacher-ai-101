@@ -1,8 +1,8 @@
 import re, sys
-EXPECT = {  # 2026-06-09 baseline (인트로 추가로 섹션은 43 또는 44)
+EXPECT = {  # 2026-06-10 baseline (AI중점학교 탭 포함)
     "copy": (r'class="[^"]*ait-copy', 95),
     "cta": (r'class="[^"]*ait-cta', 58),
-    "blank": (r'target="_blank"', 717),
+    "blank": (r'target="_blank"', 760),
     "utm": (r'utm_source=ai101', 294),
     "chip": (r'class="[^"]*ait-chip', 19),
     "panel": (r'class="[^"]*ait-subpanel', 20),
@@ -14,9 +14,9 @@ for k, (pat, exp) in EXPECT.items():
     flag = "OK" if n == exp else "FAIL"
     if n != exp: ok = False
     print(f"[{flag}] {k}: {n} (expect {exp})")
-secs = len(re.findall(r'class="[^"]*ait-sec', h))
-print(f"[{'OK' if secs in (43,44) else 'FAIL'}] sections: {secs} (expect 43 or 44)")
-if secs not in (43,44): ok = False
+secs = len(re.findall(r'class="ait-section"', h))
+print(f"[{'OK' if secs == 49 else 'FAIL'}] sections: {secs} (expect 49)")
+if secs != 49: ok = False
 # 정확도 가드
 gem = re.findall(r'Gemini.{0,40}?13\s*세', h)
 print(f"[{'OK' if gem else 'WARN'}] Gemini 13세 유지: {len(gem)}건")
