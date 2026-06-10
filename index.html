@@ -6113,17 +6113,26 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
     try{ document.title=(CATNAME[state.cat]||"")+" - AI로운 교사생활"; }catch(_){ }
     window.scrollTo(0,0);
   }
+  var CONT2CAT={rubric:"eval",spec:"special",tool:"tool",jungjeom:"jungjeom",aiclass:"aiclass"};
+  function secTarget(el){
+    if(!el||!el.classList||!el.classList.contains('ait-section')) return null;
+    var cont=el.closest('.ait-level'); var cl=cont&&cont.getAttribute('data-level');
+    var c=el.getAttribute('data-cat')||CONT2CAT[cl];
+    if(!c||!(LEVEL_AWARE[c]||DEDICATED[c])) return null;
+    var l=el.getAttribute('data-level');
+    if(!l||l==='any') l=(LEVELS.indexOf(cl)>=0?cl:null);
+    return {cat:c, lv:(l&&LEVELS.indexOf(l)>=0)?l:null};
+  }
   document.addEventListener('click',function(e){
     var anchor=e.target.closest&&e.target.closest('a[href^="#"]');
     if(anchor){
       var aid=anchor.getAttribute('href').slice(1), ael=aid&&document.getElementById(aid);
-      if(ael&&ael.classList&&ael.classList.contains('ait-section')){
-        var ac=ael.getAttribute('data-cat'), al=ael.getAttribute('data-level'), chg=false;
-        if(ac){
-          if(ac!==state.cat){state.cat=ac;chg=true;}
-          if(al&&al!=='any'&&LEVELS.indexOf(al)>=0&&al!==state.lv){state.lv=al;try{localStorage.setItem('ait_level',al);}catch(_){ }chg=true;}
-          if(chg){e.preventDefault();render();syncUrl("#"+aid);try{ael.scrollIntoView();}catch(_){ }return;}
-        }
+      var tgt=ael&&secTarget(ael);
+      if(tgt){
+        var chg=false;
+        if(tgt.cat!==state.cat){state.cat=tgt.cat;chg=true;}
+        if(tgt.lv&&tgt.lv!==state.lv){state.lv=tgt.lv;try{localStorage.setItem('ait_level',tgt.lv);}catch(_){ }chg=true;}
+        if(chg){e.preventDefault();render();syncUrl("#"+aid);try{ael.scrollIntoView();}catch(_){ }return;}
       }
     }
     var t=e.target.closest&&e.target.closest('.ait-tab');
@@ -6180,21 +6189,37 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
     });
     hh.appendChild(b);
   });
-  (function boot(){
-    var h=(location.hash||'').slice(1), el=null;
-    try{ el=h&&document.getElementById(decodeURIComponent(h)); }catch(_){ el=h&&document.getElementById(h); }
-    if(el&&el.classList&&el.classList.contains('ait-section')){
-      var c=el.getAttribute('data-cat'), l=el.getAttribute('data-level');
-      if(c&&(LEVEL_AWARE[c]||DEDICATED[c])) state.cat=c;
-      if(l&&LEVELS.indexOf(l)>=0){ state.lv=l; try{localStorage.setItem('ait_level',l);}catch(_){ } }
-      render();
-      setTimeout(function(){ try{el.scrollIntoView();}catch(_){ } },0);
-      return;
+  function hashEl(){
+    var h=(location.hash||'').slice(1); if(!h) return null;
+    try{ return document.getElementById(decodeURIComponent(h)); }catch(_){ return document.getElementById(h); }
+  }
+  function applyHash(initial){
+    var el=hashEl(), t=el&&secTarget(el);
+    if(t){
+      var chg=(t.cat!==state.cat)||(t.lv&&t.lv!==state.lv);
+      if(initial||chg){
+        state.cat=t.cat;
+        if(t.lv){ state.lv=t.lv; try{localStorage.setItem('ait_level',t.lv);}catch(_){ } }
+        render();
+        setTimeout(function(){ try{el.scrollIntoView();}catch(_){ } },0);
+      }
+      return true;
     }
+    var h=(location.hash||'').slice(1);
     var m=h.match(/^(start|aiclass|admin|eval|special|jungjeom|tool)(?:-(cho|jung|go|teuk))?$/);
-    if(m){ state.cat=m[1]; if(m[2]){ state.lv=m[2]; try{localStorage.setItem('ait_level',m[2]);}catch(_){ } } }
-    render();
-  })();
+    if(m){
+      var chg2=(m[1]!==state.cat)||(m[2]&&m[2]!==state.lv);
+      if(initial||chg2){
+        state.cat=m[1];
+        if(m[2]){ state.lv=m[2]; try{localStorage.setItem('ait_level',m[2]);}catch(_){ } }
+        render();
+      }
+      return true;
+    }
+    return false;
+  }
+  window.addEventListener('hashchange',function(){ applyHash(false); });
+  if(!applyHash(true)) render();
 })();
 
 // TOOLJS_START
