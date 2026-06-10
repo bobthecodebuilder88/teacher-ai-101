@@ -268,15 +268,19 @@ strong{font-weight:700}
 .ait-levelbar.ait-hide{display:none}
 .ait-introwrap{max-width:var(--maxw);margin:0 auto;padding:24px 22px 0}
 .ait-introwrap[hidden]{display:none}
-.ait-intro{background:linear-gradient(180deg,#f3faf7,#fff);border:1px solid var(--teal-bd);border-radius:14px;padding:22px 24px}
-.ait-intro h2{margin:0 0 6px;font-size:1.3rem;color:var(--ink)}
-.ait-intro p{margin:6px 0 0;color:var(--ink-soft);line-height:1.7}
-.ait-intro p.ait-intro-lead{color:var(--ink);font-size:1.06rem}
-.ait-intro-pts{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px}
-.ait-intro-pts li{display:flex;flex-wrap:wrap;gap:2px 10px}
-.ait-intro-pts b{color:var(--teal-d);min-width:118px}
-.ait-intro-pts span{color:var(--ink-soft);line-height:1.65;flex:1;min-width:240px}
-.ait-intro-guide{margin-top:16px;padding-top:14px;border-top:1px solid var(--teal-bd);font-size:.94rem}
+.ait-intro{background:linear-gradient(180deg,#f3faf7,#fff);border:1px solid var(--teal-bd);border-radius:12px;padding:4px 16px}
+.ait-intro-hd{display:flex;align-items:center;justify-content:space-between;width:100%;font:inherit;font-size:.98rem;font-weight:700;color:var(--ink);background:none;border:0;padding:10px 2px;cursor:pointer;text-align:left}
+.ait-intro-chev{font-size:.8rem;color:var(--teal-d);transition:transform .15s}
+.ait-intro.ait-closed .ait-intro-chev{transform:rotate(-90deg)}
+.ait-intro.ait-closed .ait-intro-body{display:none}
+.ait-intro-body{padding:0 2px 12px}
+.ait-intro p{margin:4px 0 0;color:var(--ink-soft);line-height:1.6;font-size:.9rem}
+.ait-intro p.ait-intro-lead{color:var(--ink);font-size:.92rem;margin-top:0}
+.ait-intro-pts{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+.ait-intro-pts li{display:flex;flex-wrap:wrap;gap:2px 8px;font-size:.9rem}
+.ait-intro-pts b{color:var(--teal-d);min-width:104px}
+.ait-intro-pts span{color:var(--ink-soft);line-height:1.55;flex:1;min-width:220px}
+.ait-intro-guide{margin-top:8px;padding-top:8px;border-top:1px solid var(--teal-bd);font-size:.85rem}
 #ait-aiclass-note[hidden]{display:none}
 .ait-level[data-level="aiclass"]>.ait-section{max-width:var(--maxw);margin-left:auto;margin-right:auto;padding-left:22px;padding-right:22px}
 .ait-section[hidden]{display:none}
@@ -360,15 +364,17 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
   </div>
 </div>
 <div class="ait-introwrap" id="ait-introwrap">
-  <div class="ait-intro">
-    <h2>AI로운 교사생활이란?</h2>
-    <p class="ait-intro-lead">생성형 AI를 교사 업무에 어떻게 적용할지 막막했던 선생님께 도움이 되고자 만든, 교사를 위한 무료 정보 포털입니다.</p>
-    <ul class="ait-intro-pts">
-      <li><b>왜 만들었나</b><span>생기부와 행정, 수업과 평가에 AI를 써보고 싶지만 어디서부터 무엇을 조심해야 할지 막막한 선생님을 돕고 싶었습니다.</span></li>
-      <li><b>어떻게 검증했나</b><span>모든 자료는 교육부와 교육청 공식 자료로 검증해 제작했습니다. 다만 AI의 답은 참고용이며, 최종 판단과 책임은 교사에게 있습니다.</span></li>
-      <li><b>무료이고 공유 가능</b><span>회원가입 없이 무료로 보실 수 있고, 동료 선생님께 자유롭게 공유하셔도 됩니다.</span></li>
-    </ul>
-    <p class="ait-intro-guide">위에서 학교급을 한 번 고르면 시작하기와 행정·생기부 내용이 학교급에 맞춰 표시됩니다. 그다음 메뉴에서 AI활용수업, 평가, 도구를 둘러보세요.</p>
+  <div class="ait-intro" id="ait-intro">
+    <button class="ait-intro-hd" type="button" aria-expanded="true" aria-controls="ait-intro-body"><span>AI로운 교사생활이란?</span><span class="ait-intro-chev">&#9662;</span></button>
+    <div class="ait-intro-body" id="ait-intro-body">
+      <p class="ait-intro-lead">생성형 AI를 교사 업무에 어떻게 적용할지 막막했던 선생님께 도움이 되고자 만든, 교사를 위한 무료 정보 포털입니다.</p>
+      <ul class="ait-intro-pts">
+        <li><b>왜 만들었나</b><span>생기부와 행정, 수업과 평가에 AI를 써보고 싶지만 어디서부터 무엇을 조심해야 할지 막막한 선생님을 돕고 싶었습니다.</span></li>
+        <li><b>어떻게 검증했나</b><span>모든 자료는 교육부와 교육청 공식 자료로 검증해 제작했습니다. 다만 AI의 답은 참고용이며, 최종 판단과 책임은 교사에게 있습니다.</span></li>
+        <li><b>무료이고 공유 가능</b><span>회원가입 없이 무료로 보실 수 있고, 동료 선생님께 자유롭게 공유하셔도 됩니다.</span></li>
+      </ul>
+      <p class="ait-intro-guide">위에서 학교급을 한 번 고르면 시작하기와 행정·생기부 내용이 학교급에 맞춰 표시됩니다. 그다음 메뉴에서 AI활용수업, 평가, 도구를 둘러보세요.</p>
+    </div>
   </div>
 </div>
 
@@ -6137,6 +6143,13 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
       if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,function(){fb();done();});}else{fb();done();}
     });
   });
+  var introHd=document.querySelector('.ait-intro-hd'), introBox=document.getElementById('ait-intro');
+  if(introHd&&introBox){
+    function setIntro(closed){introBox.classList.toggle('ait-closed',closed);introHd.setAttribute('aria-expanded',closed?'false':'true');try{localStorage.setItem('ait_intro_closed',closed?'1':'0');}catch(_){ }}
+    var c=false; try{c=localStorage.getItem('ait_intro_closed')==='1';}catch(_){ }
+    if(c) setIntro(true);
+    introHd.addEventListener('click',function(){setIntro(!introBox.classList.contains('ait-closed'));});
+  }
   render();
 })();
 
