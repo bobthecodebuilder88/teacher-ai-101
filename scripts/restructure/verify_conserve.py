@@ -1,9 +1,9 @@
 import re, sys
 EXPECT = {  # 2026-06-10 baseline (AI중점학교 탭 포함)
     "copy": (r'class="[^"]*ait-copy', 95),
-    "cta": (r'class="[^"]*ait-cta', 58),
-    "blank": (r'target="_blank"', 760),
-    "utm": (r'utm_source=ai101', 294),
+    "cta": (r'class="[^"]*ait-cta', 68),
+    "blank": (r'target="_blank"', 762),
+    "utm": (r'utm_source=ai101', 331),
     "chip": (r'class="[^"]*ait-chip', 19),
     "panel": (r'class="[^"]*ait-subpanel', 20),
 }
