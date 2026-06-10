@@ -6150,9 +6150,11 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
     btn.addEventListener('click',function(){
       var pre=btn.parentElement.querySelector('.ait-pre'); if(!pre)return;
       var text=pre.innerText, label=btn.textContent;
-      function done(){btn.textContent='복사됨';setTimeout(function(){btn.textContent=label;},1500);}
-      function fb(){var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
-      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,function(){fb();done();});}else{fb();done();}
+      function done(ok){btn.textContent=ok?'복사됨':'복사 실패';setTimeout(function(){btn.textContent=label;},1800);}
+      function selectPre(){try{var rng=document.createRange();rng.selectNodeContents(pre);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(rng);}catch(_){ }}
+      function fb(){var ok=false;var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{ok=document.execCommand('copy');}catch(e){}document.body.removeChild(ta);return ok;}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){done(true);},function(){var ok=fb();if(!ok)selectPre();done(ok);});}
+      else{var ok=fb();if(!ok)selectPre();done(ok);}
     });
   });
   var introHd=document.querySelector('.ait-intro-hd'), introBox=document.getElementById('ait-intro');
