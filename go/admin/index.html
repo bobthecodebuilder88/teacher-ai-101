@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<script>if(location.protocol==="http:"&&/gyopooledu\.com$/.test(location.hostname)){location.replace("https://"+location.host+location.pathname+location.search+location.hash);}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>교사 행정업무 AI로 빠르게 - 공문·통신문·계획서 초안 | AI로운 교사생활</title>
+<meta name="description" content="공문, 가정통신문, 각종 계획서를 AI 초안으로 줄이는 법. 개인정보를 넣지 않는 원칙과 바로 쓰는 행정 프롬프트를 담았습니다.">
+<link rel="canonical" href="https://ai101.gyopooledu.com/go/admin/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI로운 교사생활">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="교사 행정업무 AI로 빠르게 - 공문·통신문·계획서 초안 | AI로운 교사생활">
+<meta property="og:description" content="공문, 가정통신문, 각종 계획서를 AI 초안으로 줄이는 법. 개인정보를 넣지 않는 원칙과 바로 쓰는 행정 프롬프트를 담았습니다.">
+<meta property="og:url" content="https://ai101.gyopooledu.com/go/admin/">
+<meta property="og:image" content="https://ai101.gyopooledu.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ai101.gyopooledu.com/og-image.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"교사 행정업무 AI로 빠르게 - 공문·통신문·계획서 초안 | AI로운 교사생활","description":"공문, 가정통신문, 각종 계획서를 AI 초안으로 줄이는 법. 개인정보를 넣지 않는 원칙과 바로 쓰는 행정 프롬프트를 담았습니다.","inLanguage":"ko-KR","mainEntityOfPage":"https://ai101.gyopooledu.com/go/admin/","publisher":{"@type":"Organization","name":"교풀에듀"},"dateModified":"2026-06-11"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI로운 교사생활","item":"https://ai101.gyopooledu.com/"},{"@type":"ListItem","position":2,"name":"고등학교","item":"https://ai101.gyopooledu.com/go/admin/"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PC8M7K7HC4"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
+</script>
+<script>window.__aitState={cat:"admin",lv:"go"};</script>
+<script>
+/* 교풀 포털 행동 트래킹: 전환(교풀/블로그 이동)·콘텐츠 관심·도구 사용. 본문 비침습(이벤트 위임). */
+(function(){
+  function ev(n,p){ try{ if(window.gtag) gtag('event', n, p||{}); }catch(e){} }
+  function gyo(h){ return /(?:^|\.)gyopool\.com$/i.test(h) || /(?:^|\.)gyopooledu\.com$/i.test(h) || /\.notion\.site$/i.test(h); }
+  function dest(u){ var p=(u.pathname||'').toLowerCase(), h=(u.hostname||'').toLowerCase();
+    if(/\/dashboard\/ai\/apps\//.test(p)) return 'gyopool_tool';
+    if(/\/dashboard\/guide\//.test(p)) return 'gyopool_guide';
+    if(/\/blog/.test(p)) return 'blog';
+    if(/promotion/.test(p)) return 'promotion';
+    if(/notion\.site$/.test(h)) return 'guide';
+    if(/gyopooledu\.com$/.test(h)) return 'gyopooledu';
+    return 'gyopool_home'; }
+  var level='cho';
+  window.addEventListener('error',function(e){ try{ ev('js_error',{msg:String(e&&e.message||'').slice(0,100), src:String(e&&e.filename||'').slice(0,80), line:(e&&e.lineno)||0}); }catch(_){ } });
+  function gl(){return (window.__aitState&&window.__aitState.lv)||level;}
+  function gc(){return (window.__aitState&&window.__aitState.cat)||'start';}
+  document.addEventListener('click', function(e){
+    var t=e.target; if(!t||!t.closest) return;
+    function lvlOf(el){ return gl(); }
+    var cp=t.closest('.ait-copy');
+    if(cp){ var s=cp.closest('section[id],[id]'); ev('prompt_copy',{portal_level:lvlOf(cp), section_id:(s&&s.id)||'', portal_category:gc()}); return; }
+    var tb=t.closest('.tool-btn,.tool-btn-sm');
+    if(tb){ var ts=tb.closest('section[id],[id]'); ev('tool_use',{portal_level:lvlOf(tb), tool_id:(ts&&ts.id)||'', portal_category:gc()}); return; }
+    var a=t.closest('a[href]');
+    if(a){ try{ var u=new URL(a.getAttribute('href'), location.href);
+      if(u.host && u.host!==location.host && gyo(u.hostname)){
+        var tm=(u.pathname||'').match(/\/apps\/(\d+)/); var sec=a.closest('section[id]');
+        ev('conversion_click',{ portal_level:lvlOf(a), destination:dest(u),
+          tool_id:tm?tm[1]:'', source_section:(sec&&sec.id)||'', portal_category:gc(),
+          link_url:String(u.href).slice(0,100), link_text:(a.textContent||'').trim().slice(0,90) });
+      } }catch(_){} return; }
+    // 카테고리/학교급 전환은 별도 컨트롤러에서 category_select / level_select 발화
+  }, true);
+  document.addEventListener('DOMContentLoaded', function(){
+    if('IntersectionObserver' in window){
+      var seen={}, io=new IntersectionObserver(function(es){ es.forEach(function(x){
+        if(x.isIntersecting && x.target.id && !seen[x.target.id]){ seen[x.target.id]=1;
+          ev('section_view',{section_id:x.target.id, portal_level:gl(), portal_category:gc()}); } }); }, {threshold:0.5});
+      document.querySelectorAll('section[id]').forEach(function(s){ io.observe(s); });
+    }
+  });
+})();
+</script>
+<style>
+:root{
+  --bg:#ffffff; --bg-soft:#f6f7f4; --bg-warm:#fbf8f3;
+  --ink:#1b2a27; --ink-soft:#3a4844; --muted:#737d79; --line:#e7e6e0;
+  --teal:#1f7a6d; --teal-d:#155e54; --teal-l:#eaf3f1; --teal-bd:#cfe4df;
+  --coral:#cf6243; --coral-l:#fdf0ea; --coral-bd:#f0cdbf;
+  --code-bg:#11201d; --code-ink:#d9efe9; --code-dim:#6f8d86;
+  --r:14px; --r-sm:9px; --maxw:1180px; --nav:248px;
+  --sh-sm:0 1px 2px rgba(20,40,36,.05),0 1px 3px rgba(20,40,36,.06);
+  --sh:0 6px 22px rgba(20,40,36,.08); --sh-lg:0 18px 50px rgba(20,40,36,.12);
+  --fs:18px; --lh:1.82;
+  --sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,"D2Coding",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--bg);font:var(--fs)/var(--lh) var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%}
+a{color:var(--teal-d);text-decoration:none}
+.ait-shell{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* top bar */
+.ait-hd{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.86);-webkit-backdrop-filter:saturate(180%) blur(10px);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.ait-hd-in{display:flex;align-items:center;justify-content:space-between;height:56px}
+.ait-brand{margin:0;font-size:1.06rem;font-weight:800;color:var(--teal-d);letter-spacing:-.01em}
+.ait-brand-sub{font-size:.72em;font-weight:700;color:var(--coral);margin-left:6px}
+.ait-free{margin:0;font-size:.76rem;font-weight:700;color:var(--teal);background:var(--teal-l);border:1px solid var(--teal-bd);border-radius:20px;padding:5px 12px;white-space:nowrap}
+
+/* hero */
+.ait-hero{position:relative;overflow:hidden;background:
+   radial-gradient(1100px 380px at 12% -10%, #fdeee4 0%, rgba(253,238,228,0) 60%),
+   radial-gradient(900px 420px at 100% 0%, #e7f1ee 0%, rgba(231,241,238,0) 55%),
+   linear-gradient(180deg,#fbf9f5 0%,#ffffff 80%)}
+.ait-hero-in{max-width:var(--maxw);margin:0 auto;padding:62px 22px 54px;display:grid;grid-template-columns:1.12fr .95fr;gap:46px;align-items:center}
+.ait-hero-chip{display:inline-block;font-size:.8rem;font-weight:700;color:var(--teal-d);background:#fff;border:1px solid var(--teal-bd);border-radius:30px;padding:7px 15px;box-shadow:var(--sh-sm)}
+.ait-hero-title{font-size:clamp(2.4rem,5vw,3.5rem);line-height:1.1;font-weight:800;letter-spacing:-.03em;margin:18px 0 0;color:var(--ink)}
+.ait-hl{color:var(--coral)}
+.ait-hero-sub{font-size:1.08rem;line-height:1.72;color:var(--ink-soft);margin:18px 0 0;max-width:44ch}
+.ait-hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 0}
+.ait-btn{display:inline-flex;align-items:center;gap:6px;font-size:.95rem;font-weight:700;padding:12px 20px;border-radius:11px;border:1px solid var(--line);background:#fff;color:var(--ink);box-shadow:var(--sh-sm);transition:transform .12s,box-shadow .12s;cursor:pointer}
+.ait-btn:hover{transform:translateY(-1px);box-shadow:var(--sh)}
+.ait-btn-primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.ait-btn-primary:hover{background:var(--teal-d)}
+.ait-hero-stats{display:flex;gap:28px;flex-wrap:wrap;margin:30px 0 0}
+.ait-stat{display:flex;flex-direction:column}
+.ait-stat b{font-size:1.5rem;font-weight:800;color:var(--teal-d);line-height:1}
+.ait-stat span{font-size:.82rem;color:var(--muted);margin-top:5px}
+.ait-hero-r{display:grid;gap:11px}
+.ait-pcard{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:15px 18px;box-shadow:var(--sh-sm);transition:transform .12s,box-shadow .12s}
+.ait-pcard:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.ait-pcard-l{font-size:.69rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.ait-pcard h3{margin:6px 0 4px;font-size:1.02rem;font-weight:800;color:var(--ink)}
+.ait-pcard p{margin:0;font-size:.86rem;line-height:1.55;color:var(--muted)}
+.ait-pcard-gyo{background:linear-gradient(135deg,#1f7a6d,#134e46);border-color:transparent}
+.ait-pcard-gyo .ait-pcard-l{color:#9fe6d7}
+.ait-pcard-gyo h3{color:#fff}
+.ait-pcard-gyo p{color:#cfe7e1}
+
+/* shell grid */
+@media(min-width:920px){
+  .ait-shell:not(.ait-hd-in){display:grid;grid-template-columns:var(--nav) 1fr;gap:48px;align-items:start;padding-top:10px}
+}
+
+/* nav */
+.ait-navtoggle{display:block;width:calc(100% - 44px);margin:16px 22px 0;padding:12px;border:1px solid var(--line);background:#fff;border-radius:10px;font-size:1rem;font-weight:700;color:var(--teal-d);cursor:pointer;box-shadow:var(--sh-sm)}
+.ait-toc{display:none}
+.ait-toc.ait-open{display:block}
+.ait-toc-list{list-style:none;margin:16px 0 0;padding:0 16px;counter-reset:ait-nav}
+.ait-toc-list li{counter-increment:ait-nav;margin:1px 0}
+.ait-toc-list a{display:flex;align-items:center;gap:9px;padding:8px 11px;border-radius:9px;color:var(--ink-soft);font-size:.91rem;font-weight:500;line-height:1.3}
+.ait-toc-list a::before{content:counter(ait-nav,decimal-leading-zero);flex:none;font:700 .68rem/1 var(--mono);color:var(--muted);background:var(--bg-soft);border:1px solid var(--line);border-radius:6px;padding:4px 4px;min-width:23px;text-align:center}
+.ait-toc-list a:hover{background:var(--bg-soft);color:var(--ink)}
+.ait-toc-list a.ait-active{background:var(--teal);color:#fff}
+.ait-toc-list a.ait-active::before{background:rgba(255,255,255,.22);border-color:transparent;color:#fff}
+.ait-toc-list a.ait-timely{color:var(--coral);font-weight:700}
+.ait-toc-list a.ait-active.ait-timely{color:#fff}
+@media(min-width:920px){
+  .ait-navtoggle{display:none}
+  .ait-toc{display:block;position:sticky;top:118px;max-height:calc(100vh - 92px);overflow:auto}
+  .ait-toc-list{padding:0}
+}
+
+/* made by 교풀 card */
+.ait-madeby{display:block;margin:16px;padding:16px;border-radius:var(--r);background:linear-gradient(135deg,#1f7a6d,#134e46);color:#fff;box-shadow:var(--sh);transition:transform .12s,box-shadow .12s}
+.ait-madeby:hover{transform:translateY(-2px);box-shadow:var(--sh-lg)}
+.ait-madeby-badge{display:inline-block;font:800 .6rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#9fe6d7;background:rgba(255,255,255,.12);border-radius:5px;padding:4px 7px}
+.ait-madeby-t{display:block;margin:10px 0 3px;font-size:1.04rem;font-weight:800;color:#fff}
+.ait-madeby-d{display:block;margin-top:9px;font-size:.8rem;color:#cfe7e1}.ait-madeby-d:hover{text-decoration:underline}.ait-madeby-cta{display:block;margin-top:11px;padding:10px 12px;border-radius:8px;background:#fff;color:var(--teal-d);font-size:.85rem;font-weight:800;text-align:center}.ait-madeby-cta:hover{background:#eef5f3}
+@media(min-width:920px){.ait-madeby{margin:18px 0 0}}
+
+/* main + sections */
+.ait-main{min-width:0;counter-reset:ait-sec}
+.ait-section{counter-increment:ait-sec;padding:46px 0;border-top:1px solid var(--line)}
+.ait-section:first-child{border-top:0;padding-top:30px}
+.ait-h2{display:flex;align-items:flex-start;gap:13px;font-size:1.62rem;line-height:1.32;font-weight:800;letter-spacing:-.02em;margin:0 0 18px;color:var(--ink)}
+.ait-h2::before{content:counter(ait-sec,decimal-leading-zero);flex:none;margin-top:3px;font:800 .9rem/1 var(--mono);color:#fff;background:var(--teal);border-radius:9px;padding:9px 10px;box-shadow:var(--sh-sm)}
+.ait-h3{font-size:1.16rem;font-weight:800;color:var(--ink);margin:30px 0 8px;padding-left:14px;border-left:3px solid var(--teal)}
+.ait-body{margin:.5em 0 0;color:var(--ink-soft);font-size:1.02rem;line-height:1.85}
+strong{font-weight:700}
+.ait-body strong,.ait-ul strong,.ait-table strong,.ait-keypoint strong{color:var(--teal-d)}
+
+/* lists */
+.ait-ul{margin:.7em 0 .2em;padding:0;list-style:none}
+.ait-ul li{position:relative;padding:0 0 0 24px;margin:.5em 0;color:var(--ink-soft);line-height:1.72}
+.ait-ul li::before{content:"";position:absolute;left:4px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px var(--teal-l)}
+
+/* table */
+.ait-tw{margin:16px 0;overflow-x:auto;border-radius:var(--r);box-shadow:var(--sh-sm);border:1px solid var(--line)}
+.ait-table{width:100%;border-collapse:collapse;font-size:.92rem;background:#fff;min-width:420px}
+.ait-tw .ait-table{box-shadow:none;border:0}
+.ait-table th,.ait-table td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);line-height:1.55}
+.ait-table thead th{background:var(--teal-l);color:var(--teal-d);font-weight:800;font-size:.85rem;border-bottom:1px solid var(--teal-bd);white-space:nowrap}
+.ait-table tbody tr:last-child td{border-bottom:0}
+.ait-table tbody tr:nth-child(even) td{background:var(--bg-warm)}
+
+/* keypoint */
+.ait-keypoint{margin:18px 0;padding:14px 18px;background:var(--teal-l);border:1px solid var(--teal-bd);border-left:4px solid var(--teal);border-radius:var(--r-sm);font-size:1rem;line-height:1.62;color:var(--ink)}
+.ait-keypoint strong:first-child{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--teal);border-radius:5px;padding:3px 8px;margin-right:9px;vertical-align:middle}
+
+/* timely */
+.ait-timely-banner{display:flex;gap:10px;background:var(--coral-l);border:1px solid var(--coral-bd);border-left:4px solid var(--coral);border-radius:var(--r-sm);padding:13px 16px;margin:0 0 20px;font-size:.95rem;line-height:1.6;color:#8f3f28}
+.ait-timely-banner::before{content:"\1F4CC";flex:none}
+
+.ait-block{margin:0 0 18px}
+
+/* prompt terminal */
+.ait-prompt{position:relative;background:var(--code-bg);border-radius:var(--r);padding:42px 16px 16px;margin:14px 0;box-shadow:var(--sh)}
+.ait-prompt::before{content:"프롬프트";position:absolute;top:0;left:0;right:0;height:32px;display:flex;align-items:center;padding:0 72px 0 58px;font:700 .66rem/32px var(--mono);letter-spacing:.05em;color:var(--code-dim);background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06);border-radius:var(--r) var(--r) 0 0}
+.ait-prompt::after{content:"";position:absolute;top:11px;left:14px;width:10px;height:10px;border-radius:50%;background:#ff5f57;box-shadow:18px 0 0 #febc2e,36px 0 0 #28c840}
+.ait-pre{margin:0;white-space:pre-wrap;word-break:break-word;color:var(--code-ink);font:.86rem/1.66 var(--mono)}
+.ait-copy{position:absolute;top:5px;right:8px;z-index:2;background:var(--teal);color:#fff;border:0;border-radius:7px;padding:5px 12px;font:700 .76rem var(--sans);cursor:pointer;transition:background .12s}
+.ait-copy:hover{background:#2a9b8a}
+
+/* source */
+.ait-src{display:flex;gap:6px;align-items:baseline;margin:9px 0 0;font-size:.8rem;color:var(--muted);line-height:1.5}
+.ait-src::before{content:"\1F4C4";flex:none;font-size:.85em}
+.ait-src a{color:var(--teal-d);font-weight:600;border-bottom:1px solid var(--teal-bd)}
+
+/* caution */
+.ait-caution{position:relative;background:var(--coral-l);border:1px solid var(--coral-bd);border-left:4px solid var(--coral);border-radius:var(--r-sm);padding:13px 16px 13px 42px;margin:14px 0;font-size:.92rem;line-height:1.6;color:#8a4733}
+.ait-caution::before{content:"\26A0";position:absolute;left:15px;top:11px;color:var(--coral);font-weight:700}
+
+/* gyo cta */
+.ait-gyo{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 0;padding:15px 18px;background:linear-gradient(135deg,#eef5f3,#e6f1ee);border:1px solid var(--teal-bd);border-radius:var(--r);font-size:.94rem;color:var(--teal-d);line-height:1.55}
+.ait-gyo::before{content:"\2728";flex:none}
+.ait-gyo a{margin-left:auto;flex:none;background:var(--teal);color:#fff;font-weight:700;padding:9px 16px;border-radius:9px;font-size:.88rem;box-shadow:var(--sh-sm)}
+.ait-gyo a:hover{background:var(--teal-d)}
+.ait-verified{display:inline-block;font-size:.66rem;font-weight:800;color:#fff;background:var(--teal);border-radius:5px;padding:2px 7px;margin-left:6px;vertical-align:middle}
+
+/* footer */
+.ait-ft{margin-top:60px;background:#11201d;color:#c4d2ce;padding:36px 0}
+.ait-ft a{color:#9fe6d7;font-weight:600}
+.ait-ft-disc{margin:0 0 14px;font-size:.86rem;line-height:1.65;color:#9fb0ab;max-width:80ch}
+.ait-ft-gyo{margin:0 0 10px;font-size:1rem;font-weight:600}
+.ait-ft-meta{margin:0;font-size:.8rem;color:#7e918c}
+
+@media(max-width:919px){
+  :root{--fs:17px}
+  .ait-hero-in{grid-template-columns:1fr;gap:28px;padding:38px 22px 34px}
+  .ait-hero-title{font-size:2.1rem}
+  .ait-h2{font-size:1.36rem}
+  .ait-table{font-size:.85rem}
+  .ait-table th,.ait-table td{padding:9px 11px}
+  .ait-gyo a{margin-left:0}
+}
+/* TOOLCSS_START */
+.tool-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:12px 0 0;box-shadow:var(--sh-sm)}
+.tool-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.tool-row label{font-size:.86rem;font-weight:700;color:#374151;display:flex;gap:6px;align-items:center}
+.tool-card select,.tool-input{padding:9px 10px;border:1px solid var(--line);border-radius:8px;font-size:.95rem;background:#fff;color:var(--ink);font-family:inherit}
+.tool-num{width:84px}
+.tool-ta{width:100%;min-height:130px;padding:12px;border:1px solid var(--line);border-radius:8px;font-size:1rem;line-height:1.7;resize:vertical;font-family:inherit;color:var(--ink)}
+.tool-btn{background:var(--teal);color:#fff;border:0;border-radius:9px;padding:10px 18px;font-size:.92rem;font-weight:700;cursor:pointer;font-family:inherit}
+.tool-btn:hover{background:var(--teal-d)}
+.tool-btn-ghost{background:#fff;color:var(--teal-d);border:1px solid var(--teal-bd)}
+.tool-btn-sm{background:var(--teal);color:#fff;border:0;border-radius:7px;padding:6px 12px;font-size:.8rem;font-weight:700;cursor:pointer;margin-top:6px}
+.tool-chip{background:var(--bg-soft);border:1px solid var(--line);border-radius:20px;padding:6px 13px;font-size:.85rem;font-weight:700;color:var(--teal-d);cursor:pointer}
+.tool-chip:hover{background:var(--teal-l)}
+.tool-meter{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:12px 0 6px}
+.tool-big{font-size:1.5rem;font-weight:800;color:var(--teal-d)}
+.tool-big.over{color:var(--coral)}
+.tool-mut{font-size:.9rem;color:var(--muted)}
+.tool-bar{height:10px;background:#eef1f0;border-radius:6px;overflow:hidden;margin:4px 0 0}
+.tool-bar>i{display:block;height:100%;background:var(--teal);width:0;transition:width .15s}
+.tool-bar>i.over{background:var(--coral)}
+.tool-warn{font-size:.88rem;color:#8a4733;margin-top:8px}.tool-warn:empty{display:none}
+.tool-result{margin-top:12px}
+.tool-ok{color:var(--teal-d);font-weight:700}
+.tool-flag{padding:9px 12px;border-left:3px solid var(--coral);background:var(--coral-l);border-radius:8px;margin:8px 0;font-size:.9rem}
+.tool-flag b{color:#9a4530;display:block;margin-bottom:3px}
+.tool-flag code,.tool-group span{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:5px;padding:1px 7px;margin:2px;font-size:.85rem;font-family:inherit}
+.tool-group{padding:10px 12px;border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:8px;margin:8px 0;font-size:.92rem}
+.tool-group b{color:var(--teal-d);margin-right:6px}
+.tool-timer{text-align:center}
+.tool-timer-display{font-size:4rem;font-weight:800;color:var(--teal-d);font-variant-numeric:tabular-nums;letter-spacing:.02em;margin:6px 0 14px}
+.tool-timer-display.warn{color:var(--coral)}
+#di-out{background:var(--bg-soft)}
+/* TOOLCSS_END */
+/* tabs */
+.ait-tabbar{position:sticky;top:56px;z-index:25;background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(180%) blur(10px);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.ait-tabbar-in{display:flex;gap:6px;max-width:var(--maxw);margin:0 auto;padding:9px 22px 0;overflow-x:auto}
+.ait-tab{flex:0 0 auto;font-size:1rem;font-weight:700;padding:10px 22px;border:1px solid transparent;border-bottom:0;border-radius:11px 11px 0 0;color:var(--muted);background:transparent;cursor:pointer;white-space:nowrap}
+.ait-tab:hover{color:var(--ink);background:var(--bg-soft)}
+.ait-tab.active{color:var(--teal-d);background:var(--teal-l);border-color:var(--teal-bd)}
+.ait-level[hidden]{display:none}
+@media(max-width:919px){.ait-tab{font-size:.92rem;padding:9px 16px}.ait-tabbar-in{padding:8px 14px 0}}
+.ait-cta{margin:20px 0 8px;padding:18px 20px;background:linear-gradient(135deg,var(--teal-l),var(--bg-warm));border:1px solid var(--teal-bd);border-radius:14px}
+.ait-cta-t{font-weight:800;color:var(--teal-d);font-size:1.02rem;margin:0 0 6px}
+.ait-cta-d{font-size:.95rem;color:var(--ink);line-height:1.62;margin:0 0 12px}
+.ait-cta-btn{display:inline-block;background:var(--teal-d);color:#fff;font-weight:700;padding:9px 18px;border-radius:10px;text-decoration:none;font-size:.95rem}
+.ait-cta-btn:hover{opacity:.92}
+.ait-cta-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:2px}
+.ait-cta-links a{display:inline-block;background:#fff;border:1px solid var(--teal-bd);color:var(--teal-d);font-weight:600;font-size:.85rem;padding:6px 11px;border-radius:999px;text-decoration:none}
+.ait-cta-links a:hover{background:var(--teal-l)}
+.ait-cta-note{font-size:.82rem;color:var(--muted);margin:9px 0 0;line-height:1.5}
+.ait-subnav{margin:0 0 6px;display:flex;flex-direction:column;gap:10px}
+.ait-subnav-group{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+.ait-subnav-label{flex:0 0 auto;font-weight:800;color:var(--teal-d);font-size:.9rem;background:var(--teal-l);border:1px solid var(--teal-bd);border-radius:8px;padding:4px 10px}
+.ait-chip{flex:0 0 auto;font-size:.9rem;font-weight:700;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);cursor:pointer}
+.ait-chip:hover{color:var(--ink);background:var(--bg-soft)}
+.ait-chip.active{color:#fff;background:var(--teal-d);border-color:var(--teal-d)}
+.ait-subpanel[hidden]{display:none}
+.ait-aiclass{max-width:var(--maxw);margin:0 auto;padding:16px 22px 44px}
+.ait-aiclass .ait-h2{gap:0;margin:8px 0 16px}
+.ait-aiclass .ait-h2::before{display:none}
+.ait-aiclass .ait-subpanel{border-top:1px solid var(--line);padding-top:10px}
+.ait-unit{margin:14px 0;padding:15px 18px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:var(--r-sm);box-shadow:var(--sh-sm)}
+.ait-unit-h{font-weight:800;color:var(--teal-d);font-size:1.05rem;margin:0}
+.ait-unit-tag{font-size:.85rem;color:var(--muted);margin:2px 0 8px}
+.ait-vbox{margin:18px 0 6px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ait-vcard{padding:15px 17px;background:#fff;border:1px solid var(--teal-bd);border-radius:var(--r);box-shadow:var(--sh-sm)}
+.ait-vcard b{display:block;color:var(--teal-d);font-size:1.02rem;margin:0 0 5px}
+.ait-vcard span{display:block;color:var(--ink-soft);font-size:.93rem;line-height:1.6}
+.ait-aiclass .ait-unit a[href*="/dashboard/"]{display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#fff;font-weight:700;font-size:.9rem;padding:7px 14px;border-radius:9px;text-decoration:none;box-shadow:var(--sh-sm);transition:background .12s}
+.ait-aiclass .ait-unit a[href*="/dashboard/"]:hover{background:var(--teal-d)}
+.ait-aiclass .ait-unit a[href*="/dashboard/"]::after{content:"\2197";font-size:.92em;opacity:.9}
+.ait-aiclass .ait-table a[href*="/dashboard/"]{display:inline-flex;align-items:center;gap:5px;background:#fff;border:1px solid var(--teal-bd);color:var(--teal-d);font-weight:700;font-size:.85rem;padding:5px 11px;border-radius:7px;text-decoration:none;white-space:nowrap}
+.ait-aiclass .ait-table a[href*="/dashboard/"]:hover{background:var(--teal-l)}
+.ait-aiclass .ait-table a[href*="/dashboard/"]::after{content:"\2197";font-size:.88em}
+@media(max-width:919px){.ait-chip{font-size:.84rem;padding:6px 11px}.ait-subnav-label{font-size:.82rem}.ait-vbox{grid-template-columns:1fr}}
+/* === 과업-우선 재편: 전역 학교급 필터 + 인트로 === */
+.ait-levelbar{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(180%) blur(10px);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.ait-levelbar-in{display:flex;gap:8px;align-items:center;flex-wrap:wrap;max-width:var(--maxw);margin:0 auto;padding:10px 22px}
+@media(min-width:920px){.ait-levelbar{position:sticky;top:107px;z-index:24}}
+.ait-lv{font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1.5px solid var(--teal-bd);background:#fff;color:var(--teal-d);cursor:pointer;line-height:1.2}
+.ait-lv[aria-pressed="true"]{background:var(--teal-d);border-color:var(--teal-d);color:#fff;font-weight:700}
+.ait-levelbar.ait-hide{display:none}
+.ait-introwrap{max-width:var(--maxw);margin:0 auto;padding:24px 22px 0}
+.ait-introwrap[hidden]{display:none}
+.ait-intro{background:linear-gradient(180deg,#f3faf7,#fff);border:1px solid var(--teal-bd);border-radius:12px;padding:4px 16px}
+.ait-intro-hd{display:flex;align-items:center;justify-content:space-between;width:100%;font:inherit;font-size:.98rem;font-weight:700;color:var(--ink);background:none;border:0;padding:10px 2px;cursor:pointer;text-align:left}
+.ait-intro-chev{font-size:.8rem;color:var(--teal-d);transition:transform .15s}
+.ait-intro.ait-closed .ait-intro-chev{transform:rotate(-90deg)}
+.ait-intro.ait-closed .ait-intro-body{display:none}
+.ait-intro-body{padding:0 2px 12px}
+.ait-intro p{margin:4px 0 0;color:var(--ink-soft);line-height:1.6;font-size:.9rem}
+.ait-intro p.ait-intro-lead{color:var(--ink);font-size:.92rem;margin-top:0}
+.ait-intro-pts{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+.ait-intro-pts li{display:flex;flex-wrap:wrap;gap:2px 8px;font-size:.9rem}
+.ait-intro-pts b{color:var(--teal-d);min-width:104px}
+.ait-intro-pts span{color:var(--ink-soft);line-height:1.55;flex:1;min-width:220px}
+.ait-intro-guide{margin-top:8px;padding-top:8px;border-top:1px solid var(--teal-bd);font-size:.85rem}
+#ait-aiclass-note[hidden]{display:none}
+.ait-section[hidden]{display:none}
+.ait-share{font:inherit;font-size:.7rem;font-weight:600;color:var(--teal-d);background:#fff;border:1px solid var(--teal-bd);border-radius:999px;padding:3px 10px;margin-left:10px;cursor:pointer;vertical-align:3px;white-space:nowrap}
+.ait-share:hover{background:var(--bg-soft)}
+.ait-months{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px}
+.ait-mo{font:inherit;font-size:.85rem;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;line-height:1.2}
+.ait-mo.active{background:var(--teal-d);border-color:var(--teal-d);color:#fff;font-weight:700}
+.ait-mo.now-month:not(.active){border-color:var(--teal-d);color:var(--teal-d);font-weight:700}
+.ait-month-panel[hidden]{display:none}
+@media(max-width:919px){.ait-tabbar-in{flex-wrap:wrap;overflow-x:visible;padding-bottom:4px}}
+
+.ait-pg{max-width:var(--maxw);margin:0 auto;padding:18px 22px 40px}
+.ait-pg .ait-main{counter-reset:ait-sec}
+.ait-crumb{font-size:.85rem;color:var(--muted);margin:6px 0 0}
+.ait-crumb a{color:var(--teal-d);text-decoration:none}
+.ait-backlink{margin:34px 0 0;font-weight:700}
+.ait-backlink a{color:var(--teal-d);text-decoration:none}
+.ait-hd .ait-brand a{color:inherit;text-decoration:none}
+</style>
+</head>
+<body>
+<header class="ait-hd">
+  <div class="ait-shell ait-hd-in">
+    <p class="ait-brand"><a href="/">AI로운 교사생활</a></p>
+    <p class="ait-free">무료 · 교육부/교육청 공식 자료 기반</p>
+  </div>
+</header>
+<div class="ait-pg">
+  <nav class="ait-crumb" aria-label="현재 위치"><a href="/">AI로운 교사생활</a> &rsaquo; 고등학교</nav>
+  <main class="ait-main">
+<section class="ait-section" id="go-ait-admin" aria-labelledby="go-ait-admin-h" data-cat="admin" data-level="go">
+  <h2 class="ait-h2" id="go-ait-admin-h">행정업무 빠르게</h2>
+
+  <div class="ait-block">
+    <h3 class="ait-h3">AI는 초안 교정까지만, 사실과 책임은 교사</h3>
+    <p class="ait-body">생성형 AI는 행정 문서를 처음부터 끝까지 대신 써 주는 도구가 아니라, 빈 화면 앞에서 멈추는 시간을 없애 주는 <strong>초안 작성기이자 교정기</strong>로 쓸 때 가장 안전하고 효율적입니다.</p>
+    <ul class="ait-ul">
+      <li>AI가 잘하는 영역: 비슷한 안내문을 매 학기 반복해서 쓰거나, 회의 녹취를 정리하거나, 작년 계획서를 올해 상황에 맞게 고쳐 쓰는 일은 형식이 정해져 있습니다.</li>
+      <li>교사가 직접 채울 영역: 우리 학교의 구체적 일정, 금액, 담당자, 학생 명단처럼 사실관계가 걸린 부분은 AI가 지어낼 수 있으므로 교사가 직접 채우고 검증해야 합니다.</li>
+      <li><strong>교육부 교사용 가이드라인</strong>도 결과물의 진위성과 편향성을 교사가 검토하고, 최종 판단은 교사가 내린다는 원칙을 명시합니다.</li>
+    </ul>
+    <div class="ait-keypoint"><strong>핵심</strong> 구조와 문장은 AI에게, 사실과 책임은 교사에게 두는 분업이 핵심입니다.</div>
+    <div class="ait-caution">결과물의 사실성, 적절성, 저작권 침해 여부 검증과 최종 책임은 교사에게 있습니다. AI 초안을 검토 없이 그대로 발송하거나 결재에 올리지 않습니다.</div>
+    <p class="ait-src">출처: 교육부 / 경기도교육청 - 생성형 인공지능 활용 교육 가이드라인(교사용) <a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=92297&lev=0&m=020402" target="_blank" rel="noopener">원문</a></p>
+  </div>
+
+  <div class="ait-block">
+    <h3 class="ait-h3">공문서 표기 규칙 (항목부호 날짜 시각 금액)</h3>
+    <p class="ait-body">가정통신문이나 학교 내부 결재를 거치는 공문은 정해진 <strong>표기 표준</strong>을 지켜야 그대로 결재에 올릴 수 있습니다. AI는 이 규칙을 기본값으로 지키지 않으므로 <strong>프롬프트에 명시</strong>해야 합니다. 핵심 규칙은 다음과 같습니다.</p>
+    <div class="ait-tw"><table class="ait-table">
+      <thead>
+        <tr><th>항목</th><th>표기 규칙</th><th>예시</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>항목 부호</td><td>둘 이상으로 나눌 때 상위에서 하위로 표시</td><td>1. 가. 1) 가) (1) (가)</td></tr>
+        <tr><td>날짜</td><td>아라비아 숫자로 쓰고 연월일 글자 대신 마침표를 찍으며 0은 쓰지 않음</td><td>2024. 5. 1.</td></tr>
+        <tr><td>시각</td><td>24시각제로 쓰고 시분 글자 대신 쌍점을 찍음</td><td>14:30</td></tr>
+        <tr><td>금액</td><td>아라비아 숫자 뒤 괄호 안에 한글을 병기</td><td>금113,560원(금일십일만삼천오백육십원)</td></tr>
+      </tbody>
+    </table></div>
+    <p class="ait-body">이 네 가지만 프롬프트에 넣어도 초안 품질이 크게 올라갑니다. 본문을 왼쪽 처음부터 시작하는 작성법은 2017-11-01부터 시행되었습니다.</p>
+    <div class="ait-caution">공문서는 형식이 정해져 있으므로(항목 부호 1. 가., 날짜 2024. 5. 1., 시각 14:30, 금액 한글 병기) 프롬프트에 규칙을 명시하지 않으면 결재에 바로 쓸 수 없는 결과가 나옵니다.</div>
+    <p class="ait-src">출처: 국가법령정보센터(법제처) - 행정업무의 운영 및 혁신에 관한 규정 시행규칙 <a href="https://www.law.go.kr/LSW/lsInfoP.do?lsId=003728&ancYnChk=0" target="_blank" rel="noopener">원문</a></p>
+    <p class="ait-src">출처: 대한민국 정책브리핑(인사혁신처) - 공문서 작성 바로알기, 날짜 숫자 표기법 <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148902755" target="_blank" rel="noopener">원문</a></p>
+  </div>
+
+  <div class="ait-block">
+    <h3 class="ait-h3">가정통신문 공문 계획서 초안 만들기</h3>
+    <p class="ait-body">행정 문서용 프롬프트는 <strong>역할, 맥락, 형식, 제약</strong> 네 덩어리로 구성하면 결과가 안정적입니다.</p>
+    <ul class="ait-ul">
+      <li>역할: 고등학교 담임이나 부장이라는 시점을 고정합니다.</li>
+      <li>맥락: 무슨 행사인지와 대상, 기한 같은 배경을 주되 개인정보는 뺍니다.</li>
+      <li>형식: 가정통신문체나 공문체, 항목 부호 1. 가., 분량, 회신 방법 포함 여부를 지정합니다.</li>
+      <li>제약: 간결한 공문서 어투와 추측성 표현 금지, 빈칸 대괄호 표시 같은 조건을 겁니다.</li>
+    </ul>
+    <p class="ait-body">가정통신문은 형식이 반복되므로 작년 통신문 골격을 붙여 주고 올해 상황만 바꿔 달라고 하면 빠릅니다. 교내 결재용 기안문이나 운영 계획서도 추진 배경, 목적, 운영 개요, 세부 추진 내용, 기대 효과, 예산, 행정 사항 같은 표준 목차를 제시하고 개조식으로 써 달라고 하면 결재 문서에 가까운 초안이 나옵니다.</p>
+    <p class="ait-body">핵심은 일시, 장소, 금액, 법적 근거, 공문 번호 같은 사실 항목을 <strong>대괄호 빈칸</strong>으로 남기게 해 교사가 직접 채우는 것입니다. AI가 근거 법령이나 예산을 그럴듯하게 지어내는 환각을 막는 핵심 장치입니다. 표는 교풀AI 같은 일부 플랫폼이나 한글 문서에서 깨질 수 있으니 항목 목록 형태로 받는 편이 옮겨 붙이기 쉽습니다.</p>
+    <div class="ait-prompt"><button class="ait-copy" type="button">복사</button><pre class="ait-pre">당신은 고등학교 담임 교사입니다. 학부모님께 보내는 1학기 학부모 상담주간 안내 가정통신문 초안을 작성해 주세요.
+
+[형식]
+- 정중하고 간결한 가정통신문체
+- 항목은 1. 가. 순서의 부호로 구분
+- A4 한 장 분량, 인사말로 시작하고 끝에 회신(신청) 방법 포함
+- 날짜는 2024. 5. 1. 형식, 시각은 14:30 형식으로 표기
+
+[포함 항목]
+1. 상담 목적과 취지
+2. 상담 기간과 운영 방식(대면/전화/온라인 선택)
+3. 신청 방법과 신청 기한
+4. 문의처
+
+[제약]
+- 학생 이름, 연락처 등 개인정보는 쓰지 말 것
+- 일시, 장소, 신청 링크, 담당자 같은 구체 정보는 [   ] 빈칸으로 남겨 둘 것
+- 추측성 표현 없이 사실 위주로 작성</pre></div>
+    <div class="ait-prompt"><button class="ait-copy" type="button">복사</button><pre class="ait-pre">당신은 고등학교 부장 교사입니다. 교내 행사 운영 계획서 초안을 개조식(명사형 종결, 항목 부호 사용)으로 작성해 주세요.
+
+[목차]
+1. 추진 배경 및 목적
+2. 운영 개요(일시 / 대상 / 장소)
+3. 세부 추진 내용
+4. 안전 관리 및 유의 사항
+5. 기대 효과
+6. 소요 예산
+7. 행정 사항
+
+[형식]
+- 상위에서 하위로 1. 가. 1) 부호 사용
+- 날짜 2024. 9. 20. , 시각 09:00 형식
+- 표는 쓰지 말고 항목 목록으로 작성
+
+[제약]
+- 예산 금액, 강사비, 정확한 법적 근거 조항, 담당 부서는 임의로 채우지 말고 [   ]로 남길 것
+- 행사 주제는 [행사명], 대상 학년은 [O학년]으로 처리</pre></div>
+    <div class="ait-prompt"><button class="ait-copy" type="button">복사</button><pre class="ait-pre">당신은 고등학교 업무 담당 교사입니다. 교육청에 제출하는 공문 기안문의 본문 초안을 작성해 주세요.
+
+[내용 요지] [무엇을 보고/요청하는 공문인지 한 문장으로]
+
+[형식]
+- 격식 있는 공문서 개조식
+- 본문 항목은 1. 가. 1) 부호로 구분
+- 날짜는 2024. 5. 1. , 금액은 아라비아 숫자 뒤 괄호에 한글 병기(예: 금113,560원(금일십일만삼천오백육십원))
+- 끝에 붙임 표시 양식 포함
+
+[제약]
+- 시행 근거가 되는 법령 조항이나 상급기관 공문 번호는 임의로 만들지 말고 [근거: ]로 남길 것
+- 우리 학교명, 담당자명, 연락처는 [   ]로 처리</pre></div>
+    <div class="ait-caution">AI는 날짜, 금액, 법적 근거 조항, 공문 번호, 통계를 그럴듯하게 지어낼 수 있습니다. 사실이 들어갈 자리는 빈칸([   ])으로 남기게 하고 교사가 원자료와 대조해 채웁니다.</div>
+    <p class="ait-src">출처: 교육부 / 경기도교육청 - 생성형 인공지능 활용 교육 가이드라인(교사용) <a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=92297&lev=0&m=020402" target="_blank" rel="noopener">원문</a></p>
+    <p class="ait-src">출처: 대한민국 정책브리핑(인사혁신처) - 공문서 작성 바로알기 <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148902755" target="_blank" rel="noopener">원문</a></p>
+  </div>
+
+  <div class="ait-block">
+    <h3 class="ait-h3">회의록 요약 (비식별 후 AI에)</h3>
+    <p class="ait-body">교과협의회, 학년회의, 부서회의 기록은 음성을 텍스트로 바꾼 뒤 AI에게 요약과 정리를 맡기는 흐름이 효율적입니다. 핵심 단계는 다음과 같습니다.</p>
+    <ul class="ait-ul">
+      <li><strong>비식별 먼저</strong>: 녹음 전사 단계에서는 회의 참석자 실명이 그대로 들어가므로, AI에 넘기기 전에 발언자를 직위나 기호(부장, 교사1, 교사2)로 바꿉니다.</li>
+      <li>안건별 정리: AI에게 안건별로 결정 사항과 후속 조치(담당, 기한 포함)를 항목으로 정리하라고 지시하면 회의록 초안이 빠르게 나옵니다.</li>
+      <li><strong>원본 대조</strong>: 요약은 반드시 원본 녹취와 대조해 발언 취지가 왜곡되지 않았는지 확인합니다. AI가 없는 내용을 채워 넣거나 뉘앙스를 바꾸는 경우가 있기 때문입니다.</li>
+      <li>교정 용도: 이미 내가 쓴 초안을 다듬는 교정 용도로 쓰면 개인정보 노출 위험도 줄고 시간도 아낄 수 있는데, 이때도 원문에 학생 실명이나 민감정보가 있으면 먼저 가명으로 바꾼 뒤 붙여 넣습니다.</li>
+    </ul>
+    <div class="ait-prompt"><button class="ait-copy" type="button">복사</button><pre class="ait-pre">다음은 교과협의회 회의 녹취 내용입니다. 회의록 초안으로 정리해 주세요.
+
+[정리 형식]
+1. 안건별로 구분
+2. 각 안건마다 (1) 논의 요지 (2) 결정 사항 (3) 후속 조치(담당 / 기한) 로 정리
+3. 개조식으로 간결하게
+
+[제약]
+- 발언자는 실명 대신 직위나 기호(부장, 교사1, 교사2)로 표기
+- 녹취에 없는 내용은 추가하지 말 것
+- 결정되지 않은 사항은 (미정)으로 표시
+
+[녹취]
+(여기에 발언자를 기호로 바꾼 전사 텍스트를 붙여넣기)</pre></div>
+    <div class="ait-caution">회의록은 전사 텍스트에 실명이 그대로 남으므로 AI에 넘기기 전에 발언자를 직위나 기호로 바꾸고, 요약본을 원본 녹취와 대조해 발언 취지 왜곡 여부를 확인합니다.</div>
+    <p class="ait-src">출처: 교육부 / 경기도교육청 - 생성형 인공지능 활용 교육 가이드라인(교사용), 익명화 가명화 <a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=92297&lev=0&m=020402" target="_blank" rel="noopener">원문</a></p>
+  </div>
+
+  <div class="ait-block">
+    <h3 class="ait-h3">개인정보 비식별 - 이름 대신 학생 A</h3>
+    <p class="ait-body"><strong>교육부 교사용 가이드라인</strong>은 학생이나 교사의 개인정보를 익명화 가명화한 뒤 생성형 AI에 입력하라고 명시합니다(<strong>개인정보 보호법 제28조의2</strong> 가명정보 처리).</p>
+    <ul class="ait-ul">
+      <li>보호 대상 정보: 이름, 주민등록번호, 전화번호, 얼굴이 포함된 사진, 주소, 학교명, 그리고 학년 반 번호 같은 정보입니다.</li>
+      <li>가명 변환 예시: 박서준 학생의 기말고사 성적 경향을 분석해줘 대신 학생 A의 기말고사 성적 경향을 분석해줘처럼 가명으로 바꿉니다.</li>
+      <li>행정 문서 적용: 같은 원칙이 적용되어, 가정통신문 초안에 특정 학생 사례를 넣지 말고, 회의록의 발언자도 기호로 바꿉니다.</li>
+      <li>법적 유의: 외부 AI 모델 사용은 법적으로 개인정보 처리 위탁에 해당할 수 있다고 개인정보보호위원회는 보며, 만 14세 미만은 법정대리인 동의가 필요합니다.</li>
+    </ul>
+    <p class="ait-body">데이터가 의도치 않게 유출되거나 악용될 위험을 막기 위한 조치입니다.</p>
+    <div class="ait-prompt"><button class="ait-copy" type="button">복사</button><pre class="ait-pre">다음 학생에 대한 관찰 내용을 바탕으로, 학습 상황에 맞게 보완할 점을 안내하는 문장을 간단히 서술해 주세요.
+
+학생 A는 발표와 토론 참여가 적극적이지만, 보고서에서 근거 자료를 제시하는 부분을 어려워하는 편입니다.
+
+[제약]
+- 이름, 학번, 반 번호 등 식별정보는 쓰지 말 것
+- 학생의 강점을 살리는 방향으로 1~2문장</pre></div>
+    <div class="ait-caution">학생과 학부모 개인정보(이름, 학번, 연락처, 주소, 얼굴 사진, 학교명, 학년 반 번호)는 외부 생성형 AI에 절대 입력하지 말고 학생 A처럼 가명이나 익명으로 비식별한 뒤 사용합니다(개인정보 보호법 제28조의2).</div>
+    <div class="ait-caution">학교 비공개 내부자료(결재 전 문서, 미공개 시험 문항), 학생 생활지도 학교폭력 건강 가족사항 같은 민감정보, 비밀번호 계정 정보는 입력 금지입니다. 외부 AI 모델 사용은 법적으로 개인정보 처리 위탁에 해당할 수 있으므로(개인정보보호위원회), 민감한 행정 업무일수록 식별정보를 제거한 일반화된 형태로만 질문합니다.</div>
+    <p class="ait-src">출처: 교육부 / 경기도교육청 - 생성형 인공지능 활용 교육 가이드라인(교사용) <a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=92297&lev=0&m=020402" target="_blank" rel="noopener">원문</a></p>
+    <p class="ait-src">출처: 개인정보보호위원회 - 생성형 인공지능(AI) 개발 활용을 위한 개인정보 처리 안내서 <a href="https://www.pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&mCode=C020010000" target="_blank" rel="noopener">원문</a></p>
+    <p class="ait-src">출처: 찾기쉬운 생활법령정보 / 개인정보보호위원회 - 개인정보보호법 제22조의2 법정대리인 동의 <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=1702&ccfNo=4&cciNo=1&cnpClsNo=1" target="_blank" rel="noopener">원문</a></p>
+  </div>
+
+  <div class="ait-block">
+    <h3 class="ait-h3">대화 저장 끄기 공용 PC 보안 수칙</h3>
+    <p class="ait-body">민감정보가 서버에 남지 않도록 <strong>대화 이력과 학습 기능을 비활성화</strong>하는 것이 좋습니다(<strong>개인정보 보호법 제29조</strong> 안전조치).</p>
+    <ul class="ait-ul">
+      <li>학습 차단: 챗GPT의 경우 설정의 데이터 제어에서 모두를 위한 모델 개선을 끄면 입력 내용이 학습에 쓰이지 않게 할 수 있습니다.</li>
+      <li>공용 PC 수칙: 공용 컴퓨터에서는 자동 로그인 유지 옵션을 해제하고, 강력한 비밀번호와 2단계 인증을 설정합니다. 교무실 공용 PC에서 행정 업무를 할 때 특히 중요합니다.</li>
+      <li><strong>국가정보원</strong> 보안 가이드라인(2023): 인터넷망에서 생성형 AI를 쓸 때 기관 내부자료를 포함한 민감 데이터 활용을 금지하고, 개인정보 인증정보 금융 관련 정보 입력을 금지하는 것을 필수 수칙으로 제시합니다.</li>
+    </ul>
+    <div class="ait-caution">대화 이력과 학습 기능을 비활성화하고(챗GPT는 데이터 제어에서 모두를 위한 모델 개선 끄기), 공용 PC에서는 자동 로그인 해제와 2단계 인증을 설정합니다.</div>
+    <p class="ait-src">출처: 교육부 / 경기도교육청 - 생성형 인공지능 활용 교육 가이드라인(교사용) <a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=92297&lev=0&m=020402" target="_blank" rel="noopener">원문</a></p>
+    <p class="ait-src">출처: 국가정보원(전자신문 보도) - 챗GPT 등 생성형 AI 활용 보안 가이드라인(2023) <a href="https://www.etnews.com/20230629000228" target="_blank" rel="noopener">원문</a></p>
+  </div>
+</section>
+  </main>
+  <p class="ait-backlink"><a href="/#go-ait-admin">포털 전체에서 이어 보기 &#8594;</a></p>
+</div>
+<footer class="ait-ft">
+  <div class="ait-shell">
+    <p class="ait-ft-disc">본 안내는 교육부/교육청 공식 자료를 교사 편의를 위해 재구성한 정보물입니다. 규정의 최종 해석과 기재의 책임은 교사와 학교에 있으며, 실제 적용 전 원문과 소속 시도교육청 지침을 확인하시기 바랍니다.</p>
+    <p class="ait-ft-gyo">이 작업들을 더 빠르게 - 전교과 AI 에듀테크 <a href="https://gyopooledu.com/promotion?utm_source=ai101&amp;utm_medium=portal_brand&amp;utm_campaign=subpage" target="_blank" rel="noopener">교풀AI 살펴보기</a></p>
+    <p class="ait-ft-meta">만든 곳: 교풀에듀 (주식회사 휴몬랩) · <a href="/">AI로운 교사생활 전체 보기</a></p>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.ait-copy').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var pre=btn.parentElement.querySelector('.ait-pre'); if(!pre)return;
+    var text=pre.innerText, label=btn.textContent;
+    function done(ok){btn.textContent=ok?'복사됨':'복사 실패';setTimeout(function(){btn.textContent=label;},1800);}
+    function fb(){var ok=false;var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{ok=document.execCommand('copy');}catch(e){}document.body.removeChild(ta);return ok;}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){done(true);},function(){done(fb());});}else{done(fb());}
+  });
+});
+</script>
+
+</body>
+</html>

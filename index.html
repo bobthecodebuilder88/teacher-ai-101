@@ -294,6 +294,11 @@ strong{font-weight:700}
 .ait-mo.active{background:var(--teal-d);border-color:var(--teal-d);color:#fff;font-weight:700}
 .ait-mo.now-month:not(.active){border-color:var(--teal-d);color:var(--teal-d);font-weight:700}
 .ait-month-panel[hidden]{display:none}
+.ait-ft-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px;margin:18px 0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ait-ftl-col{display:flex;flex-direction:column;gap:5px}
+.ait-ftl-col b{font-size:.82rem;color:var(--ink);margin-bottom:3px}
+.ait-ftl-col a{font-size:.84rem;color:var(--ink-soft);text-decoration:none}
+.ait-ftl-col a:hover{color:var(--teal-d);text-decoration:underline}
 @media(max-width:919px){.ait-tabbar-in{flex-wrap:wrap;overflow-x:visible;padding-bottom:4px}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC8M7K7HC4"></script>
@@ -6620,6 +6625,12 @@ gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
   <div class="ait-shell">
     <p class="ait-ft-disc">본 안내는 교육부/교육청 공식 자료를 교사 편의를 위해 재구성한 정보물입니다. 규정의 최종 해석과 기재의 책임은 교사와 학교에 있으며, 실제 적용 전 원문과 소속 시도교육청 지침을 확인하시기 바랍니다.</p>
     <p class="ait-ft-gyo">이 작업들을 더 빠르게 - 전교과 AI 에듀테크 <a href="https://gyopooledu.com/promotion?utm_source=ai101&amp;utm_medium=portal_brand&amp;utm_campaign=brand" target="_blank" rel="noopener">교풀AI 살펴보기</a> · <a href="https://www.gyopool.com/blog/category/school_educase?utm_source=ai101&amp;utm_medium=portal_brand&amp;utm_campaign=brand" target="_blank" rel="noopener">초중고 AI 교육 사례</a></p>
+    <nav class="ait-ft-links" aria-label="주제별 바로가기">
+      <div class="ait-ftl-col"><b>생기부·행정</b><a href="/go/setuk/">고등 세특 작성</a><a href="/jung/saengbu/">중학교 생기부·세특</a><a href="/cho/haengbal/">초등 행발 작성</a><a href="/teuk/setuk/">특성화고 전공 세특</a><a href="/go/admin/">행정업무 AI</a></div>
+      <div class="ait-ftl-col"><b>수업·평가</b><a href="/go/lesson/">수업자료·평가문항</a><a href="/cho/lesson/">초등 수업·통신문</a><a href="/rubric/">루브릭 만들기</a><a href="/go/image/">이미지·미디어 생성</a><a href="/jung/free-semester/">자유학기제</a></div>
+      <div class="ait-ftl-col"><b>제도·특수</b><a href="/go/credit/">고교학점제</a><a href="/spec/iep/">IEP 작성</a><a href="/spec/tonghap/">통합교육</a><a href="/teuk/ncs/">NCS·현장실습</a><a href="/jungjeom/">AI중점학교 운영</a></div>
+      <div class="ait-ftl-col"><b>기초·도구</b><a href="/start/">AI 처음 시작하기</a><a href="/guide/">공식 가이드라인</a><a href="/tools/byte-counter/">글자수·Byte 카운터</a><a href="/tools/forbidden-checker/">금지표현 점검기</a><a href="/tools/deidentify/">개인정보 비식별</a><a href="/tools/group-maker/">모둠 편성</a><a href="/tools/timer/">수업 타이머</a></div>
+    </nav>
     <p class="ait-ft-meta">만든 곳: 교풀에듀 (주식회사 휴몬랩) · 출처 전체 보기는 "자료실 &amp; 출처" 섹션 · 최종 갱신 2026-06</p>
   </div>
 </footer>

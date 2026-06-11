@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<script>if(location.protocol==="http:"&&/gyopooledu\.com$/.test(location.hostname)){location.replace("https://"+location.host+location.pathname+location.search+location.hash);}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>분석적 루브릭(채점기준표) 만드는 법 - 템플릿과 프롬프트 | AI로운 교사생활</title>
+<meta name="description" content="평가 요소별로 채점하는 분석적 루브릭을 성취기준에서 출발해 만드는 절차. 빈 템플릿, 진술문 작성 원칙, 바로 쓰는 프롬프트를 담았습니다.">
+<link rel="canonical" href="https://ai101.gyopooledu.com/rubric/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI로운 교사생활">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="분석적 루브릭(채점기준표) 만드는 법 - 템플릿과 프롬프트 | AI로운 교사생활">
+<meta property="og:description" content="평가 요소별로 채점하는 분석적 루브릭을 성취기준에서 출발해 만드는 절차. 빈 템플릿, 진술문 작성 원칙, 바로 쓰는 프롬프트를 담았습니다.">
+<meta property="og:url" content="https://ai101.gyopooledu.com/rubric/">
+<meta property="og:image" content="https://ai101.gyopooledu.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ai101.gyopooledu.com/og-image.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"분석적 루브릭(채점기준표) 만드는 법 - 템플릿과 프롬프트 | AI로운 교사생활","description":"평가 요소별로 채점하는 분석적 루브릭을 성취기준에서 출발해 만드는 절차. 빈 템플릿, 진술문 작성 원칙, 바로 쓰는 프롬프트를 담았습니다.","inLanguage":"ko-KR","mainEntityOfPage":"https://ai101.gyopooledu.com/rubric/","publisher":{"@type":"Organization","name":"교풀에듀"},"dateModified":"2026-06-11"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI로운 교사생활","item":"https://ai101.gyopooledu.com/"},{"@type":"ListItem","position":2,"name":"평가","item":"https://ai101.gyopooledu.com/rubric/"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PC8M7K7HC4"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-PC8M7K7HC4');
+</script>
+<script>window.__aitState={cat:"eval",lv:"go"};</script>
+<script>
+/* 교풀 포털 행동 트래킹: 전환(교풀/블로그 이동)·콘텐츠 관심·도구 사용. 본문 비침습(이벤트 위임). */
+(function(){
+  function ev(n,p){ try{ if(window.gtag) gtag('event', n, p||{}); }catch(e){} }
+  function gyo(h){ return /(?:^|\.)gyopool\.com$/i.test(h) || /(?:^|\.)gyopooledu\.com$/i.test(h) || /\.notion\.site$/i.test(h); }
+  function dest(u){ var p=(u.pathname||'').toLowerCase(), h=(u.hostname||'').toLowerCase();
+    if(/\/dashboard\/ai\/apps\//.test(p)) return 'gyopool_tool';
+    if(/\/dashboard\/guide\//.test(p)) return 'gyopool_guide';
+    if(/\/blog/.test(p)) return 'blog';
+    if(/promotion/.test(p)) return 'promotion';
+    if(/notion\.site$/.test(h)) return 'guide';
+    if(/gyopooledu\.com$/.test(h)) return 'gyopooledu';
+    return 'gyopool_home'; }
+  var level='cho';
+  window.addEventListener('error',function(e){ try{ ev('js_error',{msg:String(e&&e.message||'').slice(0,100), src:String(e&&e.filename||'').slice(0,80), line:(e&&e.lineno)||0}); }catch(_){ } });
+  function gl(){return (window.__aitState&&window.__aitState.lv)||level;}
+  function gc(){return (window.__aitState&&window.__aitState.cat)||'start';}
+  document.addEventListener('click', function(e){
+    var t=e.target; if(!t||!t.closest) return;
+    function lvlOf(el){ return gl(); }
+    var cp=t.closest('.ait-copy');
+    if(cp){ var s=cp.closest('section[id],[id]'); ev('prompt_copy',{portal_level:lvlOf(cp), section_id:(s&&s.id)||'', portal_category:gc()}); return; }
+    var tb=t.closest('.tool-btn,.tool-btn-sm');
+    if(tb){ var ts=tb.closest('section[id],[id]'); ev('tool_use',{portal_level:lvlOf(tb), tool_id:(ts&&ts.id)||'', portal_category:gc()}); return; }
+    var a=t.closest('a[href]');
+    if(a){ try{ var u=new URL(a.getAttribute('href'), location.href);
+      if(u.host && u.host!==location.host && gyo(u.hostname)){
+        var tm=(u.pathname||'').match(/\/apps\/(\d+)/); var sec=a.closest('section[id]');
+        ev('conversion_click',{ portal_level:lvlOf(a), destination:dest(u),
+          tool_id:tm?tm[1]:'', source_section:(sec&&sec.id)||'', portal_category:gc(),
+          link_url:String(u.href).slice(0,100), link_text:(a.textContent||'').trim().slice(0,90) });
+      } }catch(_){} return; }
+    // 카테고리/학교급 전환은 별도 컨트롤러에서 category_select / level_select 발화
+  }, true);
+  document.addEventListener('DOMContentLoaded', function(){
+    if('IntersectionObserver' in window){
+      var seen={}, io=new IntersectionObserver(function(es){ es.forEach(function(x){
+        if(x.isIntersecting && x.target.id && !seen[x.target.id]){ seen[x.target.id]=1;
+          ev('section_view',{section_id:x.target.id, portal_level:gl(), portal_category:gc()}); } }); }, {threshold:0.5});
+      document.querySelectorAll('section[id]').forEach(function(s){ io.observe(s); });
+    }
+  });
+})();
+</script>
+<style>
+:root{
+  --bg:#ffffff; --bg-soft:#f6f7f4; --bg-warm:#fbf8f3;
+  --ink:#1b2a27; --ink-soft:#3a4844; --muted:#737d79; --line:#e7e6e0;
+  --teal:#1f7a6d; --teal-d:#155e54; --teal-l:#eaf3f1; --teal-bd:#cfe4df;
+  --coral:#cf6243; --coral-l:#fdf0ea; --coral-bd:#f0cdbf;
+  --code-bg:#11201d; --code-ink:#d9efe9; --code-dim:#6f8d86;
+  --r:14px; --r-sm:9px; --maxw:1180px; --nav:248px;
+  --sh-sm:0 1px 2px rgba(20,40,36,.05),0 1px 3px rgba(20,40,36,.06);
+  --sh:0 6px 22px rgba(20,40,36,.08); --sh-lg:0 18px 50px rgba(20,40,36,.12);
+  --fs:18px; --lh:1.82;
+  --sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,"D2Coding",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--bg);font:var(--fs)/var(--lh) var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%}
+a{color:var(--teal-d);text-decoration:none}
+.ait-shell{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* top bar */
+.ait-hd{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.86);-webkit-backdrop-filter:saturate(180%) blur(10px);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.ait-hd-in{display:flex;align-items:center;justify-content:space-between;height:56px}
+.ait-brand{margin:0;font-size:1.06rem;font-weight:800;color:var(--teal-d);letter-spacing:-.01em}
+.ait-brand-sub{font-size:.72em;font-weight:700;color:var(--coral);margin-left:6px}
+.ait-free{margin:0;font-size:.76rem;font-weight:700;color:var(--teal);background:var(--teal-l);border:1px solid var(--teal-bd);border-radius:20px;padding:5px 12px;white-space:nowrap}
+
+/* hero */
+.ait-hero{position:relative;overflow:hidden;background:
+   radial-gradient(1100px 380px at 12% -10%, #fdeee4 0%, rgba(253,238,228,0) 60%),
+   radial-gradient(900px 420px at 100% 0%, #e7f1ee 0%, rgba(231,241,238,0) 55%),
+   linear-gradient(180deg,#fbf9f5 0%,#ffffff 80%)}
+.ait-hero-in{max-width:var(--maxw);margin:0 auto;padding:62px 22px 54px;display:grid;grid-template-columns:1.12fr .95fr;gap:46px;align-items:center}
+.ait-hero-chip{display:inline-block;font-size:.8rem;font-weight:700;color:var(--teal-d);background:#fff;border:1px solid var(--teal-bd);border-radius:30px;padding:7px 15px;box-shadow:var(--sh-sm)}
+.ait-hero-title{font-size:clamp(2.4rem,5vw,3.5rem);line-height:1.1;font-weight:800;letter-spacing:-.03em;margin:18px 0 0;color:var(--ink)}
+.ait-hl{color:var(--coral)}
+.ait-hero-sub{font-size:1.08rem;line-height:1.72;color:var(--ink-soft);margin:18px 0 0;max-width:44ch}
+.ait-hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 0}
+.ait-btn{display:inline-flex;align-items:center;gap:6px;font-size:.95rem;font-weight:700;padding:12px 20px;border-radius:11px;border:1px solid var(--line);background:#fff;color:var(--ink);box-shadow:var(--sh-sm);transition:transform .12s,box-shadow .12s;cursor:pointer}
+.ait-btn:hover{transform:translateY(-1px);box-shadow:var(--sh)}
+.ait-btn-primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.ait-btn-primary:hover{background:var(--teal-d)}
+.ait-hero-stats{display:flex;gap:28px;flex-wrap:wrap;margin:30px 0 0}
+.ait-stat{display:flex;flex-direction:column}
+.ait-stat b{font-size:1.5rem;font-weight:800;color:var(--teal-d);line-height:1}
+.ait-stat span{font-size:.82rem;color:var(--muted);margin-top:5px}
+.ait-hero-r{display:grid;gap:11px}
+.ait-pcard{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:15px 18px;box-shadow:var(--sh-sm);transition:transform .12s,box-shadow .12s}
+.ait-pcard:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.ait-pcard-l{font-size:.69rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.ait-pcard h3{margin:6px 0 4px;font-size:1.02rem;font-weight:800;color:var(--ink)}
+.ait-pcard p{margin:0;font-size:.86rem;line-height:1.55;color:var(--muted)}
+.ait-pcard-gyo{background:linear-gradient(135deg,#1f7a6d,#134e46);border-color:transparent}
+.ait-pcard-gyo .ait-pcard-l{color:#9fe6d7}
+.ait-pcard-gyo h3{color:#fff}
+.ait-pcard-gyo p{color:#cfe7e1}
+
+/* shell grid */
+@media(min-width:920px){
+  .ait-shell:not(.ait-hd-in){display:grid;grid-template-columns:var(--nav) 1fr;gap:48px;align-items:start;padding-top:10px}
+}
+
+/* nav */
+.ait-navtoggle{display:block;width:calc(100% - 44px);margin:16px 22px 0;padding:12px;border:1px solid var(--line);background:#fff;border-radius:10px;font-size:1rem;font-weight:700;color:var(--teal-d);cursor:pointer;box-shadow:var(--sh-sm)}
+.ait-toc{display:none}
+.ait-toc.ait-open{display:block}
+.ait-toc-list{list-style:none;margin:16px 0 0;padding:0 16px;counter-reset:ait-nav}
+.ait-toc-list li{counter-increment:ait-nav;margin:1px 0}
+.ait-toc-list a{display:flex;align-items:center;gap:9px;padding:8px 11px;border-radius:9px;color:var(--ink-soft);font-size:.91rem;font-weight:500;line-height:1.3}
+.ait-toc-list a::before{content:counter(ait-nav,decimal-leading-zero);flex:none;font:700 .68rem/1 var(--mono);color:var(--muted);background:var(--bg-soft);border:1px solid var(--line);border-radius:6px;padding:4px 4px;min-width:23px;text-align:center}
+.ait-toc-list a:hover{background:var(--bg-soft);color:var(--ink)}
+.ait-toc-list a.ait-active{background:var(--teal);color:#fff}
+.ait-toc-list a.ait-active::before{background:rgba(255,255,255,.22);border-color:transparent;color:#fff}
+.ait-toc-list a.ait-timely{color:var(--coral);font-weight:700}
+.ait-toc-list a.ait-active.ait-timely{color:#fff}
+@media(min-width:920px){
+  .ait-navtoggle{display:none}
+  .ait-toc{display:block;position:sticky;top:118px;max-height:calc(100vh - 92px);overflow:auto}
+  .ait-toc-list{padding:0}
+}
+
+/* made by 교풀 card */
+.ait-madeby{display:block;margin:16px;padding:16px;border-radius:var(--r);background:linear-gradient(135deg,#1f7a6d,#134e46);color:#fff;box-shadow:var(--sh);transition:transform .12s,box-shadow .12s}
+.ait-madeby:hover{transform:translateY(-2px);box-shadow:var(--sh-lg)}
+.ait-madeby-badge{display:inline-block;font:800 .6rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#9fe6d7;background:rgba(255,255,255,.12);border-radius:5px;padding:4px 7px}
+.ait-madeby-t{display:block;margin:10px 0 3px;font-size:1.04rem;font-weight:800;color:#fff}
+.ait-madeby-d{display:block;margin-top:9px;font-size:.8rem;color:#cfe7e1}.ait-madeby-d:hover{text-decoration:underline}.ait-madeby-cta{display:block;margin-top:11px;padding:10px 12px;border-radius:8px;background:#fff;color:var(--teal-d);font-size:.85rem;font-weight:800;text-align:center}.ait-madeby-cta:hover{background:#eef5f3}
+@media(min-width:920px){.ait-madeby{margin:18px 0 0}}
+
+/* main + sections */
+.ait-main{min-width:0;counter-reset:ait-sec}
+.ait-section{counter-increment:ait-sec;padding:46px 0;border-top:1px solid var(--line)}
+.ait-section:first-child{border-top:0;padding-top:30px}
+.ait-h2{display:flex;align-items:flex-start;gap:13px;font-size:1.62rem;line-height:1.32;font-weight:800;letter-spacing:-.02em;margin:0 0 18px;color:var(--ink)}
+.ait-h2::before{content:counter(ait-sec,decimal-leading-zero);flex:none;margin-top:3px;font:800 .9rem/1 var(--mono);color:#fff;background:var(--teal);border-radius:9px;padding:9px 10px;box-shadow:var(--sh-sm)}
+.ait-h3{font-size:1.16rem;font-weight:800;color:var(--ink);margin:30px 0 8px;padding-left:14px;border-left:3px solid var(--teal)}
+.ait-body{margin:.5em 0 0;color:var(--ink-soft);font-size:1.02rem;line-height:1.85}
+strong{font-weight:700}
+.ait-body strong,.ait-ul strong,.ait-table strong,.ait-keypoint strong{color:var(--teal-d)}
+
+/* lists */
+.ait-ul{margin:.7em 0 .2em;padding:0;list-style:none}
+.ait-ul li{position:relative;padding:0 0 0 24px;margin:.5em 0;color:var(--ink-soft);line-height:1.72}
+.ait-ul li::before{content:"";position:absolute;left:4px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px var(--teal-l)}
+
+/* table */
+.ait-tw{margin:16px 0;overflow-x:auto;border-radius:var(--r);box-shadow:var(--sh-sm);border:1px solid var(--line)}
+.ait-table{width:100%;border-collapse:collapse;font-size:.92rem;background:#fff;min-width:420px}
+.ait-tw .ait-table{box-shadow:none;border:0}
+.ait-table th,.ait-table td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);line-height:1.55}
+.ait-table thead th{background:var(--teal-l);color:var(--teal-d);font-weight:800;font-size:.85rem;border-bottom:1px solid var(--teal-bd);white-space:nowrap}
+.ait-table tbody tr:last-child td{border-bottom:0}
+.ait-table tbody tr:nth-child(even) td{background:var(--bg-warm)}
+
+/* keypoint */
+.ait-keypoint{margin:18px 0;padding:14px 18px;background:var(--teal-l);border:1px solid var(--teal-bd);border-left:4px solid var(--teal);border-radius:var(--r-sm);font-size:1rem;line-height:1.62;color:var(--ink)}
+.ait-keypoint strong:first-child{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--teal);border-radius:5px;padding:3px 8px;margin-right:9px;vertical-align:middle}
+
+/* timely */
+.ait-timely-banner{display:flex;gap:10px;background:var(--coral-l);border:1px solid var(--coral-bd);border-left:4px solid var(--coral);border-radius:var(--r-sm);padding:13px 16px;margin:0 0 20px;font-size:.95rem;line-height:1.6;color:#8f3f28}
+.ait-timely-banner::before{content:"\1F4CC";flex:none}
+
+.ait-block{margin:0 0 18px}
+
+/* prompt terminal */
+.ait-prompt{position:relative;background:var(--code-bg);border-radius:var(--r);padding:42px 16px 16px;margin:14px 0;box-shadow:var(--sh)}
+.ait-prompt::before{content:"프롬프트";position:absolute;top:0;left:0;right:0;height:32px;display:flex;align-items:center;padding:0 72px 0 58px;font:700 .66rem/32px var(--mono);letter-spacing:.05em;color:var(--code-dim);background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06);border-radius:var(--r) var(--r) 0 0}
+.ait-prompt::after{content:"";position:absolute;top:11px;left:14px;width:10px;height:10px;border-radius:50%;background:#ff5f57;box-shadow:18px 0 0 #febc2e,36px 0 0 #28c840}
+.ait-pre{margin:0;white-space:pre-wrap;word-break:break-word;color:var(--code-ink);font:.86rem/1.66 var(--mono)}
+.ait-copy{position:absolute;top:5px;right:8px;z-index:2;background:var(--teal);color:#fff;border:0;border-radius:7px;padding:5px 12px;font:700 .76rem var(--sans);cursor:pointer;transition:background .12s}
+.ait-copy:hover{background:#2a9b8a}
+
+/* source */
+.ait-src{display:flex;gap:6px;align-items:baseline;margin:9px 0 0;font-size:.8rem;color:var(--muted);line-height:1.5}
+.ait-src::before{content:"\1F4C4";flex:none;font-size:.85em}
+.ait-src a{color:var(--teal-d);font-weight:600;border-bottom:1px solid var(--teal-bd)}
+
+/* caution */
+.ait-caution{position:relative;background:var(--coral-l);border:1px solid var(--coral-bd);border-left:4px solid var(--coral);border-radius:var(--r-sm);padding:13px 16px 13px 42px;margin:14px 0;font-size:.92rem;line-height:1.6;color:#8a4733}
+.ait-caution::before{content:"\26A0";position:absolute;left:15px;top:11px;color:var(--coral);font-weight:700}
+
+/* gyo cta */
+.ait-gyo{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 0;padding:15px 18px;background:linear-gradient(135deg,#eef5f3,#e6f1ee);border:1px solid var(--teal-bd);border-radius:var(--r);font-size:.94rem;color:var(--teal-d);line-height:1.55}
+.ait-gyo::before{content:"\2728";flex:none}
+.ait-gyo a{margin-left:auto;flex:none;background:var(--teal);color:#fff;font-weight:700;padding:9px 16px;border-radius:9px;font-size:.88rem;box-shadow:var(--sh-sm)}
+.ait-gyo a:hover{background:var(--teal-d)}
+.ait-verified{display:inline-block;font-size:.66rem;font-weight:800;color:#fff;background:var(--teal);border-radius:5px;padding:2px 7px;margin-left:6px;vertical-align:middle}
+
+/* footer */
+.ait-ft{margin-top:60px;background:#11201d;color:#c4d2ce;padding:36px 0}
+.ait-ft a{color:#9fe6d7;font-weight:600}
+.ait-ft-disc{margin:0 0 14px;font-size:.86rem;line-height:1.65;color:#9fb0ab;max-width:80ch}
+.ait-ft-gyo{margin:0 0 10px;font-size:1rem;font-weight:600}
+.ait-ft-meta{margin:0;font-size:.8rem;color:#7e918c}
+
+@media(max-width:919px){
+  :root{--fs:17px}
+  .ait-hero-in{grid-template-columns:1fr;gap:28px;padding:38px 22px 34px}
+  .ait-hero-title{font-size:2.1rem}
+  .ait-h2{font-size:1.36rem}
+  .ait-table{font-size:.85rem}
+  .ait-table th,.ait-table td{padding:9px 11px}
+  .ait-gyo a{margin-left:0}
+}
+/* TOOLCSS_START */
+.tool-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:12px 0 0;box-shadow:var(--sh-sm)}
+.tool-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.tool-row label{font-size:.86rem;font-weight:700;color:#374151;display:flex;gap:6px;align-items:center}
+.tool-card select,.tool-input{padding:9px 10px;border:1px solid var(--line);border-radius:8px;font-size:.95rem;background:#fff;color:var(--ink);font-family:inherit}
+.tool-num{width:84px}
+.tool-ta{width:100%;min-height:130px;padding:12px;border:1px solid var(--line);border-radius:8px;font-size:1rem;line-height:1.7;resize:vertical;font-family:inherit;color:var(--ink)}
+.tool-btn{background:var(--teal);color:#fff;border:0;border-radius:9px;padding:10px 18px;font-size:.92rem;font-weight:700;cursor:pointer;font-family:inherit}
+.tool-btn:hover{background:var(--teal-d)}
+.tool-btn-ghost{background:#fff;color:var(--teal-d);border:1px solid var(--teal-bd)}
+.tool-btn-sm{background:var(--teal);color:#fff;border:0;border-radius:7px;padding:6px 12px;font-size:.8rem;font-weight:700;cursor:pointer;margin-top:6px}
+.tool-chip{background:var(--bg-soft);border:1px solid var(--line);border-radius:20px;padding:6px 13px;font-size:.85rem;font-weight:700;color:var(--teal-d);cursor:pointer}
+.tool-chip:hover{background:var(--teal-l)}
+.tool-meter{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:12px 0 6px}
+.tool-big{font-size:1.5rem;font-weight:800;color:var(--teal-d)}
+.tool-big.over{color:var(--coral)}
+.tool-mut{font-size:.9rem;color:var(--muted)}
+.tool-bar{height:10px;background:#eef1f0;border-radius:6px;overflow:hidden;margin:4px 0 0}
+.tool-bar>i{display:block;height:100%;background:var(--teal);width:0;transition:width .15s}
+.tool-bar>i.over{background:var(--coral)}
+.tool-warn{font-size:.88rem;color:#8a4733;margin-top:8px}.tool-warn:empty{display:none}
+.tool-result{margin-top:12px}
+.tool-ok{color:var(--teal-d);font-weight:700}
+.tool-flag{padding:9px 12px;border-left:3px solid var(--coral);background:var(--coral-l);border-radius:8px;margin:8px 0;font-size:.9rem}
+.tool-flag b{color:#9a4530;display:block;margin-bottom:3px}
+.tool-flag code,.tool-group span{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:5px;padding:1px 7px;margin:2px;font-size:.85rem;font-family:inherit}
+.tool-group{padding:10px 12px;border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:8px;margin:8px 0;font-size:.92rem}
+.tool-group b{color:var(--teal-d);margin-right:6px}
+.tool-timer{text-align:center}
+.tool-timer-display{font-size:4rem;font-weight:800;color:var(--teal-d);font-variant-numeric:tabular-nums;letter-spacing:.02em;margin:6px 0 14px}
+.tool-timer-display.warn{color:var(--coral)}
+#di-out{background:var(--bg-soft)}
+/* TOOLCSS_END */
+/* tabs */
+.ait-tabbar{position:sticky;top:56px;z-index:25;background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(180%) blur(10px);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.ait-tabbar-in{display:flex;gap:6px;max-width:var(--maxw);margin:0 auto;padding:9px 22px 0;overflow-x:auto}
+.ait-tab{flex:0 0 auto;font-size:1rem;font-weight:700;padding:10px 22px;border:1px solid transparent;border-bottom:0;border-radius:11px 11px 0 0;color:var(--muted);background:transparent;cursor:pointer;white-space:nowrap}
+.ait-tab:hover{color:var(--ink);background:var(--bg-soft)}
+.ait-tab.active{color:var(--teal-d);background:var(--teal-l);border-color:var(--teal-bd)}
+.ait-level[hidden]{display:none}
+@media(max-width:919px){.ait-tab{font-size:.92rem;padding:9px 16px}.ait-tabbar-in{padding:8px 14px 0}}
+.ait-cta{margin:20px 0 8px;padding:18px 20px;background:linear-gradient(135deg,var(--teal-l),var(--bg-warm));border:1px solid var(--teal-bd);border-radius:14px}
+.ait-cta-t{font-weight:800;color:var(--teal-d);font-size:1.02rem;margin:0 0 6px}
+.ait-cta-d{font-size:.95rem;color:var(--ink);line-height:1.62;margin:0 0 12px}
+.ait-cta-btn{display:inline-block;background:var(--teal-d);color:#fff;font-weight:700;padding:9px 18px;border-radius:10px;text-decoration:none;font-size:.95rem}
+.ait-cta-btn:hover{opacity:.92}
+.ait-cta-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:2px}
+.ait-cta-links a{display:inline-block;background:#fff;border:1px solid var(--teal-bd);color:var(--teal-d);font-weight:600;font-size:.85rem;padding:6px 11px;border-radius:999px;text-decoration:none}
+.ait-cta-links a:hover{background:var(--teal-l)}
+.ait-cta-note{font-size:.82rem;color:var(--muted);margin:9px 0 0;line-height:1.5}
+.ait-subnav{margin:0 0 6px;display:flex;flex-direction:column;gap:10px}
+.ait-subnav-group{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+.ait-subnav-label{flex:0 0 auto;font-weight:800;color:var(--teal-d);font-size:.9rem;background:var(--teal-l);border:1px solid var(--teal-bd);border-radius:8px;padding:4px 10px}
+.ait-chip{flex:0 0 auto;font-size:.9rem;font-weight:700;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);cursor:pointer}
+.ait-chip:hover{color:var(--ink);background:var(--bg-soft)}
+.ait-chip.active{color:#fff;background:var(--teal-d);border-color:var(--teal-d)}
+.ait-subpanel[hidden]{display:none}
+.ait-aiclass{max-width:var(--maxw);margin:0 auto;padding:16px 22px 44px}
+.ait-aiclass .ait-h2{gap:0;margin:8px 0 16px}
+.ait-aiclass .ait-h2::before{display:none}
+.ait-aiclass .ait-subpanel{border-top:1px solid var(--line);padding-top:10px}
+.ait-unit{margin:14px 0;padding:15px 18px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:var(--r-sm);box-shadow:var(--sh-sm)}
+.ait-unit-h{font-weight:800;color:var(--teal-d);font-size:1.05rem;margin:0}
+.ait-unit-tag{font-size:.85rem;color:var(--muted);margin:2px 0 8px}
+.ait-vbox{margin:18px 0 6px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ait-vcard{padding:15px 17px;background:#fff;border:1px solid var(--teal-bd);border-radius:var(--r);box-shadow:var(--sh-sm)}
+.ait-vcard b{display:block;color:var(--teal-d);font-size:1.02rem;margin:0 0 5px}
+.ait-vcard span{display:block;color:var(--ink-soft);font-size:.93rem;line-height:1.6}
+.ait-aiclass .ait-unit a[href*="/dashboard/"]{display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#fff;font-weight:700;font-size:.9rem;padding:7px 14px;border-radius:9px;text-decoration:none;box-shadow:var(--sh-sm);transition:background .12s}
+.ait-aiclass .ait-unit a[href*="/dashboard/"]:hover{background:var(--teal-d)}
+.ait-aiclass .ait-unit a[href*="/dashboard/"]::after{content:"\2197";font-size:.92em;opacity:.9}
+.ait-aiclass .ait-table a[href*="/dashboard/"]{display:inline-flex;align-items:center;gap:5px;background:#fff;border:1px solid var(--teal-bd);color:var(--teal-d);font-weight:700;font-size:.85rem;padding:5px 11px;border-radius:7px;text-decoration:none;white-space:nowrap}
+.ait-aiclass .ait-table a[href*="/dashboard/"]:hover{background:var(--teal-l)}
+.ait-aiclass .ait-table a[href*="/dashboard/"]::after{content:"\2197";font-size:.88em}
+@media(max-width:919px){.ait-chip{font-size:.84rem;padding:6px 11px}.ait-subnav-label{font-size:.82rem}.ait-vbox{grid-template-columns:1fr}}
+/* === 과업-우선 재편: 전역 학교급 필터 + 인트로 === */
+.ait-levelbar{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(180%) blur(10px);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.ait-levelbar-in{display:flex;gap:8px;align-items:center;flex-wrap:wrap;max-width:var(--maxw);margin:0 auto;padding:10px 22px}
+@media(min-width:920px){.ait-levelbar{position:sticky;top:107px;z-index:24}}
+.ait-lv{font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1.5px solid var(--teal-bd);background:#fff;color:var(--teal-d);cursor:pointer;line-height:1.2}
+.ait-lv[aria-pressed="true"]{background:var(--teal-d);border-color:var(--teal-d);color:#fff;font-weight:700}
+.ait-levelbar.ait-hide{display:none}
+.ait-introwrap{max-width:var(--maxw);margin:0 auto;padding:24px 22px 0}
+.ait-introwrap[hidden]{display:none}
+.ait-intro{background:linear-gradient(180deg,#f3faf7,#fff);border:1px solid var(--teal-bd);border-radius:12px;padding:4px 16px}
+.ait-intro-hd{display:flex;align-items:center;justify-content:space-between;width:100%;font:inherit;font-size:.98rem;font-weight:700;color:var(--ink);background:none;border:0;padding:10px 2px;cursor:pointer;text-align:left}
+.ait-intro-chev{font-size:.8rem;color:var(--teal-d);transition:transform .15s}
+.ait-intro.ait-closed .ait-intro-chev{transform:rotate(-90deg)}
+.ait-intro.ait-closed .ait-intro-body{display:none}
+.ait-intro-body{padding:0 2px 12px}
+.ait-intro p{margin:4px 0 0;color:var(--ink-soft);line-height:1.6;font-size:.9rem}
+.ait-intro p.ait-intro-lead{color:var(--ink);font-size:.92rem;margin-top:0}
+.ait-intro-pts{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+.ait-intro-pts li{display:flex;flex-wrap:wrap;gap:2px 8px;font-size:.9rem}
+.ait-intro-pts b{color:var(--teal-d);min-width:104px}
+.ait-intro-pts span{color:var(--ink-soft);line-height:1.55;flex:1;min-width:220px}
+.ait-intro-guide{margin-top:8px;padding-top:8px;border-top:1px solid var(--teal-bd);font-size:.85rem}
+#ait-aiclass-note[hidden]{display:none}
+.ait-section[hidden]{display:none}
+.ait-share{font:inherit;font-size:.7rem;font-weight:600;color:var(--teal-d);background:#fff;border:1px solid var(--teal-bd);border-radius:999px;padding:3px 10px;margin-left:10px;cursor:pointer;vertical-align:3px;white-space:nowrap}
+.ait-share:hover{background:var(--bg-soft)}
+.ait-months{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px}
+.ait-mo{font:inherit;font-size:.85rem;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;line-height:1.2}
+.ait-mo.active{background:var(--teal-d);border-color:var(--teal-d);color:#fff;font-weight:700}
+.ait-mo.now-month:not(.active){border-color:var(--teal-d);color:var(--teal-d);font-weight:700}
+.ait-month-panel[hidden]{display:none}
+@media(max-width:919px){.ait-tabbar-in{flex-wrap:wrap;overflow-x:visible;padding-bottom:4px}}
+
+.ait-pg{max-width:var(--maxw);margin:0 auto;padding:18px 22px 40px}
+.ait-pg .ait-main{counter-reset:ait-sec}
+.ait-crumb{font-size:.85rem;color:var(--muted);margin:6px 0 0}
+.ait-crumb a{color:var(--teal-d);text-decoration:none}
+.ait-backlink{margin:34px 0 0;font-weight:700}
+.ait-backlink a{color:var(--teal-d);text-decoration:none}
+.ait-hd .ait-brand a{color:inherit;text-decoration:none}
+</style>
+</head>
+<body>
+<header class="ait-hd">
+  <div class="ait-shell ait-hd-in">
+    <p class="ait-brand"><a href="/">AI로운 교사생활</a></p>
+    <p class="ait-free">무료 · 교육부/교육청 공식 자료 기반</p>
+  </div>
+</header>
+<div class="ait-pg">
+  <nav class="ait-crumb" aria-label="현재 위치"><a href="/">AI로운 교사생활</a> &rsaquo; 평가</nav>
+  <main class="ait-main">
+<section class="ait-section" id="rubric-ait-what" aria-labelledby="rubric-ait-what-h">
+  <h2 class="ait-h2" id="rubric-ait-what-h">루브릭(채점기준표)이란</h2>
+<div class="ait-keypoint"><strong>핵심</strong> 분석적 채점은 KICE가 서논술형 평가에서 "권장"하는 방식이지만, 총체적 채점의 "금지"가 아닙니다. 과제 특성에 따라 두 방식 중 선택하되, 피드백과 객관성이 중요할 때 분석적을 선호합니다.</div>
+
+<div class="ait-block"><h3 class="ait-h3">분석적 루브릭 vs 총체적 루브릭</h3><p class="ait-body">채점기준표(루브릭)는 평가 요소별로 기준을 나누어 채점하는 "분석적 루브릭"과 전체를 아우르는 기준에 따라 종합 점수 하나를 부여하는 "총체적 루브릭"으로 나뉩니다. 두 방식의 특징을 비교하면 다음과 같습니다.</p><div class="ait-tw"><table class="ait-table"><thead><tr><th>구분</th><th>총체적(Holistic) 루브릭</th><th>분석적(Analytic) 루브릭</th></tr></thead><tbody><tr><td>채점 방식</td><td>전체를 아우르는 기준에 따라 종합적으로 단일 점수/등급 부여</td><td>평가 요소별로 기준을 설정·구분하여 요소마다 채점</td></tr><tr><td>결과</td><td>하나의 종합 점수</td><td>요소별 점수의 집합</td></tr><tr><td>강점</td><td>채점이 빠르고 전체 인상 평가에 적합</td><td>강점·약점 진단 가능, 구체적 피드백 용이, 높은 타당도·신뢰도</td></tr><tr><td>약점</td><td>어느 부분이 부족한지 진단 어려움</td><td>개발 난도가 높고 채점에 시간이 더 소요됨</td></tr></tbody></table></div><p class="ait-src">출처: KERIS 2020 통합사회 평가도구 개발 연수자료 <a href="http://contents2.kocw.or.kr/KOCW/data/keris/2020/keris1/keris3/5.pdf" target="_blank" rel="noopener">원문</a></p></div>
+
+<div class="ait-block"><h3 class="ait-h3">서논술형 평가에서의 분석적 채점 추천</h3><p class="ait-body">한국교육과정평가원(KICE)은 서논술형 평가에서 채점의 객관성 확보와 평가 결과에 대한 구체적 피드백 제공을 위해 분석적 채점 방식을 권장합니다. 다만 이는 총체적 채점의 '금지'가 아니라 '권장'이므로, 과제의 성격과 특성에 맞게 두 방식 중 선택할 수 있습니다.</p><p class="ait-src">출처: KICE 교육과정평가연구 2021 <a href="https://www.ejce.org/download/download_pdf?pid=jce-24-3-27" target="_blank" rel="noopener">원문</a></p></div>
+</section>
+<section class="ait-section" id="rubric-ait-make" aria-labelledby="rubric-ait-make-h">
+  <h2 class="ait-h2" id="rubric-ait-make-h">루브릭 만드는 법</h2>
+<div class="ait-keypoint"><strong>핵심</strong> 분석적 루브릭은 평가 요소(세로축) × 수준(가로축) × 진술문(각 칸) 3가지로 구성됩니다. 요소 간 중첩을 피하고(배타성), 성취기준을 빠짐없이 담되(포괄성), 수준별로 질적 차이를 명확히 써야 합니다.</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">3대 구성요소</h3>
+<p class="ait-body">분석적 루브릭은 다음 세 가지로 구성됩니다.</p>
+<ul class="ait-ul">
+<li>측정하려는 평가 요소 (무엇을 볼 것인가)</li>
+<li>요소별 수준 (범주·척도, 보통 3~5단계)</li>
+<li>각 수준에 대한 기대 수행 진술문(descriptor, 그 수준에서 어떤 모습이어야 하는가)</li>
+</ul>
+<p class="ait-body">표 형태로는 세로축에 평가 요소, 가로축에 평가 요소별 성취 혹은 수행 수준을 배치하고, 각 칸에 진술문을 채웁니다. 평가 요소가 지식·기능·태도로 구성될 때는 3개 차원으로, 또는 지식+기능/태도의 2개 차원으로 구성할 수 있습니다.</p>
+<p class="ait-src">출처: KICE 김경희·이명진, 교육과정평가연구 2021 Vol.24 No.3 <a href="https://www.ejce.org/download/download_pdf?pid=jce-24-3-27" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">제작 절차 3단계</h3>
+<p class="ait-body">표준 제작 절차는 다음과 같습니다.</p>
+<ul class="ait-ul">
+<li><strong>가. 평가 요소 추출하기</strong> - 성취기준에서 측정할 주요 요소들을 도출합니다.</li>
+<li><strong>나. 평가 요소 세부 내용 확정</strong> - 각 요소의 범위와 내용을 명확히 합니다.</li>
+<li><strong>다. 척도 결정 및 채점기준표 제작</strong> - 수준의 개수(보통 3~5단계)를 정하고 각 칸에 진술문을 작성합니다.</li>
+</ul>
+<p class="ait-body">핵심 원칙은 이렇습니다. 평가 요소는 배타성(요소 간 서로 중첩되지 않음)과 포괄성(성취기준을 빠짐없이 포괄)을 갖춰야 합니다. 척도(수준 수)는 과제와 평가 요소의 복잡성·난이도·관찰 가능 정도에 따라 보통 3~5수준으로 정합니다.</p>
+<p class="ait-src">출처: KERIS 2020 통합사회 평가도구 개발 연수자료 <a href="http://contents2.kocw.or.kr/KOCW/data/keris/2020/keris1/keris3/5.pdf" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">진술문(Descriptor) 작성 5가지 원리</h3>
+<p class="ait-body">성취수준 진술문을 작성할 때 다음을 지켜야 합니다.</p>
+<ul class="ait-ul">
+<li>양적 측면보다 질적 측면을 부각합니다. 가능하면 개수·수량 표현을 줄이고 수행의 질로 수준을 구분합니다.</li>
+<li>척도 간 질적 구분이 명확해야 합니다. 인접한 두 수준이 무엇이 다른지 읽어서 구분되어야 합니다.</li>
+<li>모호한 표현("창의적", "일반적" 등)이나 최소 도달 수준이 전혀 없는 부정적 진술을 피합니다.</li>
+<li>학습자가 이해하기 쉬운 용어를 씁니다.</li>
+<li>동 교과 교사와의 협업으로 작성합니다.</li>
+</ul>
+<p class="ait-src">출처: KERIS 2020 통합사회 평가도구 개발 연수자료 <a href="http://contents2.kocw.or.kr/KOCW/data/keris/2020/keris1/keris3/5.pdf" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">조건 세기형의 한계와 과정중심 단계형 대안</h3>
+<p class="ait-body">최근 연구는 "조건 3개 충족=상" 식 루브릭의 한계를 지적합니다. 이런 식으로 작성하면 학생은 조건에만 집착하게 되고, 교사도 기계적으로 점수를 매기게 된다는 것입니다.</p>
+<p class="ait-body">이를 보완하는 방법은 <strong>계획 단계 - 수행 단계 - 산출물 단계</strong>로 구성하여 과정중심평가를 반영하고, A/B/C 등급을 요소 충족 여부로 판정하는 것입니다(예: A = 세 가지 모두 충족). 이렇게 하면 진술문의 질적 차별성을 살리면서도 단계적 성장을 평가할 수 있습니다.</p>
+<p class="ait-body">분석적 루브릭을 만들 때 기계적 합산을 넘어서, 과정(계획-수행-산출)을 단계로 녹이고 진술문의 질적 차별성을 살리는 방향이 권장됩니다.</p>
+<p class="ait-src">출처: 이형빈, "성장중심평가의 취지에 따른 평가 루브릭 개발 가능성 탐구", 교육과정평가연구 2023 Vol.26 No.2 <a href="https://www.ejce.org/archive/view_article?pid=jce-26-2-259" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-cta"><p class="ait-cta-t">이 절차, 교풀AI가 골격까지</p><p class="ait-cta-d">3대 구성요소와 진술문을 매번 직접 짜기 번거롭다면, 교풀AI <strong>분석적 루브릭 작성 도우미</strong>가 성취기준 기반으로 4요소 척도 초안을 만들어 줍니다. 다듬기는 교사의 몫으로 남습니다.</p><a class="ait-cta-btn" href="https://www.gyopool.com/dashboard/ai/apps/1135?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=rubric-ait-make&amp;utm_content=1135" target="_blank" rel="noopener">루브릭 도우미 보기 &#8594;</a></div>
+</section>
+<section class="ait-section" id="rubric-ait-curri" aria-labelledby="rubric-ait-curri-h">
+  <h2 class="ait-h2" id="rubric-ait-curri-h">국가 교육과정 연계</h2>
+<div class="ait-keypoint"><strong>핵심</strong> 채점기준표는 교육과정 성취기준과 평가기준(상/중/하)에 반드시 근거해야 하며, KICE의 수업-평가 연계 6단계 절차에 따라 단계별로 개발합니다.</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">성취기준에서 평가기준(성취수준)으로</h3>
+<p class="ait-body">채점기준표 개발의 첫 단계는 교육과정 성취기준과 평가기준을 분석하는 것입니다. 한국교육과정평가원(KICE)은 성취기준 도달 정도를 상/중/하 3단계로 구분·기술한 평가기준을 학생평가지원포털에서 제시합니다. 계획 단계에서 성취기준별 평가기준과 성취수준을 꼼꼼히 살피고, 지식·기능·태도를 고르게 평가하도록 계획하는 것이 핵심입니다.</p>
+<p class="ait-body">연결 흐름은 다음과 같습니다:</p>
+<ul class="ait-ul">
+<li>성취기준 분석</li>
+<li>평가기준(상/중/하) 검토</li>
+<li>평가 요소 도출</li>
+<li>평가 방법 선정</li>
+<li>분석적 채점기준표 작성</li>
+</ul>
+<p class="ait-src">출처: KICE 학생평가지원포털 <a href="https://stas.moe.go.kr/" target="_blank" rel="noopener">stas.moe.go.kr</a>, KERIS 고교학점제 연수자료 <a href="http://kocw-n.xcache.kinxcdn.com/data/keris/2023/keris0610/03.pdf" target="_blank" rel="noopener">고교학점제 평가 연수</a></p>
+</div>
+
+<div class="ait-caution">
+<strong>참고:</strong> KICE 서·논술형 평가 지침은 채점의 객관성과 피드백을 위해 분석적 채점을 "권장"하는 것이며, 총체적 채점을 "금지"하는 것은 아닙니다. 과제 특성에 따라 총체적 채점과 분석적 채점 중에서 선택하시되, 피드백과 객관성이 중요할 때 분석적 방식을 선호한다는 의미로 이해하시면 됩니다.
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">KICE 수업-평가 연계 6단계 절차</h3>
+<p class="ait-body">KICE는 수업과 평가의 유기적 연계를 강화하기 위해 다음 6단계 절차를 제시합니다. 이 절차를 따를 때 채점기준표가 교육과정과 수업을 일관되게 연결할 수 있습니다.</p>
+<ul class="ait-ul">
+<li>1단계: 평가 계획 수립</li>
+<li>2단계: 평가도구 개발</li>
+<li>3단계: 평가 시행 및 채점</li>
+<li>4단계: 결과 처리</li>
+<li>5단계: 피드백 제공</li>
+<li>6단계: 교사 자체 평가</li>
+</ul>
+<p class="ait-body">또한 KICE는 단위학교 교사를 위해 서·논술형 평가 지침 69개를 개발해 제시했습니다. 이 지침들은 학생 피드백을 위한 객관적인 채점 기준 개발을 지원합니다.</p>
+<p class="ait-src">출처: KICE 교육과정평가연구 2021 <a href="https://www.ejce.org/download/download_pdf?pid=jce-24-3-27" target="_blank" rel="noopener">서·논술형 평가 도구 개발</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">평가 요소와 평가 방법의 매칭</h3>
+<p class="ait-body">평가 방법의 선택은 성취기준에 반영된 내용 요소와 기능 요소를 고려해 도출한 평가 요소에 따라 결정됩니다. 같은 기능을 평가하더라도 내용에 따라 다른 평가 방법이 필요할 수 있습니다.</p>
+<p class="ait-body">예를 들어:</p>
+<ul class="ait-ul">
+<li>"기체의 성질 비교하기" → 실험·실습 방법</li>
+<li>"추론하기" → 논술형 방법</li>
+</ul>
+<p class="ait-body">이렇게 평가 요소별로 적절한 평가 방법을 선택한 후, 해당 방법에 맞는 채점기준표를 개발하면 됩니다. 한 가지 유의하실 점은, 인용한 경기도교육청 초등 예시 자료가 채점·등급용 분석적 루브릭이 아니라 형성평가(학습으로의 평가) 성격의 자기평가 도구라는 것입니다. 평가 요소와 방법을 연결하는 사고 과정의 참고로는 유용하나, 총괄 채점용 루브릭과는 목적이 다릅니다.</p>
+<p class="ait-src">출처: 경기도교육청 초등 평가 예시자료 <a href="https://www.goe.go.kr/resource/old/BBSMSTR_000000030136/BBS_202502201106162700.pdf" target="_blank" rel="noopener">학습으로의 평가</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">교과별 완성 예시: 2021 서·논술형 평가 도구 가이드북</h3>
+<p class="ait-body">2021년 교육부는 국어·영어·수학·사회·과학 5개 교과별로 중학교 및 고등학교 서·논술형 평가 도구 가이드북을 발간했습니다. 실제 교과별 문항과 채점 기준 사례가 수록되어 있어 바로 참고할 수 있는 예시 모음입니다.</p>
+<p class="ait-body">다만 이 가이드북은 2015 개정 교육과정을 기반으로 한 2021년판입니다. 2022 개정 교육과정 적용 이후의 갱신본 발간 여부는 별도로 확인하시는 것이 좋겠습니다.</p>
+<p class="ait-src">출처: 교육부·KICE 2021 교과별 가이드북(중학교판 재배포) <a href="https://ssam.teacherville.co.kr/aabb/contents/15196.edu" target="_blank" rel="noopener">중학교판</a>, 고등학교판 <a href="https://ssam.teacherville.co.kr/aabb/contents/15197.edu" target="_blank" rel="noopener">고등학교판</a></p>
+</div>
+
+<div class="ait-caution">
+<strong>주의:</strong> 2022 개정 교육과정이 현재 적용 진행 중이므로, 성취기준과 평가기준의 코드는 학교급과 연도에 따라 다를 수 있습니다. 반드시 최신 KICE 학생평가지원포털(stas.moe.go.kr)에서 현재 학년·교과의 기준을 재확인하시기 바랍니다.
+</div>
+</section>
+<section class="ait-section" id="rubric-ait-template" aria-labelledby="rubric-ait-template-h">
+  <h2 class="ait-h2" id="rubric-ait-template-h">바로 쓰는 템플릿과 프롬프트</h2>
+<div class="ait-block">
+<h3 class="ait-h3">분석적 루브릭 기본 양식 (4수준)</h3>
+<p class="ait-body">평가 요소별로 상·중상·중·하 4수준의 진술문을 담은 표준 표식입니다. 내용 정확성, 논리적 구성, 근거 활용, 표현 어법 등의 평가 요소를 예시로 제시했으니, 교과와 평가 과제에 맞게 요소를 수정해 사용하세요.</p>
+<div class="ait-tw"><table class="ait-table"><thead><tr><th>평가 요소</th><th>상 (매우 우수)</th><th>중상 (우수)</th><th>중 (보통)</th><th>하 (미흡)</th></tr></thead><tbody><tr><td>요소 1<br>(예: 내용의 정확성)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>요소 2<br>(예: 논리적 구성)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>요소 3<br>(예: 근거 활용)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>요소 4<br>(예: 표현 어법)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr></tbody></table></div>
+<p class="ait-src">출처: KERIS 2020 통합사회 평가도구 개발 연수자료 <a href="http://contents2.kocw.or.kr/KOCW/data/keris/2020/keris1/keris3/5.pdf" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">지식·기능·태도 3차원 양식</h3>
+<p class="ait-body">교육과정의 지식·기능·태도를 3개 차원으로 구조화한 변형 양식입니다. 성취기준을 이 세 차원으로 나누어 고르게 평가하고 싶을 때 유용합니다.</p>
+<div class="ait-tw"><table class="ait-table"><thead><tr><th>차원</th><th>평가 요소</th><th>상</th><th>중</th><th>하</th></tr></thead><tbody><tr><td>지식</td><td>(개념 이해 등)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>기능</td><td>(적용·탐구 등)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>태도</td><td>(참여·협력 등)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr></tbody></table></div>
+<p class="ait-src">출처: KICE 교육과정평가연구 2021 Vol.24 No.3 <a href="https://www.ejce.org/download/download_pdf?pid=jce-24-3-27" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">과정중심 단계형 양식 (성장중심평가 대안)</h3>
+<p class="ait-body">계획 단계 - 수행 단계 - 산출물 단계로 구성하는 방식입니다. 조건 개수만 세는 기계적 합산을 넘어서, 과정을 녹이고 진술문의 질적 차별성을 살리는 데 효과적입니다. 등급은 각 단계 요소의 충족 여부로 판정합니다(예: A = 세 단계 모두 충족).</p>
+<div class="ait-tw"><table class="ait-table"><thead><tr><th>단계</th><th>평가 요소</th><th>A (모두 충족)</th><th>B (일부 충족)</th><th>C (충족 미흡)</th></tr></thead><tbody><tr><td>계획 단계</td><td>(계획 수립의 적절성)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>수행 단계</td><td>(과정의 충실성)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr><tr><td>산출물 단계</td><td>(결과물의 완성도)</td><td>(진술문)</td><td>(진술문)</td><td>(진술문)</td></tr></tbody></table></div>
+<p class="ait-src">출처: 이형빈, "성장중심평가의 취지에 따른 평가 루브릭 개발 가능성 탐구", 교육과정평가연구 2023 Vol.26 No.2 <a href="https://www.ejce.org/archive/view_article?pid=jce-26-2-259" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">루브릭 작성 체크리스트</h3>
+<p class="ait-body">분석적 루브릭을 완성한 뒤 다음 항목들을 확인해 보세요.</p>
+<ul class="ait-ul">
+<li>평가 요소들이 서로 중첩되지 않는가 (배타성)</li>
+<li>평가 요소가 성취기준을 빠짐없이 포괄하는가 (포괄성)</li>
+<li>수준은 과제의 복잡성에 맞게 3~5단계인가</li>
+<li>진술문이 개수·수량보다 수행의 질로 구분되는가</li>
+<li>인접한 두 수준의 진술문이 질적으로 명확히 구분되는가</li>
+<li>"창의적" "일반적" 등 모호한 표현이나 부정적 진술을 피했는가</li>
+<li>학생이 읽고 이해할 수 있는 용어인가</li>
+<li>동 교과 교사와 협의해서 작성했는가</li>
+</ul>
+<p class="ait-src">출처: KERIS 2020 통합사회 평가도구 개발 연수자료 <a href="http://contents2.kocw.or.kr/KOCW/data/keris/2020/keris1/keris3/5.pdf" target="_blank" rel="noopener">원문</a></p>
+</div>
+
+<div class="ait-block">
+<h3 class="ait-h3">AI와 함께 만드는 루브릭 초안 프롬프트</h3>
+<p class="ait-body">범용 AI(ChatGPT, Claude 등)를 활용해 분석적 루브릭의 초안을 만든 뒤, 교사가 직접 성취기준·평가기준과 대조해 검증하고 수정하는 방식이 효과적입니다. 다음 프롬프트를 참고해 필요한 내용을 채워 사용하세요.</p>
+</div>
+
+<div class="ait-prompt">
+<button class="ait-copy" type="button">복사</button>
+<pre class="ait-pre">너는 한국 교육과정평가원 기준을 따르는 분석적 루브릭 작성 전문가다.
+
+[역할]
+한국 초중고 교사를 위해 분석적 채점기준표를 만드는 것을 지원한다.
+
+[과제]
+다음 성취기준을 근거로 4수준(상/중상/중/하) 분석적 루브릭을 만들어야 한다.
+
+성취기준:
+[성취기준을 여기에 붙여넣기]
+
+학교급: [초등 / 중학 / 고등 중 선택]
+교과: [국어 / 수학 / 영어 / 과학 / 사회 등]
+평가 방법: [서술형 / 논술형 / 프로젝트 / 실험실습 중 선택]
+
+[형식]
+- 평가 요소: 3~4개 (배타성·포괄성 만족)
+- 수준: 상, 중상, 중, 하 (4수준 고정)
+- 각 칸: 기대 수행을 기술한 진술문 (150자 이내, 학생 이해 용어)
+- 출력: HTML 표 또는 마크다운 표로
+
+[제약]
+1. 개수 세기식 조건("조건 3개 충족=상") 금지
+2. "창의적" "일반적" 같은 모호 표현 금지
+3. 질적 차별성을 드러낼 것(예: 계획 - 실행 - 검토의 완성도 차이)
+
+[출력]
+마크다운 표 형식으로 루브릭 초안을 만들고, 각 진술문 하단에 (검토 필요) 주석을 달아줄 것.</pre>
+</div>
+
+<div class="ait-prompt">
+<button class="ait-copy" type="button">복사</button>
+<pre class="ait-pre">너는 분석적 루브릭의 진술문 품질 개선 전문가다.
+
+[과제]
+다음 루브릭의 진술문들을 질적으로 더 명확하게 차별화해 줄 수 있는가?
+
+[현재 루브릭]
+[진술문이 들어있는 표를 여기에 붙여넣기]
+
+교과: [예: 사회]
+학년: [예: 중학 1학년]
+
+[검토 기준]
+1. 인접한 수준(예: 상과 중상)을 읽었을 때 명확히 무엇이 다른지 드러나는가?
+2. 개수가 아니라 "완성도"나 "정확도" 같은 질적 측면이 드러나는가?
+3. 학생이 읽고 자신이 어느 수준에 있는지 판단할 수 있는 용어인가?
+
+[출력]
+개선된 진술문을 표 형식으로 보여주고, 각 요소별로 개선 이유를 한 줄씩 설명할 것.</pre>
+</div>
+
+<div class="ait-caution">
+<strong>주의</strong> 
+경기도교육청이 제공하는 초등 다단계 기술어("잘하고 있어요 / 발전하고 있어요 / 도움이 필요해요")는 형성평가(학습으로의 평가)용 자기평가 도구로, 총괄 채점용 분석적 루브릭과는 목적이 다릅니다. 다단계 기술어 작성의 참고로는 유용하나, 이것만으로는 학기말 성적 산출용 루브릭으로 쓸 수 없습니다. 2021년 교육부 가이드북은 2015 개정 교육과정 기반이며, 2022 개정 교육과정 적용이 진행 중이므로 학교급·연도별 성취기준·평가기준 코드는 KICE 학생평가지원포털(stas.moe.go.kr)에서 최신 정보를 재확인할 필요가 있습니다.
+</div>
+
+<div class="ait-cta"><p class="ait-cta-t">범용 AI로 프롬프트 짤 필요 없이</p><p class="ait-cta-d">교풀AI <strong>분석적 루브릭 작성 도우미</strong>는 성취기준만 넣으면 평가 요소 4개와 A~E 5단계(점수 병기) 루브릭 초안, 영역별 성취수준 진술까지 만들어 줍니다. 한국 중등 형식과 최소 성취수준(40%) 기준이 반영돼, 빈 프롬프트 창에서 시작하지 않아도 됩니다.</p><a class="ait-cta-btn" href="https://www.gyopool.com/dashboard/ai/apps/1135?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=rubric-ait-template&amp;utm_content=1135" target="_blank" rel="noopener">교풀AI 루브릭 도우미 열기 &#8594;</a><p class="ait-cta-note">교풀AI 도구는 교사의 업무 보조용입니다. 출력은 초안이며 최종 검토는 교사가 합니다.</p></div>
+</section>
+<section class="ait-section" id="rubric-ait-src" aria-labelledby="rubric-ait-src-h">
+  <h2 class="ait-h2" id="rubric-ait-src-h">자료실 & 출처</h2>
+<div class="ait-block"><h3 class="ait-h3">이 자료실 쓰는 법</h3><p class="ait-body">루브릭 이론과 제작 원리는 안정적이므로, 아래 자료들은 2020년대 현재도 유효한 표준 지침입니다. 다만 성취기준과 평가기준 코드는 2022 개정 교육과정 적용이 진행 중이므로, 학교급과 연도에 맞게 한국교육과정평가원(KICE) 학생평가지원포털에서 재확인하시기 바랍니다.</p></div><div class="ait-keypoint"><strong>핵심</strong> 루브릭 이론은 안정적이나 성취기준·평가기준 코드는 최신 KICE 포털에서 재확인 필요합니다.</div><div class="ait-block"><h3 class="ait-h3">공식 포털 및 교과별 평가도구</h3><p class="ait-body">교육부 공식 채점기준표 자료실과 교과별 예시자료입니다. 서술형·논술형·실험·프로젝트·포트폴리오·구술발표·토의토론 등 평가 유형별로 분류되어 있습니다.</p><ul class="ait-ul"><li><a href="https://stas.moe.go.kr/" target="_blank" rel="noopener">KICE 학생평가지원포털</a> - 한국교육과정평가원 (초·중·고 학교급별 서논술형 평가도구, 유형별 채점기준 6종)</li></ul><p class="ait-src">출처: <a href="https://stas.moe.go.kr/" target="_blank" rel="noopener">한국교육과정평가원 학생평가지원포털</a></p></div><div class="ait-block"><h3 class="ait-h3">학술자료 (이론 근거)</h3><p class="ait-body">분석적 루브릭의 구성요소, 제작 절차, 과정중심평가 대안을 다룬 교육과정평가 학술논문입니다.</p><ul class="ait-ul"><li><a href="https://www.ejce.org/download/download_pdf?pid=jce-24-3-27" target="_blank" rel="noopener">김경희·이명진, "서·논술형 평가 도구 개발"</a> - 교육과정평가연구 2021 Vol.24 No.3 (구성요소, 제작절차, KICE 6단계 평가 절차, 중학교 과학 예시)</li><li><a href="https://www.ejce.org/archive/view_article?pid=jce-26-2-259" target="_blank" rel="noopener">이형빈, "성장중심평가의 취지에 따른 평가 루브릭 개발 가능성 탐구"</a> - 교육과정평가연구 2023 Vol.26 No.2 (조건 세기형 한계 분석, 계획-수행-산출 단계형 대안)</li></ul><p class="ait-src">출처: <a href="https://www.ejce.org/" target="_blank" rel="noopener">한국교육과정평가원 교육과정평가연구</a></p></div><div class="ait-block"><h3 class="ait-h3">교사 연수자료 (실무 작성법)</h3><p class="ait-body">KERIS(한국교육학술정보원)에서 제공하는 평가 실무 가이드입니다. 분석적 루브릭의 정의, 장단점, 진술문 작성 원리 등 교사들이 즉시 활용할 수 있는 방법론을 담고 있습니다.</p><ul class="ait-ul"><li><a href="http://contents2.kocw.or.kr/KOCW/data/keris/2020/keris1/keris3/5.pdf" target="_blank" rel="noopener">KERIS 2020 통합사회 평가도구 개발 연수자료</a> - 한국교육학술정보원 (이론 정의, 3단계 제작 절차, 진술문 원리, 교사 협의 사례)</li><li><a href="http://kocw-n.xcache.kinxcdn.com/data/keris/2023/keris0610/03.pdf" target="_blank" rel="noopener">KERIS 2023 고교학점제 평가 연수</a> - 한국교육학술정보원 (상·중·하 평가기준, 성취기준 연계)</li></ul><p class="ait-src">출처: <a href="http://www.kocw.or.kr/" target="_blank" rel="noopener">KERIS 공개강좌(KOCW)</a></p></div><div class="ait-block"><h3 class="ait-h3">시도교육청 자료 (초등·지역별 예시)</h3><p class="ait-body">경기도와 경상남도교육청, 서울교육정책연구소에서 발간한 평가 지침과 예시자료입니다.</p><ul class="ait-ul"><li><a href="https://www.goe.go.kr/resource/old/BBSMSTR_000000030136/BBS_202502201106162700.pdf" target="_blank" rel="noopener">경기도교육청 초등 평가 예시 자료</a> - 경기도교육청 (초등 자기평가 도구, 다단계 기술어 예시)</li><li><a href="https://www.gne.go.kr/component/file/ND_fileDownload.do?q_fileSn=181529862&q_fileId=35f1624d-9456-4c01-8eb5-4410dbbac6fc" target="_blank" rel="noopener">경상남도교육청 평가 자료</a> - 경상남도교육청</li><li><a href="https://www.serii.re.kr/fus/MI000000000000000488/board/BO00000363/ctgynone/view0010v.do?board_seq=4765" target="_blank" rel="noopener">서울교육정책연구소(SERII) 자료</a> - 서울교육정책연구소</li></ul><p class="ait-src">출처: 각 시도교육청 공식 사이트</p></div><div class="ait-block"><h3 class="ait-h3">2021 교육부 교과별 서논술형 평가 가이드북</h3><p class="ait-body">국어·영어·수학·사회·과학 5개 교과에 대해 교육부가 발간한 실제 예시와 채점 기준입니다. 실무에서 바로 참고 가능한 문항과 분석적 루브릭 사례를 수록하고 있습니다.</p><ul class="ait-ul"><li><a href="https://ssam.teacherville.co.kr/aabb/contents/15196.edu" target="_blank" rel="noopener">중학교 서논술형 평가 도구 가이드북</a> - 교육부 (재배포처)</li><li><a href="https://ssam.teacherville.co.kr/aabb/contents/15197.edu" target="_blank" rel="noopener">고등학교 서논술형 평가 도구 가이드북</a> - 교육부 (재배포처)</li></ul><p class="ait-src">출처: 교육부 (KICE 학생평가지원포털 1차 출처, 위 재배포처 참고)</p></div><div class="ait-caution"><strong>주의</strong> 이 가이드북은 2015 개정 교육과정을 기반으로 2021년에 발간되었습니다. 2022 개정 교육과정 갱신본 여부는 KICE 포털에서 별도 확인하시기 바랍니다. 또한 경기도교육청 초등 자료는 채점·등급용이 아니라 형성평가(학습으로의 평가) 성격의 자기평가 도구입니다.</div><div class="ait-block"><h3 class="ait-h3">출처 정책과 면책</h3><p class="ait-body">본 자료실의 모든 출처는 교육부, 한국교육과정평가원(KICE), 한국교육학술정보원(KERIS), 각 시도교육청 등 공신력 있는 공공기관이 발간한 공식 자료입니다. 루브릭 이론과 제작 원리는 교육학 문헌에서 2020년대 현재도 안정적입니다. 다만 교육과정 코드와 성취기준은 학제·지역·년도에 따라 변동될 수 있으므로, 실제 작성 시 최신 KICE 학생평가지원포털(https://stas.moe.go.kr/)과 각 학교의 교육과정을 참고하시기 바랍니다.</p></div></StructuredOutput>
+</section>
+  </main>
+  <p class="ait-backlink"><a href="/#eval">포털 전체에서 이어 보기 &#8594;</a></p>
+</div>
+<footer class="ait-ft">
+  <div class="ait-shell">
+    <p class="ait-ft-disc">본 안내는 교육부/교육청 공식 자료를 교사 편의를 위해 재구성한 정보물입니다. 규정의 최종 해석과 기재의 책임은 교사와 학교에 있으며, 실제 적용 전 원문과 소속 시도교육청 지침을 확인하시기 바랍니다.</p>
+    <p class="ait-ft-gyo">이 작업들을 더 빠르게 - 전교과 AI 에듀테크 <a href="https://gyopooledu.com/promotion?utm_source=ai101&amp;utm_medium=portal_brand&amp;utm_campaign=subpage" target="_blank" rel="noopener">교풀AI 살펴보기</a></p>
+    <p class="ait-ft-meta">만든 곳: 교풀에듀 (주식회사 휴몬랩) · <a href="/">AI로운 교사생활 전체 보기</a></p>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.ait-copy').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var pre=btn.parentElement.querySelector('.ait-pre'); if(!pre)return;
+    var text=pre.innerText, label=btn.textContent;
+    function done(ok){btn.textContent=ok?'복사됨':'복사 실패';setTimeout(function(){btn.textContent=label;},1800);}
+    function fb(){var ok=false;var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{ok=document.execCommand('copy');}catch(e){}document.body.removeChild(ta);return ok;}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){done(true);},function(){done(fb());});}else{done(fb());}
+  });
+});
+</script>
+
+</body>
+</html>
