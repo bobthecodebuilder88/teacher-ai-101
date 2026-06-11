@@ -144,6 +144,7 @@ def build_page(p):
 <title>{p["title"]}</title>
 <meta name="description" content="{p["desc"]}">
 <link rel="canonical" href="{url}">
+<meta name="naver-site-verification" content="907490e7ae9a76f6450bfe3cab721e0ad26e86c1" />
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="AI로운 교사생활">
 <meta property="og:locale" content="ko_KR">

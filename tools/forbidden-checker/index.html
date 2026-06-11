@@ -7,6 +7,7 @@
 <title>생기부 금지표현 점검기 - 어학시험·교외수상 자동 확인 | AI로운 교사생활</title>
 <meta name="description" content="생기부 초안을 붙여넣으면 어학시험, 교외 수상, 자격증, 특수문자 등 기재 금지·주의 표현을 표시합니다. 브라우저에서만 처리되고 저장되지 않습니다.">
 <link rel="canonical" href="https://ai101.gyopooledu.com/tools/forbidden-checker/">
+<meta name="naver-site-verification" content="907490e7ae9a76f6450bfe3cab721e0ad26e86c1" />
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="AI로운 교사생활">
 <meta property="og:locale" content="ko_KR">
@@ -214,9 +215,9 @@ strong{font-weight:700}
 .ait-caution::before{content:"\26A0";position:absolute;left:15px;top:11px;color:var(--coral);font-weight:700}
 
 /* gyo cta */
-.ait-gyo{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 0;padding:15px 18px;background:linear-gradient(135deg,#eef5f3,#e6f1ee);border:1px solid var(--teal-bd);border-radius:var(--r);font-size:.94rem;color:var(--teal-d);line-height:1.55}
-.ait-gyo::before{content:"\2728";flex:none}
-.ait-gyo a{margin-left:auto;flex:none;background:var(--teal);color:#fff;font-weight:700;padding:9px 16px;border-radius:9px;font-size:.88rem;box-shadow:var(--sh-sm)}
+.ait-gyo{display:block;position:relative;margin:22px 0 0;padding:15px 18px 15px 46px;background:linear-gradient(135deg,#eef5f3,#e6f1ee);border:1px solid var(--teal-bd);border-radius:var(--r);font-size:.94rem;color:var(--teal-d);line-height:1.55}
+.ait-gyo::before{content:"\2728";position:absolute;left:18px;top:16px}
+.ait-gyo a{display:inline-block;margin-top:10px;background:var(--teal);color:#fff;font-weight:700;padding:9px 16px;border-radius:9px;font-size:.88rem;box-shadow:var(--sh-sm)}
 .ait-gyo a:hover{background:var(--teal-d)}
 .ait-verified{display:inline-block;font-size:.66rem;font-weight:800;color:#fff;background:var(--teal);border-radius:5px;padding:2px 7px;margin-left:6px;vertical-align:middle}
 
@@ -335,13 +336,20 @@ strong{font-weight:700}
 .ait-intro-guide{margin-top:8px;padding-top:8px;border-top:1px solid var(--teal-bd);font-size:.85rem}
 #ait-aiclass-note[hidden]{display:none}
 .ait-section[hidden]{display:none}
-.ait-share{font:inherit;font-size:.7rem;font-weight:600;color:var(--teal-d);background:#fff;border:1px solid var(--teal-bd);border-radius:999px;padding:3px 10px;margin-left:10px;cursor:pointer;vertical-align:3px;white-space:nowrap}
+.ait-share{font:inherit;font-size:.7rem;font-weight:600;color:var(--teal-d);background:#fff;border:1px solid var(--teal-bd);border-radius:999px;padding:3px 10px;margin-left:10px;cursor:pointer;vertical-align:middle;white-space:nowrap}
 .ait-share:hover{background:var(--bg-soft)}
 .ait-months{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px}
 .ait-mo{font:inherit;font-size:.85rem;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;line-height:1.2}
 .ait-mo.active{background:var(--teal-d);border-color:var(--teal-d);color:#fff;font-weight:700}
 .ait-mo.now-month:not(.active){border-color:var(--teal-d);color:var(--teal-d);font-weight:700}
 .ait-month-panel[hidden]{display:none}
+.ait-cta-svc{margin:8px 0 0;font-size:12px;color:var(--muted);line-height:1.5}
+.ait-src{flex-wrap:wrap}
+.ait-ft-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px;margin:18px 0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ait-ftl-col{display:flex;flex-direction:column;gap:5px}
+.ait-ftl-col b{font-size:.82rem;color:var(--ink);margin-bottom:3px}
+.ait-ftl-col a{font-size:.84rem;color:var(--ink-soft);text-decoration:none}
+.ait-ftl-col a:hover{color:var(--teal-d);text-decoration:underline}
 @media(max-width:919px){.ait-tabbar-in{flex-wrap:wrap;overflow-x:visible;padding-bottom:4px}}
 
 .ait-pg{max-width:var(--maxw);margin:0 auto;padding:18px 22px 40px}
@@ -370,7 +378,7 @@ strong{font-weight:700}
     <textarea id="fb-ta" class="tool-ta" placeholder="생기부 초안을 붙여넣으세요"></textarea>
     <button class="tool-btn" id="fb-run" type="button">점검하기</button>
     <div class="tool-result" id="fb-out"></div>
-    <div class="ait-cta"><p class="ait-cta-t">간단 점검은 여기서, 정밀 점검은 교풀AI로</p><p class="ait-cta-d">이 점검기는 대표 금지 표현만 빠르게 봅니다. 교풀AI 자가점검 도구는 문장 단위로 기재요령 위반 가능성을 짚어 줍니다.</p><div class="ait-cta-links"><a href="https://www.gyopool.com/dashboard/ai/apps/844?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=tool-ait-forbidden&amp;utm_content=844" target="_blank" rel="noopener">기재요령 자가점검 도구</a></div><p class="ait-cta-note">최종 판단과 기재 책임은 교사에게 있습니다.</p></div>
+    <div class="ait-cta"><p class="ait-cta-t">간단 점검은 여기서, 정밀 점검은 교풀AI로</p><p class="ait-cta-d">이 점검기는 대표 금지 표현만 빠르게 봅니다. 교풀AI 자가점검 도구는 문장 단위로 기재요령 위반 가능성을 짚어 줍니다.</p><div class="ait-cta-links"><a href="https://www.gyopool.com/dashboard/ai/apps/844?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=tool-ait-forbidden&amp;utm_content=844" target="_blank" rel="noopener">기재요령 자가점검 도구</a></div><p class="ait-cta-svc">*교풀AI는 교사들의 수업, 행정 업무를 보조하는 학교용 AI 에듀테크 입니다. 로그인시 무료 플랜 이용이 가능합니다.</p><p class="ait-cta-note">최종 판단과 기재 책임은 교사에게 있습니다.</p></div>
   </div>
 </section>
   </main>

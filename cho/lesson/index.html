@@ -7,6 +7,7 @@
 <title>초등 수업·평가·가정통신문 AI 활용 - 교사의 도구로 | AI로운 교사생활</title>
 <meta name="description" content="초등 담임의 전과목 수업 준비, 서술형 평가, 가정통신문을 AI 초안으로 줄이는 법. 학생 직접 사용이 아닌 교사 도구 원칙으로 정리했습니다.">
 <link rel="canonical" href="https://ai101.gyopooledu.com/cho/lesson/">
+<meta name="naver-site-verification" content="907490e7ae9a76f6450bfe3cab721e0ad26e86c1" />
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="AI로운 교사생활">
 <meta property="og:locale" content="ko_KR">
@@ -214,9 +215,9 @@ strong{font-weight:700}
 .ait-caution::before{content:"\26A0";position:absolute;left:15px;top:11px;color:var(--coral);font-weight:700}
 
 /* gyo cta */
-.ait-gyo{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 0;padding:15px 18px;background:linear-gradient(135deg,#eef5f3,#e6f1ee);border:1px solid var(--teal-bd);border-radius:var(--r);font-size:.94rem;color:var(--teal-d);line-height:1.55}
-.ait-gyo::before{content:"\2728";flex:none}
-.ait-gyo a{margin-left:auto;flex:none;background:var(--teal);color:#fff;font-weight:700;padding:9px 16px;border-radius:9px;font-size:.88rem;box-shadow:var(--sh-sm)}
+.ait-gyo{display:block;position:relative;margin:22px 0 0;padding:15px 18px 15px 46px;background:linear-gradient(135deg,#eef5f3,#e6f1ee);border:1px solid var(--teal-bd);border-radius:var(--r);font-size:.94rem;color:var(--teal-d);line-height:1.55}
+.ait-gyo::before{content:"\2728";position:absolute;left:18px;top:16px}
+.ait-gyo a{display:inline-block;margin-top:10px;background:var(--teal);color:#fff;font-weight:700;padding:9px 16px;border-radius:9px;font-size:.88rem;box-shadow:var(--sh-sm)}
 .ait-gyo a:hover{background:var(--teal-d)}
 .ait-verified{display:inline-block;font-size:.66rem;font-weight:800;color:#fff;background:var(--teal);border-radius:5px;padding:2px 7px;margin-left:6px;vertical-align:middle}
 
@@ -335,13 +336,20 @@ strong{font-weight:700}
 .ait-intro-guide{margin-top:8px;padding-top:8px;border-top:1px solid var(--teal-bd);font-size:.85rem}
 #ait-aiclass-note[hidden]{display:none}
 .ait-section[hidden]{display:none}
-.ait-share{font:inherit;font-size:.7rem;font-weight:600;color:var(--teal-d);background:#fff;border:1px solid var(--teal-bd);border-radius:999px;padding:3px 10px;margin-left:10px;cursor:pointer;vertical-align:3px;white-space:nowrap}
+.ait-share{font:inherit;font-size:.7rem;font-weight:600;color:var(--teal-d);background:#fff;border:1px solid var(--teal-bd);border-radius:999px;padding:3px 10px;margin-left:10px;cursor:pointer;vertical-align:middle;white-space:nowrap}
 .ait-share:hover{background:var(--bg-soft)}
 .ait-months{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px}
 .ait-mo{font:inherit;font-size:.85rem;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;line-height:1.2}
 .ait-mo.active{background:var(--teal-d);border-color:var(--teal-d);color:#fff;font-weight:700}
 .ait-mo.now-month:not(.active){border-color:var(--teal-d);color:var(--teal-d);font-weight:700}
 .ait-month-panel[hidden]{display:none}
+.ait-cta-svc{margin:8px 0 0;font-size:12px;color:var(--muted);line-height:1.5}
+.ait-src{flex-wrap:wrap}
+.ait-ft-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px;margin:18px 0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ait-ftl-col{display:flex;flex-direction:column;gap:5px}
+.ait-ftl-col b{font-size:.82rem;color:var(--ink);margin-bottom:3px}
+.ait-ftl-col a{font-size:.84rem;color:var(--ink-soft);text-decoration:none}
+.ait-ftl-col a:hover{color:var(--teal-d);text-decoration:underline}
 @media(max-width:919px){.ait-tabbar-in{flex-wrap:wrap;overflow-x:visible;padding-bottom:4px}}
 
 .ait-pg{max-width:var(--maxw);margin:0 auto;padding:18px 22px 40px}
@@ -496,7 +504,7 @@ strong{font-weight:700}
     <div class="ait-caution">생기부 규정: 초등 교과 · 행발 · 창체 특기사항은 별도 글자수 제한이 없으나 시스템 입력 단위는 byte(한글 3byte)입니다. 'OO자 이내'로만 맞추지 말고 NEIS에 직접 붙여 길이를 확인합니다. 누가기록 양식 · 주기 등 변동값은 단정하지 말고 소속 교육청 · 학교 규정을 따릅니다.</div>
     <p class="ait-src">출처: 교육부 학교생활기록부 종합지원포털(star.moe.go.kr) - 학교생활기록 작성 및 관리지침(교육부훈령 제555호, 시행 2026.3.1.) <a href="https://star.moe.go.kr/web/contents/m20103.do" target="_blank" rel="noopener">원문</a></p></div>
 
-<div class="ait-cta"><p class="ait-cta-t">작성한 기록, 교풀AI로 최종 점검</p><p class="ait-cta-d">초등 평가·통신문을 마무리할 때 교풀AI 자가점검 도우미로 기재요령 위반(실명·수상 등)을 한 번에 확인할 수 있습니다. 분석적 루브릭 작성 도우미도 있으나 중등 기준이라 참고용입니다.</p><div class="ait-cta-links"><a href="https://www.gyopool.com/dashboard/ai/apps/844?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=cho-ait-lesson&amp;utm_content=844" target="_blank" rel="noopener">기재요령 자가점검</a><a href="https://www.gyopool.com/dashboard/ai/apps/1135?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=cho-ait-lesson&amp;utm_content=1135" target="_blank" rel="noopener">분석적 루브릭 (중등 기준, 참고)</a></div></div>
+<div class="ait-cta"><p class="ait-cta-t">작성한 기록, 교풀AI로 최종 점검</p><p class="ait-cta-d">초등 평가·통신문을 마무리할 때 교풀AI 자가점검 도우미로 기재요령 위반(실명·수상 등)을 한 번에 확인할 수 있습니다. 분석적 루브릭 작성 도우미도 있으나 중등 기준이라 참고용입니다.</p><div class="ait-cta-links"><a href="https://www.gyopool.com/dashboard/ai/apps/844?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=cho-ait-lesson&amp;utm_content=844" target="_blank" rel="noopener">기재요령 자가점검</a><a href="https://www.gyopool.com/dashboard/ai/apps/1135?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=cho-ait-lesson&amp;utm_content=1135" target="_blank" rel="noopener">분석적 루브릭 (중등 기준, 참고)</a></div><p class="ait-cta-svc">*교풀AI는 교사들의 수업, 행정 업무를 보조하는 학교용 AI 에듀테크 입니다. 로그인시 무료 플랜 이용이 가능합니다.</p></div>
 </section>
   </main>
   <p class="ait-backlink"><a href="/#cho-ait-lesson">포털 전체에서 이어 보기 &#8594;</a></p>

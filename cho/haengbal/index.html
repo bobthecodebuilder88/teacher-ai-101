@@ -7,6 +7,7 @@
 <title>초등 생기부 행동특성 및 종합의견(행발) 작성과 AI 활용 | AI로운 교사생활</title>
 <meta name="description" content="초등 행발·교과 성취수준 기재 원칙과 AI 활용법. 관찰 기록을 바탕으로 한 초안 작성 프롬프트, 기재 금지사항, 검증 체크리스트를 담았습니다.">
 <link rel="canonical" href="https://ai101.gyopooledu.com/cho/haengbal/">
+<meta name="naver-site-verification" content="907490e7ae9a76f6450bfe3cab721e0ad26e86c1" />
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="AI로운 교사생활">
 <meta property="og:locale" content="ko_KR">
@@ -214,9 +215,9 @@ strong{font-weight:700}
 .ait-caution::before{content:"\26A0";position:absolute;left:15px;top:11px;color:var(--coral);font-weight:700}
 
 /* gyo cta */
-.ait-gyo{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 0;padding:15px 18px;background:linear-gradient(135deg,#eef5f3,#e6f1ee);border:1px solid var(--teal-bd);border-radius:var(--r);font-size:.94rem;color:var(--teal-d);line-height:1.55}
-.ait-gyo::before{content:"\2728";flex:none}
-.ait-gyo a{margin-left:auto;flex:none;background:var(--teal);color:#fff;font-weight:700;padding:9px 16px;border-radius:9px;font-size:.88rem;box-shadow:var(--sh-sm)}
+.ait-gyo{display:block;position:relative;margin:22px 0 0;padding:15px 18px 15px 46px;background:linear-gradient(135deg,#eef5f3,#e6f1ee);border:1px solid var(--teal-bd);border-radius:var(--r);font-size:.94rem;color:var(--teal-d);line-height:1.55}
+.ait-gyo::before{content:"\2728";position:absolute;left:18px;top:16px}
+.ait-gyo a{display:inline-block;margin-top:10px;background:var(--teal);color:#fff;font-weight:700;padding:9px 16px;border-radius:9px;font-size:.88rem;box-shadow:var(--sh-sm)}
 .ait-gyo a:hover{background:var(--teal-d)}
 .ait-verified{display:inline-block;font-size:.66rem;font-weight:800;color:#fff;background:var(--teal);border-radius:5px;padding:2px 7px;margin-left:6px;vertical-align:middle}
 
@@ -335,13 +336,20 @@ strong{font-weight:700}
 .ait-intro-guide{margin-top:8px;padding-top:8px;border-top:1px solid var(--teal-bd);font-size:.85rem}
 #ait-aiclass-note[hidden]{display:none}
 .ait-section[hidden]{display:none}
-.ait-share{font:inherit;font-size:.7rem;font-weight:600;color:var(--teal-d);background:#fff;border:1px solid var(--teal-bd);border-radius:999px;padding:3px 10px;margin-left:10px;cursor:pointer;vertical-align:3px;white-space:nowrap}
+.ait-share{font:inherit;font-size:.7rem;font-weight:600;color:var(--teal-d);background:#fff;border:1px solid var(--teal-bd);border-radius:999px;padding:3px 10px;margin-left:10px;cursor:pointer;vertical-align:middle;white-space:nowrap}
 .ait-share:hover{background:var(--bg-soft)}
 .ait-months{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px}
 .ait-mo{font:inherit;font-size:.85rem;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;line-height:1.2}
 .ait-mo.active{background:var(--teal-d);border-color:var(--teal-d);color:#fff;font-weight:700}
 .ait-mo.now-month:not(.active){border-color:var(--teal-d);color:var(--teal-d);font-weight:700}
 .ait-month-panel[hidden]{display:none}
+.ait-cta-svc{margin:8px 0 0;font-size:12px;color:var(--muted);line-height:1.5}
+.ait-src{flex-wrap:wrap}
+.ait-ft-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px;margin:18px 0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ait-ftl-col{display:flex;flex-direction:column;gap:5px}
+.ait-ftl-col b{font-size:.82rem;color:var(--ink);margin-bottom:3px}
+.ait-ftl-col a{font-size:.84rem;color:var(--ink-soft);text-decoration:none}
+.ait-ftl-col a:hover{color:var(--teal-d);text-decoration:underline}
 @media(max-width:919px){.ait-tabbar-in{flex-wrap:wrap;overflow-x:visible;padding-bottom:4px}}
 
 .ait-pg{max-width:var(--maxw);margin:0 auto;padding:18px 22px 40px}
@@ -526,7 +534,7 @@ strong{font-weight:700}
     <div class="ait-caution">저작권: 외부 자료(검사지·교재·평가지 문구)를 그대로 복사해 서술에 넣지 않는다. 서술은 교사가 직접 관찰·평가한 내용을 근거로 한다.</div>
     <p class="ait-src">출처: 한국경제 - 학생부 작성때 AI 허용…책임은 교사 몫 <a href="https://www.hankyung.com/article/2025081018181" target="_blank" rel="noopener">원문</a></p></div>
 
-<div class="ait-cta"><p class="ait-cta-t">행발·종합의견, 범용 AI보다 교풀AI로</p><p class="ait-cta-d">관찰 메모를 넣으면 초등 기재요령에 맞춘 행동특성·종합의견 초안이 나옵니다. 가족사·민감 표현은 자동으로 걸러집니다. 작성 후 자가점검 도구로 실명·수상 노출을 확인하세요.</p><div class="ait-cta-links"><a href="https://www.gyopool.com/dashboard/ai/apps/840?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=cho-ait-saengbu&amp;utm_content=840" target="_blank" rel="noopener">초등 행특·종합의견</a><a href="https://www.gyopool.com/dashboard/ai/apps/841?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=cho-ait-saengbu&amp;utm_content=841" target="_blank" rel="noopener">창체 진로활동</a><a href="https://www.gyopool.com/dashboard/ai/apps/844?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=cho-ait-saengbu&amp;utm_content=844" target="_blank" rel="noopener">최종 검수: 기재요령 자가점검</a></div><p class="ait-cta-note">교풀AI는 관찰 기록을 초안으로 정돈하는 보조 도구이며, 기재 책임은 교사에게 있습니다.</p></div>
+<div class="ait-cta"><p class="ait-cta-t">행발·종합의견, 범용 AI보다 교풀AI로</p><p class="ait-cta-d">관찰 메모를 넣으면 초등 기재요령에 맞춘 행동특성·종합의견 초안이 나옵니다. 가족사·민감 표현은 자동으로 걸러집니다. 작성 후 자가점검 도구로 실명·수상 노출을 확인하세요.</p><div class="ait-cta-links"><a href="https://www.gyopool.com/dashboard/ai/apps/840?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=cho-ait-saengbu&amp;utm_content=840" target="_blank" rel="noopener">초등 행특·종합의견</a><a href="https://www.gyopool.com/dashboard/ai/apps/841?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=cho-ait-saengbu&amp;utm_content=841" target="_blank" rel="noopener">창체 진로활동</a><a href="https://www.gyopool.com/dashboard/ai/apps/844?utm_source=ai101&amp;utm_medium=portal_cta&amp;utm_campaign=cho-ait-saengbu&amp;utm_content=844" target="_blank" rel="noopener">최종 검수: 기재요령 자가점검</a></div><p class="ait-cta-svc">*교풀AI는 교사들의 수업, 행정 업무를 보조하는 학교용 AI 에듀테크 입니다. 로그인시 무료 플랜 이용이 가능합니다.</p><p class="ait-cta-note">교풀AI는 관찰 기록을 초안으로 정돈하는 보조 도구이며, 기재 책임은 교사에게 있습니다.</p></div>
 </section>
   </main>
   <p class="ait-backlink"><a href="/#cho-ait-saengbu">포털 전체에서 이어 보기 &#8594;</a></p>
