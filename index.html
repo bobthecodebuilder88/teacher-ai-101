@@ -6786,7 +6786,7 @@ gtag('config','G-3Z7C643VLS');
         var chg=false;
         if(tgt.cat!==state.cat){state.cat=tgt.cat;chg=true;}
         if(tgt.lv&&tgt.lv!==state.lv){state.lv=tgt.lv;try{localStorage.setItem('ait_level',tgt.lv);}catch(_){ }chg=true;}
-        e.preventDefault();if(chg){render();}syncUrl("#"+aid);try{ael.scrollIntoView();}catch(_){ }return;
+        e.preventDefault();if(chg){render();}syncUrl("#"+aid);try{var _de=document.documentElement,_pv=_de.style.scrollBehavior;_de.style.scrollBehavior='auto';ael.scrollIntoView();_de.style.scrollBehavior=_pv;}catch(_){ }return;
       }
     }
     var t=e.target.closest&&e.target.closest('.ait-tab');
@@ -6858,7 +6858,7 @@ gtag('config','G-3Z7C643VLS');
         state.cat=t.cat;
         if(t.lv){ state.lv=t.lv; try{localStorage.setItem('ait_level',t.lv);}catch(_){ } }
         render();
-        setTimeout(function(){ try{el.scrollIntoView();}catch(_){ } },0);
+        setTimeout(function(){ try{var _de=document.documentElement,_pv=_de.style.scrollBehavior;_de.style.scrollBehavior='auto';el.scrollIntoView();_de.style.scrollBehavior=_pv;}catch(_){ } },0);
       }
       return true;
     }
