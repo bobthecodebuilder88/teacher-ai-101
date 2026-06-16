@@ -5688,12 +5688,13 @@ gtag('config','G-3Z7C643VLS');
     <li><a href="#rubric-ait-make">루브릭 만드는 법</a></li>
     <li><a href="#rubric-ait-curri">국가 교육과정 연계</a></li>
     <li><a href="#rubric-ait-template">바로 쓰는 템플릿과 프롬프트</a></li>
-        <li class="ait-toc-div" aria-hidden="true" style="margin-top:6px;padding-top:6px;border-top:1px solid var(--line,#e5e7eb);font-weight:700;color:var(--muted,#64748b)">시험문제 출제</li>
-        <li><a href="#exam-ait-what">시험문제 출제, 어디까지 맡길까</a></li>
-        <li><a href="#exam-ait-make">서·논술형 + 루브릭 프롬프트</a></li>
-        <li><a href="#exam-ait-choice">선택형 매력적 오답 프롬프트</a></li>
-        <li><a href="#exam-ait-check">개인정보·출력 전 검토 5</a></li>
     <li><a href="#rubric-ait-src">자료실 &amp; 출처</a></li>
+    <li class="ait-toc-div" aria-hidden="true" style="counter-increment:none;margin-top:8px;padding-top:8px;border-top:1px solid var(--line,#e5e7eb);font-weight:700;font-size:.8rem;color:var(--muted,#64748b)">시험문제 출제</li>
+    <li><a href="#exam-ait-what">시험문제 출제, 어디까지 맡길까</a></li>
+    <li><a href="#exam-ait-make">서·논술형 + 루브릭 프롬프트</a></li>
+    <li><a href="#exam-ait-choice">선택형 매력적 오답 프롬프트</a></li>
+    <li><a href="#exam-ait-check">개인정보·출력 전 검토 5</a></li>
+    <li><a href="#exam-ait-src">자료실 &amp; 출처</a></li>
   </ul>
   <div class="ait-madeby">
     <span class="ait-madeby-badge">made by</span>
@@ -6785,7 +6786,7 @@ gtag('config','G-3Z7C643VLS');
         var chg=false;
         if(tgt.cat!==state.cat){state.cat=tgt.cat;chg=true;}
         if(tgt.lv&&tgt.lv!==state.lv){state.lv=tgt.lv;try{localStorage.setItem('ait_level',tgt.lv);}catch(_){ }chg=true;}
-        if(chg){e.preventDefault();render();syncUrl("#"+aid);try{ael.scrollIntoView();}catch(_){ }return;}
+        e.preventDefault();if(chg){render();}syncUrl("#"+aid);try{ael.scrollIntoView();}catch(_){ }return;
       }
     }
     var t=e.target.closest&&e.target.closest('.ait-tab');
